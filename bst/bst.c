@@ -15,6 +15,7 @@
  */
 struct Bst * create_bst(){
     struct Bst * new_bst = (struct Bst *) malloc(sizeof(struct Bst));
+    new_bst->root = NULL;
 
     return new_bst;
 }
