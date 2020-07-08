@@ -1,5 +1,5 @@
 //
-// Created by kali on 7/7/20.
+// Created by Alessandro Zanatta on 7/7/20.
 //
 
 #include "bst.h"
@@ -57,4 +57,8 @@ int main(int argc, char** argv){
     }
 
     // printf("Exiting...\n");
+    destroy_bst(bst);
+    free(token);
+    free(value);
+    exit(0);
 }
