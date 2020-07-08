@@ -128,9 +128,9 @@ struct Node * max(struct Node * node){
 }
 
 /**
- * Finds the predecessor of the given node
+ * Finds the successor of the given node
  * @param node
- * @return the pointer to the predecessor of the given Node
+ * @return the pointer to the successor of the given Node
  */
 struct Node * successor(struct Node * node){
     if(node->right != NULL){
@@ -153,6 +153,7 @@ void delete(struct Bst * bst, struct Node * node){
 
     if(node->left == NULL || node->right == NULL){ // at least one child is NULL, easier to solve!
         struct Node * x = NULL;
+
         if(node->left != NULL) {
             x = node->left;
         } else {
@@ -178,28 +179,23 @@ void delete(struct Bst * bst, struct Node * node){
         }
 
         free(node);
-    } else { // it has two childs, so i use the predecessor/successor (here i chose predecessor, but it does not matter)
+    } else { // it has two childs, so i use the predecessor/successor (here i chose successor, but it does not matter)
         struct Node * real_delete = successor(node);
 
         node->key = real_delete->key;
         strcpy(node->value, real_delete->value);
+
+        // there should be a complete swap to make the delete procedure formally correct,
+        // but this works as well and it takes less computational time
+
         delete(bst, real_delete);
     }
 }
 
-void in_order_rec(struct Node * x) {
-    if(x != NULL){
-        in_order_rec(x->left);
-        printf("%d", x->key);
-        in_order_rec(x->right);
-    }
-}
-
-void in_order(struct Bst * bst){
-    in_order_rec(bst->root);
-}
-
-
+/**
+ * Prints the sub-tree radicated in the given node in reverse polish notation
+ * @param node
+ */
 void show_rec(struct Node * node){
     if(node == NULL || strncmp(node->value, "", BUFFER) == 0){
         printf("NULL ");
@@ -210,6 +206,10 @@ void show_rec(struct Node * node){
     }
 }
 
+/**
+ * Prints the given bst in reverse polish notation
+ * @param bst
+ */
 void show(struct Bst * bst){
     show_rec(bst->root);
 }
