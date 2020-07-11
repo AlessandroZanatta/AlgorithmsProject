@@ -2,16 +2,16 @@
 // Created by Alessandro Zanatta on 7/7/20.
 //
 
-#ifndef ALGORITHMPROJECT_BST_H
-#define ALGORITHMPROJECT_BST_H
+#ifndef ALGORITHMPROJECT_RBT_H
+#define ALGORITHMPROJECT_RBT_H
 
-#define BUFFER 30
+#define BUFFER 10
 #define RED 0
 #define BLACK 1
 #define ROTATE_LEFT 2
 #define ROTATE_RIGHT 3
 /**
- * Bst data structure to hold a BST
+ * Bst data structure to hold a RBT
  */
 struct Rbt{
     struct Node * root;
@@ -36,5 +36,4 @@ struct Node * find(struct Rbt * rbt, int key);
 void insert(struct Rbt * rbt, int key, char * value);
 void show(struct Rbt * rbt);
 
-#undef BUFFER
-#endif //ALGORITHMPROJECT_BST_H
+#endif //ALGORITHMPROJECT_RBT_H

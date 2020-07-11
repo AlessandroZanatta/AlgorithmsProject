@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define BUFFER 10
-
 // here i suppose -1 is not a valid key, might need to find a better way to do this tho...
 struct Node NIL = {-1, {0,0,0,0,0,0,0,0,0,0}, BLACK, NULL, NULL, NULL};
 
