@@ -49,7 +49,7 @@ int main(int argc, char** argv){
 
             extractMin(minheap);
             printElementsMin(minheap);
-        } else if(strcmp(token, "insertMin") == 0){
+        } else if(strcmp(token, "insert") == 0){
 
             int key = atoi(strtok(NULL, " "));
             insertMin(minheap, key);

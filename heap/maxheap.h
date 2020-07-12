@@ -24,4 +24,26 @@ int extractMax(struct MaxHeap * maxHeap);
 void insertMax(struct MaxHeap * maxHeap, int i);
 void changeValueMax(struct MaxHeap * maxHeap, int i, int key);
 
+
+
+// MAXHEAP WITH POSITION
+
+#define KEY 0
+#define POS 1
+
+struct MaxHeapPos{
+    int array[MAX_LENGTH][2];
+};
+
+struct MaxHeapPos * createEmptyMaxHeapPos();
+int heapsizeMaxPos(struct MaxHeapPos * maxHeap);
+void destroyMaxHeapPos(struct MaxHeapPos * maxHeap);
+struct MaxHeapPos * buildMaxHeapPos(const int * array, int num_elements);
+void printElementsMaxPos(struct MaxHeapPos * maxHeap);
+int getMaxPos(const struct MaxHeapPos * maxHeap);
+void extractMaxPos(struct MaxHeapPos * maxHeap, int * res);
+void insertMaxPos(struct MaxHeapPos * maxHeap, int i, int pos);
+void changeValueMaxPos(struct MaxHeapPos * maxHeap, int i, int key);
+int getKeyOnPositionMax(struct MaxHeap * maxHeap, int i);
+
 #endif //ALGORITHMPROJECT_MAXHEAP_H
