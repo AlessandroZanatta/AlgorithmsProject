@@ -96,3 +96,52 @@ int heapselect(int * a, int length, int k){
         return getMaxPos(H2);
     }
 }
+
+int medianselect_rec(int *a, int p, int q, int k) {
+
+    if(q-p <= 5){
+        quicksort(a, p, q);
+        return a[k];
+    } else {
+        int i = 0;
+
+        // for blocks of 5 elements, sort them and take the median.
+        // Here i swap in the first place (which is p, as i consider the array between p and q) to optimize space complexity (in place)
+        while(i < (int) ((q-p+1)/5)){
+            quicksort(a, p+i*5, p+i*5+4);
+            swap_array(a, p+i, p+i*5+2);
+            i++;
+        }
+
+        // I may have a block of < 5 elements, check if it exists and sort it
+        if(((q-p+1) % 5) != 0){
+            quicksort(a, p + i*5, q);
+            swap_array(a, p + i, p + i*5 + (int) (q - (p+i*5)) / 2);
+            i++;
+        }
+
+        int M = medianselect_rec(a, p, p+i-1, ((int) (q-p)/10) + p);
+        int pivot = partition_with_pivot(a, p, q, M);
+
+        if(pivot == k){
+            return M;
+        } else {
+            if(k < pivot) {
+                return medianselect_rec(a, p, pivot-1, k);
+            } else {
+                return medianselect_rec(a, pivot+1, q, k);
+            }
+        }
+    }
+}
+
+/**
+ * Finds the k-th element in the array a (if a was ordered) using MedianSelect (median of medians) algorithm
+ * @param a
+ * @param length of the array a
+ * @param k the position of the element we want in the sorted array
+ * @return the value of this k-th element
+ */
+int medianselect(int * a, int length, int k){
+    return medianselect_rec(a, 0, length-1, k);
+}

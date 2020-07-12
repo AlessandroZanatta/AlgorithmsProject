@@ -7,5 +7,6 @@
 
 int quickselect(int * a, int length, int k);
 int heapselect(int * a, int length, int k);
+int medianselect(int * a, int length, int k);
 
 #endif //ALGORITHMPROJECT_SELECT_FUN_H

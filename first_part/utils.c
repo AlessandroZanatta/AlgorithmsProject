@@ -52,6 +52,34 @@ int partition(int * a, int start, int end, int key_pos){
 }
 
 /**
+ * Partitions the array a between start and end using as partition value the given pivot
+ * @param a
+ * @param start
+ * @param end
+ * @param pivot
+ * @return the position of the key used to partition
+ */
+int partition_with_pivot(int * a, int start, int end, int pivot){
+
+    int x = pivot;
+    int i = start-1;
+    int notFound = 1;
+    for(int j = start; j <= end; j++){
+        if(notFound && x == a[j]){ // i didn't know where the pivot was, I found it now, swap it in first position!
+            notFound = 0;
+            swap_array(a, j, end);
+        }
+
+        if(a[j] <= x){
+            i++;
+            swap_array(a, i, j);
+        }
+    }
+
+    return i;
+}
+
+/**
  * Reads an array of values and transforms it in an actual integer array
  * @param a the array to save the result into
  * @param values a string with a set of values in the form "N N N N N N" where N is a number of arbitrary digits
@@ -68,4 +96,18 @@ int read_array(int * a, char * string, int start_from){
         }
     } while(res==1);
     return i - start_from;
+}
+
+/**
+ * Sorts the array a[p, ..., q] using QuickSort algorithm
+ * @param a
+ * @param p
+ * @param q
+ */
+void quicksort(int * a, int p, int q){
+    if(p < q){
+        int r = partition(a, p, q, q);
+        quicksort(a, p, r-1);
+        quicksort(a, r+1, q);
+    }
 }
