@@ -26,7 +26,7 @@ struct MinHeap * createEmptyMinHeap(){
  * @param minHeap
  * @return the heapsize of the given min-heap
  */
-int heapsize(struct MinHeap * minHeap){
+int heapsizeMin(struct MinHeap * minHeap){
     return minHeap->array[0];
 }
 
@@ -46,7 +46,7 @@ void destroyMinHeap(struct MinHeap * minHeap){
  * @param i
  * @param j
  */
-void swap(struct MinHeap * minHeap, int i, int j){
+void swapMin(struct MinHeap * minHeap, int i, int j){
     int a = minHeap->array[i];
     minHeap->array[i] = minHeap->array[j];
     minHeap->array[j] = a;
@@ -58,24 +58,24 @@ void swap(struct MinHeap * minHeap, int i, int j){
  * @param minHeap
  * @param i
  */
-void Heapify(struct MinHeap * minHeap, int i){
+void MinHeapify(struct MinHeap * minHeap, int i){
     int l = LEFT(i);
     int r = RIGHT(i);
     int m;
 
-    if(l <= heapsize(minHeap) && minHeap->array[i] > minHeap->array[l]){
+    if(l <= heapsizeMin(minHeap) && minHeap->array[i] > minHeap->array[l]){
         m = l;
     } else {
         m = i;
     }
 
-    if(r <= heapsize(minHeap) && minHeap->array[m] > minHeap->array[r]){
+    if(r <= heapsizeMin(minHeap) && minHeap->array[m] > minHeap->array[r]){
         m = r;
     }
 
     if(m != i){
-        swap(minHeap, i, m);
-        Heapify(minHeap, m);
+        swapMin(minHeap, i, m);
+        MinHeapify(minHeap, m);
     }
 }
 
@@ -90,8 +90,8 @@ struct MinHeap * buildMinHeap(int * array, int num_elements){
     minHeap->array = array;
     minHeap->array[0] = num_elements - 1;
 
-    for(int i = (int) heapsize(minHeap)/2; i > 0; i--){
-        Heapify(minHeap, i);
+    for(int i = (int) heapsizeMin(minHeap) / 2; i > 0; i--){
+        MinHeapify(minHeap, i);
     }
 
     return minHeap;
@@ -101,8 +101,8 @@ struct MinHeap * buildMinHeap(int * array, int num_elements){
  * Prints the content of the min-heap
  * @param minHeap
  */
-void printElements(struct MinHeap * minHeap){
-    for(int i = 1; i <= heapsize(minHeap); i++){
+void printElementsMin(struct MinHeap * minHeap){
+    for(int i = 1; i <= heapsizeMin(minHeap); i++){
         printf("%d ", minHeap->array[i]);
     }
 }
@@ -124,7 +124,7 @@ int extractMin(struct MinHeap * minHeap){
     int min = minHeap->array[1];
     minHeap->array[1] = minHeap->array[minHeap->array[0]];
     minHeap->array[0]--; // decrement heapsize
-    Heapify(minHeap, 1);
+    MinHeapify(minHeap, 1);
 
     return min;
 }
@@ -135,13 +135,13 @@ int extractMin(struct MinHeap * minHeap){
  * @param minHeap
  * @param i
  */
-void insert(struct MinHeap * minHeap, int i){
+void insertMin(struct MinHeap * minHeap, int i){
     minHeap->array[0]++;
     minHeap->array[minHeap->array[0]] = i;
 
     int x = minHeap->array[0];
     while(PARENT(x) >= 1 && minHeap->array[x] < minHeap->array[PARENT(x)]){
-        swap(minHeap, x, PARENT(x));
+        swapMin(minHeap, x, PARENT(x));
         x = PARENT(x);
     }
 }
@@ -152,18 +152,18 @@ void insert(struct MinHeap * minHeap, int i){
  * @param i : 0 < i <= heapsize
  * @param key
  */
-void changeValue(struct MinHeap * minHeap, int i, int key){
+void changeValueMin(struct MinHeap * minHeap, int i, int key){
     if(minHeap->array[i] < key){
 
         minHeap->array[i] = key;
-        Heapify(minHeap, i);
+        MinHeapify(minHeap, i);
     } else if(minHeap->array[i] > key){
 
         minHeap->array[i] = key;
 
         int x = i;
         while(PARENT(x) >= 1 && minHeap->array[x] < minHeap->array[PARENT(x)]){
-            swap(minHeap, x, PARENT(x));
+            swapMin(minHeap, x, PARENT(x));
             x = PARENT(x);
         }
     }

@@ -32,35 +32,35 @@ int main(int argc, char** argv){
             }
 
             minheap = buildMinHeap(array, i);
-            printElements(minheap);
+            printElementsMin(minheap);
         } else if(strcmp(token, "length\n") == 0){
 
             if(minheap == NULL){
                 minheap = createEmptyMinHeap();
             }
 
-            printf("%d\n", heapsize(minheap));
-            printElements(minheap);
+            printf("%d\n", heapsizeMin(minheap));
+            printElementsMin(minheap);
         } else if(strcmp(token, "getmin\n") == 0){
 
             printf("%d\n", getMin(minheap));
-            printElements(minheap);
+            printElementsMin(minheap);
         } else if(strcmp(token, "extract\n") == 0){
 
             extractMin(minheap);
-            printElements(minheap);
-        } else if(strcmp(token, "insert") == 0){
+            printElementsMin(minheap);
+        } else if(strcmp(token, "insertMin") == 0){
 
             int key = atoi(strtok(NULL, " "));
-            insert(minheap, key);
-            printElements(minheap);
+            insertMin(minheap, key);
+            printElementsMin(minheap);
         } else if(strcmp(token, "change") == 0){
 
             int position = atoi(strtok(NULL, " "));
             int key = atoi(strtok(NULL, " "));
 
-            changeValue(minheap, position+1, key);
-            printElements(minheap);
+            changeValueMin(minheap, position + 1, key);
+            printElementsMin(minheap);
         } else {
             printf("ERROR: unrecognized operation!!!\n");
         }

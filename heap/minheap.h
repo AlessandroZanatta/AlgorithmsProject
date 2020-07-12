@@ -15,13 +15,13 @@ struct MinHeap{
 };
 
 struct MinHeap * createEmptyMinHeap();
-int heapsize(struct MinHeap * minHeap);
+int heapsizeMin(struct MinHeap * minHeap);
 void destroyMinHeap(struct MinHeap * minHeap);
 struct MinHeap * buildMinHeap(int * array, int num_elements);
-void printElements(struct MinHeap * minHeap);
+void printElementsMin(struct MinHeap * minHeap);
 int getMin(const struct MinHeap * minHeap);
 int extractMin(struct MinHeap * minHeap);
-void insert(struct MinHeap * minHeap, int i);
-void changeValue(struct MinHeap * minHeap, int i, int key);
+void insertMin(struct MinHeap * minHeap, int i);
+void changeValueMin(struct MinHeap * maxHeap, int i, int key);
 
 #endif //ALGORITHMPROJECT_MINHEAP_H
