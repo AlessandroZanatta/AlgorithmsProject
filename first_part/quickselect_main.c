@@ -14,7 +14,7 @@ int main(){
     int * array = allocate_array();
 
     fgets(input_string, CHAR_BUFFER, stdin);
-    int length = read_array(array, input_string);
+    int length = read_array(array, input_string, 0);
 
     fgets(input_string, CHAR_BUFFER, stdin);
     int k = (int) strtol(strtok(input_string, " "), (char **) NULL, 10) - 1; // -1 as the test give us the position with a starting array position of 1

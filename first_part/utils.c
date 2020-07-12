@@ -55,10 +55,11 @@ int partition(int * a, int start, int end, int key_pos){
  * Reads an array of values and transforms it in an actual integer array
  * @param a the array to save the result into
  * @param values a string with a set of values in the form "N N N N N N" where N is a number of arbitrary digits
+ * @param start_from starts saving numbers into the array starting from this position of the array
  * @return returns the number of elements read
  */
-int read_array(int * a, char * string){
-    int i=0, j=0, res, offset, value;
+int read_array(int * a, char * string, int start_from){
+    int i = start_from, j=0, res, offset, value;
     do{
         res = sscanf(string+j,"%i %n",&value,&offset);
         if(res==1){
@@ -66,5 +67,5 @@ int read_array(int * a, char * string){
             j = j + offset;
         }
     } while(res==1);
-    return i;
+    return i - start_from;
 }
