@@ -8,4 +8,7 @@ add_executable(MinHeap heap/minheap.c heap/minheap.h heap/minheap_main.c)
 add_executable(RBT rbt/rbt.c rbt/rbt.h rbt/rbt_main.c)
 add_executable(AVL avl/avl.c avl/avl.h avl/avl_main.c)
 add_executable(QuickSelectMain first_part/quickselect_main.c first_part/utils.c first_part/utils.h first_part/select_fun.c first_part/select_fun.h)
-add_executable(HeapSelectMain first_part/heapselect_main.c first_part/utils.c first_part/utils.h first_part/select_fun.c first_part/select_fun.h heap/minheap.c heap/minheap.h heap/maxheap.c heap/maxheap.h)
+
+add_executable(HeapSelectMain first_part/heapselect_main.c first_part/utils.c first_part/utils.h
+        first_part/select_fun.c first_part/select_fun.h heap/minheap.c heap/minheap.h
+        heap/maxheap.c heap/maxheap.h)
