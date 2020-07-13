@@ -17,3 +17,7 @@ add_executable(HeapSelectMain first_part/heapselect_main.c first_part/utils.c fi
 add_executable(MedianSelectMain first_part/medianselect_main.c first_part/select_fun.c
         first_part/select_fun.h first_part/utils.h first_part/utils.c heap/minheap.c
         heap/minheap.h heap/maxheap.c heap/maxheap.h)
+
+add_executable(Times first_part/select_fun.c
+        first_part/select_fun.h first_part/utils.h first_part/utils.c heap/minheap.c
+        heap/minheap.h heap/maxheap.c heap/maxheap.h mtwister/mtwister.c mtwister/mtwister.h first_part/times.c)

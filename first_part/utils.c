@@ -3,10 +3,41 @@
 //
 
 #include "utils.h"
-#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
+
+
+/**
+ * Gets the resolution of the clock using a MONOTONIC clock (steady clock!)
+ * @return the resolution
+ */
+long getResolution(){
+
+    struct timespec start, end;
+    clock_gettime(CLOCK_MONOTONIC, &start);
+    do{
+        clock_gettime(CLOCK_MONOTONIC, &end);
+    } while(start.tv_nsec == end.tv_nsec);
+
+    return (end.tv_nsec - start.tv_nsec);
+}
+
+/**
+ * Computes the resolution of the clock multiple times to have a better precision
+ * @return the median resolution
+ */
+long getMedianResolution(){
+    long res [10000];
+    for(int i = 0; i < 10000; i++){
+        res[i] = getResolution();
+    }
+
+    quicksortLong(res, 0, 10000 - 1);
+
+    return res[10000 / 2]; // return median
+}
 
 /**
  * Allocates an integer array of BUFFER size.
@@ -109,5 +140,37 @@ void quicksort(int * a, int p, int q){
         int r = partition(a, p, q, q);
         quicksort(a, p, r-1);
         quicksort(a, r+1, q);
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------
+// Some functions from above adapted to work with the long data type, nothing too interesting or commented
+// -------------------------------------------------------------------------------------------------------
+
+void swap_arrayLong(long *a, int i, int j) {
+    long temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+}
+
+int partitionLong(long *a, int p, int q) {
+
+    long x = a[q];
+    int i = p-1;
+    for(int j = p; j <= q; j++){
+        if(a[j] <= x){
+            i++;
+            swap_arrayLong(a, i, j);
+        }
+    }
+
+    return i;
+}
+
+void quicksortLong (long * a, int p, int q){
+    if(p < q){
+        int r = partitionLong(a, p, q);
+        quicksortLong(a, p, r-1);
+        quicksortLong(a, r+1, q);
     }
 }
