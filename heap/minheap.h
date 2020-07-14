@@ -5,7 +5,7 @@
 #ifndef ALGORITHMPROJECT_MINHEAP_H
 #define ALGORITHMPROJECT_MINHEAP_H
 
-#define MAX_LENGTH 100
+#define MAX_LENGTH 2500000
 
 #define LEFT(i) (2*i)
 #define RIGHT(i) (2*i + 1)
@@ -31,21 +31,25 @@ int getKeyOnPositionMin(struct MinHeap * minHeap, int i);
 
 // MINHEAP WITH POSITION
 
-#define KEY 0
-#define POS 1
+#ifndef HEAP_PAIR
+#define HEAP_PAIR
+struct Pair{
+    int key;
+    int pos;
+};
+#endif
 
 
 struct MinHeapPos{
-    int array[MAX_LENGTH][2];
+    struct Pair * array;
 };
 
 struct MinHeapPos * createEmptyMinHeapPos();
 int heapsizeMinPos(struct MinHeapPos *maxHeap);
 void destroyMinHeapPos(struct MinHeapPos * minHeap);
-struct MinHeapPos * buildMinHeapPos(const int * array, int num_elements);
 void printElementsMinPos(struct MinHeapPos * minHeap);
 int getMinPos(const struct MinHeapPos * minHeap);
-void extractMinPos(struct MinHeapPos * minHeap, int * res);
+void extractMinPos(struct MinHeapPos * minHeap, struct Pair * res);
 void insertMinPos(struct MinHeapPos * minHeap, int i, int pos);
 void changeValueMinPos(struct MinHeapPos * maxHeap, int i, int key);
 

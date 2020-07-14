@@ -7,18 +7,6 @@
 #include <stdio.h>
 
 /**
- * Creates an empty MinHeap (MinHeap with zero elements)
- * @return the pointer to the allocated MinHeap struct
- */
-struct MinHeap * createEmptyMinHeap(){
-    struct MinHeap * newMinHeap = (struct MinHeap *) malloc(sizeof(struct MinHeap));
-
-    newMinHeap->array = (int *) malloc(sizeof(int) * MAX_LENGTH);
-    newMinHeap->array[0] = 0;
-    return newMinHeap;
-}
-
-/**
  * @param minHeap
  * @return the heapsize of the given min-heap
  */
@@ -31,7 +19,6 @@ int heapsizeMin(struct MinHeap * minHeap){
  * @param minHeap
  */
 void destroyMinHeap(struct MinHeap * minHeap){
-    free(minHeap->array);
     free(minHeap);
 }
 
@@ -182,10 +169,11 @@ void changeValueMin(struct MinHeap * minHeap, int i, int key){
  * Creates an empty MinHeap (MinHeap with zero elements)
  * @return the pointer to the allocated MinHeap struct
  */
-struct MinHeapPos * createEmptyMinHeapPos(){
+struct MinHeapPos * createEmptyMinHeapPos(int length){
     struct MinHeapPos * newMinHeap = (struct MinHeapPos *) malloc(sizeof(struct MinHeapPos));
+    newMinHeap->array = (struct Pair *) malloc(sizeof(struct Pair) * (length+1)); // +1 as we need the first cell as heapsize!
 
-    newMinHeap->array[0][0] = 0; // only first cell of the first element in the array is updated as the heapsize!
+    newMinHeap->array[0].key = 0; // only first cell of the first element in the array is updated as the heapsize!
     return newMinHeap;
 }
 
@@ -194,7 +182,7 @@ struct MinHeapPos * createEmptyMinHeapPos(){
  * @return the heapsize of the given min-heap
  */
 int heapsizeMinPos(struct MinHeapPos * minHeap){
-    return minHeap->array[0][0];
+    return minHeap->array[0].key;
 }
 
 /**
@@ -202,6 +190,7 @@ int heapsizeMinPos(struct MinHeapPos * minHeap){
  * @param minHeap
  */
 void destroyMinHeapPos(struct MinHeapPos * minHeap){
+    free(minHeap->array);
     free(minHeap);
 }
 
@@ -213,13 +202,13 @@ void destroyMinHeapPos(struct MinHeapPos * minHeap){
  * @param j
  */
 void swapMinPos(struct MinHeapPos * minHeap, int i, int j){
-    int a = minHeap->array[i][KEY];
-    minHeap->array[i][KEY] = minHeap->array[j][KEY];
-    minHeap->array[j][KEY] = a;
+    int a = minHeap->array[i].key;
+    minHeap->array[i].key = minHeap->array[j].key;
+    minHeap->array[j].key = a;
 
-    a = minHeap->array[i][POS];
-    minHeap->array[i][POS] = minHeap->array[j][POS];
-    minHeap->array[j][POS] = a;
+    a = minHeap->array[i].pos;
+    minHeap->array[i].pos = minHeap->array[j].pos;
+    minHeap->array[j].pos = a;
 }
 
 /**
@@ -233,13 +222,13 @@ void MinHeapifyPos(struct MinHeapPos * minHeap, int i){
     int r = RIGHT(i);
     int m;
 
-    if(l <= heapsizeMinPos(minHeap) && minHeap->array[i][KEY] > minHeap->array[l][KEY]){
+    if(l <= heapsizeMinPos(minHeap) && minHeap->array[i].key > minHeap->array[l].key){
         m = l;
     } else {
         m = i;
     }
 
-    if(r <= heapsizeMinPos(minHeap) && minHeap->array[m][KEY] > minHeap->array[r][KEY]){
+    if(r <= heapsizeMinPos(minHeap) && minHeap->array[m].key > minHeap->array[r].key){
         m = r;
     }
 
@@ -250,34 +239,13 @@ void MinHeapifyPos(struct MinHeapPos * minHeap, int i){
 }
 
 /**
- * Assumes the array has the 0-indexed cell NOT used
- * @param array containing elements of the heap
- * @param num_elements of the array (the first index is NOT counted!)
- */
-struct MinHeapPos * buildMinHeapPos(const int * array, int num_elements){
-    struct MinHeapPos * minHeap = (struct MinHeapPos *) malloc(sizeof(struct MinHeapPos));
-
-    for(int i = 1; i <= num_elements; i++){
-        minHeap->array[i][KEY] = array[i];
-        minHeap->array[i][POS] = i;
-    }
-    minHeap->array[0][0] = num_elements;
-
-    for(int i = (int) heapsizeMinPos(minHeap) / 2; i > 0; i--){
-        MinHeapifyPos(minHeap, i);
-    }
-
-    return minHeap;
-}
-
-/**
  * Prints the content of the min-heap
  * @param minHeap
  */
 void printElementsMinPos(struct MinHeapPos * minHeap){
     for(int i = 1; i <= heapsizeMinPos(minHeap); i++){
-        printf("%d ", minHeap->array[i][KEY]);
-        // printf("%d\n", minHeap->array[i][POS]);
+        printf("%d ", minHeap->array[i].key);
+        // printf("%d\n", minHeap->array[i].pos);
     }
 }
 
@@ -286,7 +254,7 @@ void printElementsMinPos(struct MinHeapPos * minHeap){
  * @return the min value of the minHeap
  */
 int getMinPos(const struct MinHeapPos * minHeap){
-    return minHeap->array[1][KEY];
+    return minHeap->array[1].key;
 }
 
 /**
@@ -294,12 +262,12 @@ int getMinPos(const struct MinHeapPos * minHeap){
  * @param minHeap
  * @return the min value of the min-heap
  */
-void extractMinPos(struct MinHeapPos * minHeap, int * res){
-    res[0] = minHeap->array[1][KEY];
-    res[1] = minHeap->array[1][POS];
-    minHeap->array[1][KEY] = minHeap->array[heapsizeMinPos(minHeap)][KEY];
-    minHeap->array[1][POS] = minHeap->array[heapsizeMinPos(minHeap)][POS];
-    minHeap->array[0][0]--; // decrement heapsize
+void extractMinPos(struct MinHeapPos * minHeap, struct Pair * res){
+    res->key = minHeap->array[1].key;
+    res->pos = minHeap->array[1].pos;
+    minHeap->array[1].key = minHeap->array[heapsizeMinPos(minHeap)].key;
+    minHeap->array[1].pos = minHeap->array[heapsizeMinPos(minHeap)].pos;
+    minHeap->array[0].key--; // decrement heapsize
     MinHeapifyPos(minHeap, 1);
 }
 
@@ -310,12 +278,12 @@ void extractMinPos(struct MinHeapPos * minHeap, int * res){
  * @param i
  */
 void insertMinPos(struct MinHeapPos * minHeap, int i, int pos){
-    minHeap->array[0][0]++;
-    minHeap->array[heapsizeMinPos(minHeap)][KEY] = i;
-    minHeap->array[heapsizeMinPos(minHeap)][POS] = pos;
+    minHeap->array[0].key++;
+    minHeap->array[heapsizeMinPos(minHeap)].key = i;
+    minHeap->array[heapsizeMinPos(minHeap)].pos = pos;
 
     int x = heapsizeMinPos(minHeap);
-    while(PARENT(x) >= 1 && minHeap->array[x][KEY] < minHeap->array[PARENT(x)][KEY]){
+    while(PARENT(x) >= 1 && minHeap->array[x].key < minHeap->array[PARENT(x)].key){
         swapMinPos(minHeap, x, PARENT(x));
         x = PARENT(x);
     }
@@ -328,16 +296,16 @@ void insertMinPos(struct MinHeapPos * minHeap, int i, int pos){
  * @param key
  */
 void changeValueMinPos(struct MinHeapPos * minHeap, int i, int key){
-    if(minHeap->array[i][KEY] < key){
+    if(minHeap->array[i].key < key){
 
-        minHeap->array[i][KEY] = key;
+        minHeap->array[i].key = key;
         MinHeapifyPos(minHeap, i);
-    } else if(minHeap->array[i][KEY] > key){
+    } else if(minHeap->array[i].key > key){
 
-        minHeap->array[i][KEY] = key;
+        minHeap->array[i].key = key;
 
         int x = i;
-        while(PARENT(x) >= 1 && minHeap->array[x][KEY] < minHeap->array[PARENT(x)][KEY]){
+        while(PARENT(x) >= 1 && minHeap->array[x].key < minHeap->array[PARENT(x)].key){
             swapMinPos(minHeap, x, PARENT(x));
             x = PARENT(x);
         }

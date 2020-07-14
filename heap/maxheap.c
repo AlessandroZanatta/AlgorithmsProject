@@ -11,18 +11,6 @@
 #define PARENT(i) ((int) (i/2))
 
 /**
- * Creates an empty MaxHeap (MaxHeap with zero elements)
- * @return the pointer to the allocated MinHeap struct
- */
-struct MaxHeap * createEmptyMaxHeap(){
-    struct MaxHeap * newMaxHeap = (struct MaxHeap *) malloc(sizeof(struct MaxHeap));
-
-    newMaxHeap->array = (int *) malloc(sizeof(int) * MAX_LENGTH);
-    newMaxHeap->array[0] = 0;
-    return newMaxHeap;
-}
-
-/**
  * @param maxHeap
  * @return the heapsize of the given max-heap
  */
@@ -35,7 +23,6 @@ int heapsizeMax(struct MaxHeap * maxHeap){
  * @param maxHeap
  */
 void destroyMaxHeap(struct MaxHeap * maxHeap){
-    free(maxHeap->array);
     free(maxHeap);
 }
 
@@ -186,10 +173,11 @@ int getKeyOnPositionMax(struct MaxHeap * maxHeap, int i){
  * Creates an empty MaxHeapPos
  * @return the pointer to the allocated MaxHeapPos struct
  */
-struct MaxHeapPos * createEmptyMaxHeapPos(){
+struct MaxHeapPos * createEmptyMaxHeapPos(int length){
     struct MaxHeapPos * newMaxHeap = (struct MaxHeapPos *) malloc(sizeof(struct MaxHeapPos));
+    newMaxHeap->array = (struct Pair *) malloc(sizeof(struct Pair) * length);
 
-    newMaxHeap->array[0][0] = 0; // only first cell of the first element in the array is updated as the heapsize!
+    newMaxHeap->array[0].key = 0; // only first cell of the first element in the array is updated as the heapsize!
     return newMaxHeap;
 }
 
@@ -198,7 +186,7 @@ struct MaxHeapPos * createEmptyMaxHeapPos(){
  * @return the heapsize of the given max-heap
  */
 int heapsizeMaxPos(struct MaxHeapPos * maxHeap){
-    return maxHeap->array[0][0];
+    return maxHeap->array[0].key;
 }
 
 /**
@@ -206,6 +194,7 @@ int heapsizeMaxPos(struct MaxHeapPos * maxHeap){
  * @param maxHeap
  */
 void destroyMaxHeapPos(struct MaxHeapPos * maxHeap){
+    free(maxHeap->array);
     free(maxHeap);
 }
 
@@ -217,13 +206,13 @@ void destroyMaxHeapPos(struct MaxHeapPos * maxHeap){
  * @param j
  */
 void swapMaxPos(struct MaxHeapPos * maxHeap, int i, int j){
-    int a = maxHeap->array[i][KEY];
-    maxHeap->array[i][KEY] = maxHeap->array[j][KEY];
-    maxHeap->array[j][KEY] = a;
+    int a = maxHeap->array[i].key;
+    maxHeap->array[i].key = maxHeap->array[j].key;
+    maxHeap->array[j].key = a;
 
-    a = maxHeap->array[i][POS];
-    maxHeap->array[i][POS] = maxHeap->array[j][POS];
-    maxHeap->array[j][POS] = a;
+    a = maxHeap->array[i].pos;
+    maxHeap->array[i].pos = maxHeap->array[j].pos;
+    maxHeap->array[j].pos = a;
 }
 
 /**
@@ -237,13 +226,13 @@ void MaxHeapifyPos(struct MaxHeapPos * maxHeap, int i){
     int r = RIGHT(i);
     int m;
 
-    if(l <= heapsizeMaxPos(maxHeap) && maxHeap->array[i][KEY] < maxHeap->array[l][KEY]){
+    if(l <= heapsizeMaxPos(maxHeap) && maxHeap->array[i].key < maxHeap->array[l].key){
         m = l;
     } else {
         m = i;
     }
 
-    if(r <= heapsizeMaxPos(maxHeap) && maxHeap->array[m][KEY] < maxHeap->array[r][KEY]){
+    if(r <= heapsizeMaxPos(maxHeap) && maxHeap->array[m].key < maxHeap->array[r].key){
         m = r;
     }
 
@@ -254,34 +243,13 @@ void MaxHeapifyPos(struct MaxHeapPos * maxHeap, int i){
 }
 
 /**
- * Assumes the array has the 0-indexed cell NOT used
- * @param array containing elements of the heap
- * @param num_elements of the array (the first index is NOT counted!)
- */
-struct MaxHeapPos * buildMaxHeapPos(const int * array, int num_elements){
-    struct MaxHeapPos * maxHeap = (struct MaxHeapPos *) malloc(sizeof(struct MaxHeapPos));
-
-    for(int i = 1; i <= num_elements; i++){
-        maxHeap->array[i][KEY] = array[i];
-        maxHeap->array[i][POS] = i;
-    }
-    maxHeap->array[0][0] = num_elements;
-
-    for(int i = (int) heapsizeMaxPos(maxHeap) / 2; i > 0; i--){
-        MaxHeapifyPos(maxHeap, i);
-    }
-
-    return maxHeap;
-}
-
-/**
  * Prints the content of the max-heap
  * @param maxHeap
  */
 void printElementsMaxPos(struct MaxHeapPos * maxHeap){
     for(int i = 1; i <= heapsizeMaxPos(maxHeap); i++){
-        printf("%d ", maxHeap->array[i][KEY]);
-        // printf("%d\n", minHeap->array[i][POS]);
+        printf("%d ", maxHeap->array[i].key);
+        // printf("%d\n", minHeap->array[i].pos);
     }
 }
 
@@ -290,7 +258,7 @@ void printElementsMaxPos(struct MaxHeapPos * maxHeap){
  * @return the min value of the minHeap
  */
 int getMaxPos(const struct MaxHeapPos * maxHeap){
-    return maxHeap->array[1][KEY];
+    return maxHeap->array[1].key;
 }
 
 /**
@@ -298,12 +266,12 @@ int getMaxPos(const struct MaxHeapPos * maxHeap){
  * @param maxHeap
  * @return the min value of the max-heap
  */
-void extractMaxPos(struct MaxHeapPos * maxHeap, int * res){
-    res[0] = maxHeap->array[1][KEY];
-    res[1] = maxHeap->array[1][POS];
-    maxHeap->array[1][KEY] = maxHeap->array[heapsizeMaxPos(maxHeap)][KEY];
-    maxHeap->array[1][POS] = maxHeap->array[heapsizeMaxPos(maxHeap)][POS];
-    maxHeap->array[0][0]--; // decrement heapsize
+void extractMaxPos(struct MaxHeapPos * maxHeap, struct Pair * res){
+    res->key = maxHeap->array[1].key;
+    res->pos = maxHeap->array[1].pos;
+    maxHeap->array[1].key = maxHeap->array[heapsizeMaxPos(maxHeap)].key;
+    maxHeap->array[1].pos = maxHeap->array[heapsizeMaxPos(maxHeap)].pos;
+    maxHeap->array[0].key--; // decrement heapsize
     MaxHeapifyPos(maxHeap, 1);
 }
 
@@ -314,12 +282,12 @@ void extractMaxPos(struct MaxHeapPos * maxHeap, int * res){
  * @param i
  */
 void insertMaxPos(struct MaxHeapPos * maxHeap, int i, int pos){
-    maxHeap->array[0][0]++;
-    maxHeap->array[heapsizeMaxPos(maxHeap)][KEY] = i;
-    maxHeap->array[heapsizeMaxPos(maxHeap)][POS] = pos;
+    maxHeap->array[0].key++;
+    maxHeap->array[heapsizeMaxPos(maxHeap)].key = i;
+    maxHeap->array[heapsizeMaxPos(maxHeap)].pos = pos;
 
     int x = heapsizeMaxPos(maxHeap);
-    while(PARENT(x) >= 1 && maxHeap->array[x][KEY] > maxHeap->array[PARENT(x)][KEY]){
+    while(PARENT(x) >= 1 && maxHeap->array[x].key > maxHeap->array[PARENT(x)].key){
         swapMaxPos(maxHeap, x, PARENT(x));
         x = PARENT(x);
     }
@@ -332,16 +300,16 @@ void insertMaxPos(struct MaxHeapPos * maxHeap, int i, int pos){
  * @param key
  */
 void changeValueMaxPos(struct MaxHeapPos * maxHeap, int i, int key){
-    if(maxHeap->array[i][KEY] < key){
+    if(maxHeap->array[i].key < key){
 
-        maxHeap->array[i][KEY] = key;
+        maxHeap->array[i].key = key;
         MaxHeapifyPos(maxHeap, i);
-    } else if(maxHeap->array[i][KEY] > key){
+    } else if(maxHeap->array[i].key > key){
 
-        maxHeap->array[i][KEY] = key;
+        maxHeap->array[i].key = key;
 
         int x = i;
-        while(PARENT(x) >= 1 && maxHeap->array[x][KEY] > maxHeap->array[PARENT(x)][KEY]){
+        while(PARENT(x) >= 1 && maxHeap->array[x].key > maxHeap->array[PARENT(x)].key){
             swapMaxPos(maxHeap, x, PARENT(x));
             x = PARENT(x);
         }
