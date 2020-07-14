@@ -13,7 +13,7 @@
  * Gets the resolution of the clock using a MONOTONIC clock (steady clock!)
  * @return the resolution
  */
-long getResolution(){
+double getResolution(){
 
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
@@ -21,22 +21,22 @@ long getResolution(){
         clock_gettime(CLOCK_MONOTONIC, &end);
     } while(start.tv_nsec == end.tv_nsec);
 
-    return (end.tv_nsec - start.tv_nsec);
+    return (double) (end.tv_nsec - start.tv_nsec);
 }
 
 /**
  * Computes the resolution of the clock multiple times to have a better precision
  * @return the median resolution
  */
-long getMedianResolution(){
-    long res [10000];
+double getMedianResolution(){
+    double res [10000];
     for(int i = 0; i < 10000; i++){
         res[i] = getResolution();
     }
 
     quicksortLong(res, 0, 10000 - 1);
 
-    return res[10000 / 2]; // return median
+    return (double) (res[(int) (10000 / 2)]); // return median
 }
 
 /**
@@ -172,5 +172,33 @@ void quicksortLong (long * a, int p, int q){
         int r = partitionLong(a, p, q);
         quicksortLong(a, p, r-1);
         quicksortLong(a, r+1, q);
+    }
+}
+
+void swap_arrayDouble(double *a, int i, int j) {
+    double temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+}
+
+int partitionDouble(double *a, int p, int q) {
+
+    double x = a[q];
+    int i = p-1;
+    for(int j = p; j <= q; j++){
+        if(a[j] <= x){
+            i++;
+            swap_arrayDouble(a, i, j);
+        }
+    }
+
+    return i;
+}
+
+void quicksortDouble (double * a, int p, int q){
+    if(p < q){
+        int r = partitionDouble(a, p, q);
+        quicksortDouble(a, p, r-1);
+        quicksortDouble(a, r+1, q);
     }
 }

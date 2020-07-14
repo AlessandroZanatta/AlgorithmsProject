@@ -14,7 +14,8 @@ int * allocate_array();
 int read_array(int * a, char * values, int start_from);
 void quicksort(int * a, int p, int q);
 void quicksortLong(long * a, int p, int q);
+void quicksortDouble(double * a, int p, int q);
 int partition_with_pivot(int * a, int start, int end, int pivot);
-long getMedianResolution();
+double getMedianResolution();
 
 #endif //ALGORITHMPROJECT_UTILS_H

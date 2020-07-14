@@ -8,8 +8,9 @@
 #include <stdio.h>
 #include "select_fun.h"
 #include <stdlib.h>
+#include <math.h>
 
-#define ITERATIONS 1
+#define ITERATIONS 20
 
 /**
  * Computes the median time of a random initialization of a vector of given length
@@ -18,16 +19,16 @@
  * @param seed for prng MT
  * @return the median initialization time
  */
-long getInitTime(long resolution, int length, unsigned long seed){
+double getInitTime(double resolution, int length, unsigned long seed){
 
     struct timespec start,end;
-    long times [ITERATIONS];
+    double times [ITERATIONS];
     int * array = (int *) malloc(sizeof(int) * length);
     int counter = 0;
     MTRand prng;
 
     for(int i = 0; i < ITERATIONS; i++){
-        printf("Getting init time: %d", i);
+
         clock_gettime(CLOCK_MONOTONIC, &start);
         do{
             prng = seedRand(seed);
@@ -37,12 +38,12 @@ long getInitTime(long resolution, int length, unsigned long seed){
 
             clock_gettime(CLOCK_MONOTONIC, &end);
             counter++;
-        } while((double) (end.tv_nsec - start.tv_nsec) <= (double) resolution * ((1 / 0.005) + 1));
-        times[i] = (end.tv_nsec - start.tv_nsec) / counter;
+        } while((double) (end.tv_nsec - start.tv_nsec) <= resolution * ((1 / 0.005) + 1));
+        times[i] = (double) (end.tv_nsec - start.tv_nsec) / counter;
 
     }
 
-    quicksortLong(times, 0, ITERATIONS - 1);
+    quicksortDouble(times, 0, ITERATIONS - 1);
     return times[(int) (ITERATIONS/2)];
 }
 
@@ -56,14 +57,14 @@ long getInitTime(long resolution, int length, unsigned long seed){
  * @param selectFunction the select function we want to use
  * @param time the function writes the mean and std deviation in time[0] and time[1]
  */
-void getSelectTime(long resolution, int length, unsigned long seed, long timeInit, int k, int (*selectFunction)(int *, int, int), long * time){
+void getSelectTime(double resolution, int length, unsigned long seed, double timeInit, int k, int (*selectFunction)(int *, int, int), double * time){
 
     struct timespec start,end;
-    long times [ITERATIONS];
+    double times [ITERATIONS];
 
     // check if we are using heapselect. In this case, we want to leave the first cell of the array empty (heapsize!)
     int real_length = (selectFunction == heapselect) ? length+1 : length;
-    
+
     int * array = (int *) malloc(sizeof(int) * real_length);
 
     int counter = 0;
@@ -71,17 +72,9 @@ void getSelectTime(long resolution, int length, unsigned long seed, long timeIni
 
     for(int i = 0; i < ITERATIONS; i++){
 
-        if(selectFunction == quickselect){
-            printf("QuickSelect: %d/%d\n", i, ITERATIONS);
-        } else if(selectFunction == heapselect){
-            printf("HeapSelect: %d/%d\n", i, ITERATIONS);
-        } else {
-            printf("MedianSelect: %d/%d\n", i, ITERATIONS);
-        }
-
         clock_gettime(CLOCK_MONOTONIC, &start);
         do{
-            prng = seedRand(seed+i);
+            prng = seedRand(seed*i);
             for(int j = real_length-length; j < real_length; j++){ // this will leave the first cell free
                 array[j] = (int) genRandLong(&prng);
             }
@@ -90,20 +83,22 @@ void getSelectTime(long resolution, int length, unsigned long seed, long timeIni
 
             clock_gettime(CLOCK_MONOTONIC, &end);
             counter++;
-        } while((end.tv_nsec - start.tv_nsec) <= timeInit + resolution * ((1 / 0.005) + 1));
-        times[i] = (end.tv_nsec - start.tv_nsec) / counter;
+        } while((double) (end.tv_nsec - start.tv_nsec) <= timeInit + resolution * ((1 / 0.005) + 1));
+        times[i] = (double) (end.tv_nsec - start.tv_nsec) / counter;
 
     }
 
     free(array);
 
+    double mean = 0;
+    double std = 0;
     for(int i = 0; i < ITERATIONS; i++){
-        time[0] = times[i];
-        time[1] = times[i] * times[i];
+        mean += times[i];
+        std += times[i] * times[i];
     }
 
-    time[0] = time[0] / ITERATIONS; // E(X)
-    time[1] = time[1] / ITERATIONS - time[0] * time[0]; // E(X^2) - (E(X))^2 = sigma(X)
+    time[0] = mean / ITERATIONS;
+    time[1] = sqrt(std - time[0]*time[0]);
 }
 
 /**
@@ -111,18 +106,18 @@ void getSelectTime(long resolution, int length, unsigned long seed, long timeIni
  * @param i
  * @return the seconds
  */
-double seconds(long i) {
-    return (double) i / 1000000000;
+double seconds(double i) {
+    return i / 1000000000;
 }
 
 int main(){
-    long resolution = getMedianResolution();
+    double resolution = getMedianResolution();
 
     int array_length = 100;
-    long initTime = 0;
-    long quickTime [2];
-    long heapTime [2];
-    long medianTime [2];
+    double initTime = 0;
+    double quickTime [2];
+    double heapTime [2];
+    double medianTime [2];
 
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
@@ -131,11 +126,11 @@ int main(){
     printf("N K T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 40; i++){
 
-        int k = (int) 2 * array_length / 5; // take k as 2/5 of the length of the array, it does not matter (for most algorithms, see below)
+        int k = 1; // take k as n/10, where n=array_length
 
 
         initTime = getInitTime(resolution, array_length, seed);
-        getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        // getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
         getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
         // getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
 
