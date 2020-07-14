@@ -22,7 +22,7 @@ long getInitTime(long resolution, int length, unsigned long seed){
 
     struct timespec start,end;
     long times [ITERATIONS];
-    int array [length];
+    int * array = (int *) malloc(sizeof(int) * length);
     int counter = 0;
     MTRand prng;
 
@@ -63,8 +63,8 @@ void getSelectTime(long resolution, int length, unsigned long seed, long timeIni
 
     // check if we are using heapselect. In this case, we want to leave the first cell of the array empty (heapsize!)
     int real_length = (selectFunction == heapselect) ? length+1 : length;
-
-    int array [real_length];
+    
+    int * array = (int *) malloc(sizeof(int) * real_length);
 
     int counter = 0;
     MTRand prng;
@@ -94,6 +94,8 @@ void getSelectTime(long resolution, int length, unsigned long seed, long timeIni
         times[i] = (end.tv_nsec - start.tv_nsec) / counter;
 
     }
+
+    free(array);
 
     for(int i = 0; i < ITERATIONS; i++){
         time[0] = times[i];
