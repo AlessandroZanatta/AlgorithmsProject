@@ -46,16 +46,16 @@ int quickselect(int * a, int length, int k){
 int heapselect(int * a, int length, int k){
     if(k <= (int) (length / 2)){ // use min-heap (more-efficient)
         struct MinHeap * H1 = buildMinHeap(a, length);
-        struct MinHeapPos * H2 = createEmptyMinHeapPos();
+        struct MinHeapPos * H2 = createEmptyMinHeapPos(length);
 
-        int res[2];
+        struct Pair res;
 
         insertMinPos(H2, getMin(H1), 1);
 
         for(int i = 1; i <= k; i++){
-            extractMinPos(H2, res);
-            int l = LEFT(res[POS]);
-            int r = RIGHT(res[POS]);
+            extractMinPos(H2, &res);
+            int l = LEFT(res.pos);
+            int r = RIGHT(res.pos);
 
             if(l <= heapsizeMin(H1)){
                 insertMinPos(H2, getKeyOnPositionMin(H1, l), l);
@@ -66,23 +66,25 @@ int heapselect(int * a, int length, int k){
             }
         }
 
+        int result = getMinPos(H2);
 
-        // destroyMinHeap(H1);
-        // destroyMinHeapPos(H2);
+        destroyMinHeap(H1);
+        destroyMinHeapPos(H2);
 
-        return getMinPos(H2);
+        return result;
     } else { // use max-heap (more efficient)
         struct MaxHeap * H1 = buildMaxHeap(a, length);
-        struct MaxHeapPos * H2 = createEmptyMaxHeapPos();
+        struct MaxHeapPos * H2 = createEmptyMaxHeapPos(length);
         k = length - k; // we need to perform length - k iterations if we use maxheaps!
-        int res[2];
+
+        struct Pair res;
 
         insertMaxPos(H2, getMax(H1), 1);
 
         for(int i = 1; i < k; i++){
-            extractMaxPos(H2, res);
-            int l = LEFT(res[POS]);
-            int r = RIGHT(res[POS]);
+            extractMaxPos(H2, &res);
+            int l = LEFT(res.pos);
+            int r = RIGHT(res.pos);
 
             if(l <= heapsizeMax(H1)){
                 insertMaxPos(H2, getKeyOnPositionMax(H1, l), l);
@@ -93,13 +95,18 @@ int heapselect(int * a, int length, int k){
             }
         }
 
-        return getMaxPos(H2);
+        int result = getMaxPos(H2);
+
+        destroyMaxHeap(H1);
+        destroyMaxHeapPos(H2);
+
+        return result;
     }
 }
 
 int medianselect_rec(int *a, int p, int q, int k) {
 
-    if(q-p <= 5){
+    if(q-p < 5){
         quicksort(a, p, q);
         return a[k];
     } else {
