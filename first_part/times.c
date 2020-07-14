@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define ITERATIONS 20
+#define ITERATIONS 1
 
 /**
  * Computes the median time of a random initialization of a vector of given length
@@ -31,7 +31,7 @@ double getInitTime(double resolution, int length, unsigned long seed){
 
         clock_gettime(CLOCK_MONOTONIC, &start);
         do{
-            prng = seedRand(seed);
+            prng = seedRand(seed*i);
             for(int j = 0; j < length; j++){
                 array[j] = (int) genRandLong(&prng);
             }
@@ -113,7 +113,7 @@ double seconds(double i) {
 int main(){
     double resolution = getMedianResolution();
 
-    int array_length = 100;
+    int array_length = 10;
     double initTime = 0;
     double quickTime [2];
     double heapTime [2];
@@ -126,13 +126,13 @@ int main(){
     printf("N K T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 40; i++){
 
-        int k = 1; // take k as n/10, where n=array_length
+        int k = (int) (array_length/20); // take k as n/10, where n=array_length
 
 
         initTime = getInitTime(resolution, array_length, seed);
-        // getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
         getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
-        // getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
+        //getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
 
         /*fprintf(output, "%d %d %f %f %f %f %f %f",
                 array_length, k,
