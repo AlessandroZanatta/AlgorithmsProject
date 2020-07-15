@@ -90,9 +90,23 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     free(array);
 
+    /*
     double mean = 0;
     double std = 0;
 
+    for(int i = 0; i < ITERATIONS; i++){
+        mean += times[i];
+        std += (times[i] * times[i]);
+    }
+
+    mean /= ITERATIONS;
+    std = sqrt(std/ITERATIONS - mean*mean);
+
+    time[0] = mean;
+    time[1] = std;
+    */
+
+    // Using medians
     quicksortDouble(times, 0, ITERATIONS-1);
 
     time[0] = times[(int) (ITERATIONS / 2)];
@@ -103,6 +117,7 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
     quicksortDouble(times, 0, ITERATIONS-1);
 
     time[1] = times[(int) (ITERATIONS / 2)];
+
 }
 
 
@@ -114,17 +129,18 @@ int main(){
     double quickTime [2];
     double heapTime [2];
     double medianTime [2];
+    FILE * output;
 
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
     printf("Resolution %.17g\n", resolution);
 
-    FILE * output = fopen("../first_part/times.txt", "w");
+    output = fopen("../first_part/times/basic_times.txt", "w");
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 40; i++){
 
-        int k = (int) (array_length/10); // take k as n/10, where n=array_length
+        int k = (int) array_length/3;
 
         printf("%d %d ", array_length, k);
 
@@ -149,4 +165,83 @@ int main(){
     }
 
     fclose(output);
+
+
+    // Evaluate algorithms when k changes using a sample of 75.000 elements
+    // We should only see a difference using heap-select
+    output = fopen("../first_part/times/changing_k.txt", "w");
+    fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
+    printf("N K T1 D1 T2 D2 T3 D3\n");
+    array_length = 75000;
+    int num_points = 250;
+    for(int k = 0; k < array_length; k += array_length/num_points){
+
+        initTime = getInitTime(resolution, array_length, seed);
+        getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
+        printf("%d %d %.17g %.17g %.17g %.17g %.17g %.17g\n",
+                array_length, k,
+                quickTime[0], quickTime[1],
+                heapTime[0], heapTime[1],
+                medianTime[0], medianTime[1]);
+
+        fprintf(output, "%d,%d,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g\n",
+                array_length, k,
+                quickTime[0], quickTime[1],
+                heapTime[0], heapTime[1],
+                medianTime[0], medianTime[1]);
+    }
+
+    fclose(output);
+
+    // Evalute heap-select when k and n changes
+    output = fopen("../first_part/times/heap3D.txt", "w");
+    fprintf(output, "N,K,T2,D2\n");
+    array_length = 100;
+    num_points = 10;
+    for(int i = 0; i < 30; i++){
+        for(int k = 0; k < array_length; k += (int) array_length/num_points){
+
+            initTime = getInitTime(resolution, array_length, seed);
+            getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
+            printf("%d,%d,%.17g,%.17g\n", array_length, k, heapTime[0], heapTime[1]);
+
+            fprintf(output, "%d,%d,%.17g,%.17g\n", array_length, k, heapTime[0], heapTime[1]);
+            array_length = (int) (array_length * 1.32);
+        }
+    }
+
+    fclose(output);
+
+    // Evaluate algorithms difference for k = 1, as heap-select should be pretty fast (Theta(n), in theory)
+    output = fopen("../first_part/times/times_k1.txt", "w");
+    fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
+    printf("N K T1 D1 T2 D2 T3 D3\n");
+
+    int k = 1;
+    for(int i = 0; i < 40; i++){
+
+        printf("%d %d ", array_length, k);
+
+        initTime = getInitTime(resolution, array_length, seed);
+
+        getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        printf("%.17g %.17g  ", quickTime[0], quickTime[1]);
+
+        getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
+        printf("%.17g %.17g ", heapTime[0], heapTime[1]);
+
+        getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
+        printf("%.17g %.17g\n", medianTime[0], medianTime[1]);
+
+        fprintf(output, "%d,%d,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g\n",
+                array_length, k,
+                quickTime[0], quickTime[1],
+                heapTime[0], heapTime[1],
+                medianTime[0], medianTime[1]);
+
+        array_length = (int) (array_length * 1.32);
+    }
+
+    fclose(output);
+
 }

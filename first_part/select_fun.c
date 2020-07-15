@@ -68,8 +68,8 @@ int heapselect(int * a, int length, int k){
 
         int result = getMinPos(H2);
 
-        destroyMinHeap(H1);
-        destroyMinHeapPos(H2);
+        // destroyMinHeap(H1);
+        // destroyMinHeapPos(H2);
 
         return result;
     } else { // use max-heap (more efficient)
