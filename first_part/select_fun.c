@@ -106,28 +106,36 @@ int heapselect(int * a, int length, int k){
 
 int medianselect_rec(int *a, int p, int q, int k) {
 
+    int l = p;
+    int r = q;
+    int k1 = k;
     if(q-p < 5){
         quicksort(a, p, q);
         return a[k];
     } else {
-        int i = 0;
+        while(r-l >= 5) {
 
-        // for blocks of 5 elements, sort them and take the median.
-        // Here i swap in the first place (which is p, as i consider the array between p and q) to optimize space complexity (in place)
-        while(i < (int) ((q-p+1)/5)){
-            quicksort(a, p+i*5, p+i*5+4);
-            swap_array(a, p+i, p+i*5+2);
-            i++;
+            int i = 0;
+            // for blocks of 5 elements, sort them and take the median.
+            // Here i swap in the first place (which is p, as i consider the array between p and q) to optimize space complexity (in place)
+            while (i < (int) ((r - l + 1) / 5)) {
+                quicksort(a, l + i * 5, l + i * 5 + 4);
+                swap_array(a, l + i, l + i * 5 + 2);
+                i++;
+            }
+
+            // I may have a block of < 5 elements, check if it exists and sort it
+            if (((r - l + 1) % 5) != 0) {
+                quicksort(a, l + i * 5, r);
+                swap_array(a, l + i, l + i * 5 + (int) (r - (l + i * 5)) / 2);
+                i++;
+            }
+
+            r = p+i-1;
+            k1 = (int) ((r-l)/10) + l;
         }
 
-        // I may have a block of < 5 elements, check if it exists and sort it
-        if(((q-p+1) % 5) != 0){
-            quicksort(a, p + i*5, q);
-            swap_array(a, p + i, p + i*5 + (int) (q - (p+i*5)) / 2);
-            i++;
-        }
-
-        int M = medianselect_rec(a, p, p+i-1, ((int) (q-p)/10) + p);
+        int M = a[k1];
         int pivot = partition_with_pivot(a, p, q, M);
 
         if(pivot == k){

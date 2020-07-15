@@ -7,6 +7,51 @@
 #include <stdio.h>
 #include <time.h>
 
+/**
+ * Computes the time difference between two timespec structs
+ * @param start
+ * @param end
+ * @return a timespec with seconds and nanoseconds diff computed
+ */
+struct timespec time_diff(struct timespec start, struct timespec end)
+{
+    struct timespec temp;
+    if ((end.tv_nsec-start.tv_nsec)<0) {
+        temp.tv_sec = end.tv_sec-start.tv_sec-1;
+        temp.tv_nsec = 1000000000+end.tv_nsec-start.tv_nsec;
+    } else {
+        temp.tv_sec = end.tv_sec-start.tv_sec;
+        temp.tv_nsec = end.tv_nsec-start.tv_nsec;
+    }
+    return temp;
+}
+
+/**
+ * Converts nanoseconds to seconds
+ * @param i
+ * @return the seconds
+ */
+double seconds(double i) {
+    return i / 1000000000;
+}
+
+/**
+ * Gets the difference between two timespec and returns it as a double
+ * @param start
+ * @param end
+ * @return
+ */
+double getDifference(struct timespec start, struct timespec end){
+
+    double diff = 0;
+
+    struct timespec res = time_diff(start, end);
+
+    diff = (double) res.tv_sec + seconds((double) res.tv_nsec);
+
+    return diff;
+}
+
 
 
 /**
@@ -16,12 +61,13 @@
 double getResolution(){
 
     struct timespec start, end;
-    clock_gettime(CLOCK_MONOTONIC, &start);
-    do{
-        clock_gettime(CLOCK_MONOTONIC, &end);
-    } while(start.tv_nsec == end.tv_nsec);
+    clock_gettime(CLOCK_MONOTONIC_RAW, &start);
 
-    return (double) (end.tv_nsec - start.tv_nsec);
+    do{
+        clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+    } while(getDifference(start, end) == 0);
+
+    return getDifference(start, end);
 }
 
 /**
@@ -34,7 +80,7 @@ double getMedianResolution(){
         res[i] = getResolution();
     }
 
-    quicksortLong(res, 0, 10000 - 1);
+    quicksortDouble(res, 0, 10000 - 1);
 
     return (double) (res[(int) (10000 / 2)]); // return median
 }

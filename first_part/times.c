@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define ITERATIONS 1
+#define ITERATIONS 100
 
 /**
  * Computes the median time of a random initialization of a vector of given length
@@ -29,17 +29,17 @@ double getInitTime(double resolution, int length, unsigned long seed){
 
     for(int i = 0; i < ITERATIONS; i++){
 
-        clock_gettime(CLOCK_MONOTONIC, &start);
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
         do{
-            prng = seedRand(seed*i);
+            prng = seedRand(seed+i);
             for(int j = 0; j < length; j++){
                 array[j] = (int) genRandLong(&prng);
             }
 
-            clock_gettime(CLOCK_MONOTONIC, &end);
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
             counter++;
-        } while((double) (end.tv_nsec - start.tv_nsec) <= resolution * ((1 / 0.005) + 1));
-        times[i] = (double) (end.tv_nsec - start.tv_nsec) / counter;
+        } while(getDifference(start, end) <= resolution * ((1 / 0.005) + 1));
+        times[i] = getDifference(start, end) / counter;
 
     }
 
@@ -72,19 +72,19 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     for(int i = 0; i < ITERATIONS; i++){
 
-        clock_gettime(CLOCK_MONOTONIC, &start);
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
         do{
-            prng = seedRand(seed*i);
+            prng = seedRand(seed+i);
             for(int j = real_length-length; j < real_length; j++){ // this will leave the first cell free
                 array[j] = (int) genRandLong(&prng);
             }
 
             selectFunction(array, length, k); // length as in both cases there are effectively length elements
 
-            clock_gettime(CLOCK_MONOTONIC, &end);
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
             counter++;
-        } while((double) (end.tv_nsec - start.tv_nsec) <= timeInit + resolution * ((1 / 0.005) + 1));
-        times[i] = (double) (end.tv_nsec - start.tv_nsec) / counter;
+        } while(getDifference(start, end) <= timeInit + resolution * ((1 / 0.005) + 1));
+        times[i] = getDifference(start, end) / counter - timeInit; // - timeInit as i don't have to count initialization time
 
     }
 
@@ -92,28 +92,24 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     double mean = 0;
     double std = 0;
+
+    quicksortDouble(times, 0, ITERATIONS-1);
+
+    time[0] = times[(int) (ITERATIONS / 2)];
     for(int i = 0; i < ITERATIONS; i++){
-        mean += times[i];
-        std += times[i] * times[i];
+        times[i] = (time[0] - times[i]) >= 0 ? (time[0] - times[i]) : (time[0] - times[i])*(-1); // abs(time[0] - times[i])
     }
 
-    time[0] = mean / ITERATIONS;
-    time[1] = sqrt(std - time[0]*time[0]);
+    quicksortDouble(times, 0, ITERATIONS-1);
+
+    time[1] = times[(int) (ITERATIONS / 2)];
 }
 
-/**
- * Converts nanoseconds to seconds
- * @param i
- * @return the seconds
- */
-double seconds(double i) {
-    return i / 1000000000;
-}
 
 int main(){
     double resolution = getMedianResolution();
 
-    int array_length = 10;
+    int array_length = 100;
     double initTime = 0;
     double quickTime [2];
     double heapTime [2];
@@ -121,33 +117,36 @@ int main(){
 
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
-    //FILE * output = fopen("times.txt", "w");
-    //fprintf(output, "N K T1 D1 T2 D2 T3 D3");
+    printf("Resolution %.17g\n", resolution);
+
+    FILE * output = fopen("../first_part/times.txt", "w");
+    fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 40; i++){
 
-        int k = (int) (array_length/20); // take k as n/10, where n=array_length
-
-
-        initTime = getInitTime(resolution, array_length, seed);
-        getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
-        getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
-        //getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
-
-        /*fprintf(output, "%d %d %f %f %f %f %f %f",
-                array_length, k,
-                seconds(quickTime[0]), seconds(quickTime[1]),
-                seconds(heapTime[0]), seconds(heapTime[1]),
-                seconds(medianTime[0]), seconds(medianTime[1]));*/
+        int k = (int) (array_length/10); // take k as n/10, where n=array_length
 
         printf("%d %d ", array_length, k);
-        printf("%f %f %f %f %f %f\n",
-               seconds(quickTime[0]), seconds(quickTime[1]),
-               seconds(heapTime[0]), seconds(heapTime[1]),
-               seconds(medianTime[0]), seconds(medianTime[1]));
+
+        initTime = getInitTime(resolution, array_length, seed);
+
+        getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        printf("%.17g %.17g  ", quickTime[0], quickTime[1]);
+
+        getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
+        printf("%.17g %.17g ", heapTime[0], heapTime[1]);
+
+        getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
+        printf("%.17g %.17g\n", medianTime[0], medianTime[1]);
+
+        fprintf(output, "%d,%d,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g\n",
+                array_length, k,
+                quickTime[0], quickTime[1],
+                heapTime[0], heapTime[1],
+                medianTime[0], medianTime[1]);
 
         array_length = (int) (array_length * 1.32); // doing so it reaches a length of about 5'000'000
     }
 
-    //fclose(output);
+    fclose(output);
 }
