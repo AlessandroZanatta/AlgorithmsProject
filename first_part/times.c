@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define ITERATIONS 100
+#define ITERATIONS 60
 
 /**
  * Computes the median time of a random initialization of a vector of given length
@@ -206,8 +206,8 @@ int main(){
             printf("%d,%d,%.17g,%.17g\n", array_length, k, heapTime[0], heapTime[1]);
 
             fprintf(output, "%d,%d,%.17g,%.17g\n", array_length, k, heapTime[0], heapTime[1]);
-            array_length = (int) (array_length * 1.32);
         }
+        array_length = (int) (array_length * 1.32);
     }
 
     fclose(output);
@@ -217,6 +217,7 @@ int main(){
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
 
+    array_length = 100;
     int k = 1;
     for(int i = 0; i < 40; i++){
 
