@@ -134,6 +134,7 @@ int main(){
 
     printf("Resolution %.17g\n", resolution);
 
+    /*
     output = fopen("../first_part/times/basic_times.txt", "w");
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
@@ -164,7 +165,7 @@ int main(){
     }
 
     fclose(output);
-
+    */
 
     // Evaluate algorithms when k changes using a sample of 75.000 elements
     // We should only see a difference using heap-select
@@ -194,6 +195,7 @@ int main(){
 
     fclose(output);
 
+    /*
     // Evalute heap-select when k and n changes
     output = fopen("../first_part/times/heap3D.txt", "w");
     fprintf(output, "N,K,T2,D2\n");
@@ -245,5 +247,5 @@ int main(){
     }
 
     fclose(output);
-
+    */
 }
