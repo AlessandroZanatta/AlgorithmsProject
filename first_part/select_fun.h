@@ -1,5 +1,5 @@
 //
-// Created by kali on 7/12/20.
+// Created by Alessandro Zanatta on 7/12/20.
 //
 
 #ifndef ALGORITHMPROJECT_SELECT_FUN_H
