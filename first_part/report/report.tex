@@ -1,5 +1,8 @@
 \documentclass{article}
 
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+
 \title{Relazione per il Primo Progetto di Algoritmi e Strutture Dati e Laboratorio}
 \date{16-07-2020}
 \author{Alessandro Zanatta \\ 143154 \\ zanatta.alessandro@spes.uniud.it \and Christian Abbondo \\ 144033 \\ abbondo.christian@spes.uniud.it}
@@ -13,12 +16,10 @@
 	
 	
 	% Generate table of contents (entries correspond to sections, subsections, ...)
-	\pagenumbering{roman}
+	\pagenumbering{arabic}
 	\tableofcontents	
 	\newpage
 	
-	% Bring back page numbering
-	\pagenumbering{arabic}
 	\section{Introduzione}
 	La seguente relazione si propone di analizzare i tempi di esecuzione di tre algoritmi utilizzati per trovare il $ k $-esimo elemento più piccolo di un array: QuickSelect, HeapSelect e MedianSelect.
 	\\ 
@@ -40,8 +41,12 @@
 	
 	
 	\subsection{Lunghezza $n$ dell'array variabile e $k=\frac{n}{3}$}
-	asdf
-	\newpage
+	
+	\begin{figure}[h!]
+  		\includegraphics[width=\linewidth]{images/test.png}
+  		\caption{Lorem ipsum}
+  		\label{fig:graph1}
+	\end{figure}	
 	
 	
 	\subsection{Lunghezza $n=75000$ e $k$ variabile in $[0,n-1]$}
