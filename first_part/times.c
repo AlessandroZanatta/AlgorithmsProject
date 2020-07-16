@@ -2,7 +2,6 @@
 // Created by Alessandro Zanatta on 7/13/20.
 //
 
-#include "../mtwister/mtwister.h"
 #include "utils.h"
 #include "time.h"
 #include <stdio.h>
