@@ -2,7 +2,7 @@
 
 \title{Relazione per il Primo Progetto di Algoritmi e Strutture Dati e Laboratorio}
 \date{16-07-2020}
-\author{Alessandro Zanatta \\ 143154 \and Christian Abbondo \\ 123456}
+\author{Alessandro Zanatta \\ 143154 \\ zanatta.alessandro@spes.uniud.it \and Christian Abbondo \\ 123456 \\ abbondo.christian@spes.uniud.it}
 
 \begin{document}
 
@@ -17,18 +17,17 @@
 	\tableofcontents	
 	\newpage
 	
-	
-	% Introduction
+	% Bring back page numbering
 	\pagenumbering{arabic}
 	\section{Introduzione}
 	La seguente relazione si propone di analizzare i tempi di esecuzione di tre algoritmi utilizzati per trovare il $ k $-esimo elemento più piccolo di un array: QuickSelect, HeapSelect e MedianSelect.
 	\\ 
-	Il linguaggio scelto e utilizzato per implementare le strutture dati e gli algoritmi, nonchè per il calcolo dei tempi di esecuzione, è C, in quanto è indubbiamente uno dei linguaggi più efficienti e veloci. In questo modo i tempi di esecuzione ottenuti sono liberi da controlli aggiuntivi che altri linguaggio di programmazione applicano.
+	Il linguaggio scelto e utilizzato per implementare le strutture dati e gli algoritmi, nonchè per il calcolo dei tempi di esecuzione, è C, in quanto è indubbiamente uno dei linguaggi più efficienti e veloci. In questo modo i tempi di esecuzione ottenuti sono liberi da controlli aggiuntivi che altri linguaggio di programmazione effettuano.
 	\newpage
 	
 	
 	\section{Valutazione degli algoritmi}
-	Per la valutazione dei 3 diversi algoritmi sono stati utilizzati diversi criteri e state valutate diverse casistiche ritenute interessanti per motivi riportati in seguito. In particolare ci si soffermerà sui seguenti casi:
+	Per la valutazione dei 3 diversi algoritmi sono stati utilizzati diversi criteri e sono state valutate diverse casistiche ritenute interessanti per motivi riportati in seguito. In particolare ci si soffermerà sui seguenti casi:
 	
 	\begin{itemize}
 		\item Lunghezza $n$ dell'array variabile e $k=\frac{n}{3}$
@@ -36,7 +35,7 @@
 		\item Lunghezza $n$ variabile e $k=1$
 	\end{itemize}
 	
-	Nota: nelle prime volte che sono stati misurati i tempi di esecuzione, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere dei tempi migliori, cioè meno sensibili ad outliers, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathopen|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori.
+	Nota: durante le prime misurazioni, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere dei tempi migliori, cioè meno sensibili ad outliers, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathopen|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori.
 	\newpage
 	\subsection{Lunghezza $n$ dell'array variabile e $k=\frac{n}{3}$}
 	asdf
