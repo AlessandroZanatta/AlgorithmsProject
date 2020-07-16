@@ -177,6 +177,8 @@ int main(){
 
         initTime = getInitTime(resolution, array_length, seed);
         getSelectTime(resolution, array_length, seed, initTime, k, heapselect, heapTime);
+        getSelectTime(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        getSelectTime(resolution, array_length, seed, initTime, k, medianselect, medianTime);
         printf("%d %d %.17g %.17g %.17g %.17g %.17g %.17g\n",
                 array_length, k,
                 quickTime[0], quickTime[1],
