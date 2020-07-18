@@ -40,7 +40,7 @@ int main(int argc, char** argv){
         } else if(strcmp(token, "find") == 0){ // find
 
             key = atoi(strtok(NULL, " "));
-            struct Node * node = find(rbt, key);
+            struct NodeRbt * node = find(rbt, key);
             printf("%s", node->value);
         } else {
             printf("ERROR, token not recognized!\n");

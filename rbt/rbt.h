@@ -14,25 +14,25 @@
  * Bst data structure to hold a RBT
  */
 struct Rbt{
-    struct Node * root;
+    struct NodeRbt * root;
 };
 
 /**
  * Node of a generic binary tree
  */
-struct Node{
+struct NodeRbt{
     int key;
     char value[BUFFER];
     short color;
-    struct Node * left;
-    struct Node * right;
-    struct Node * parent;
+    struct NodeRbt * left;
+    struct NodeRbt * right;
+    struct NodeRbt * parent;
 };
 
 
 struct Rbt * create_rbt();
 void destroy_rbt(struct Rbt * rbt);
-struct Node * find(struct Rbt * rbt, int key);
+struct NodeRbt * find(struct Rbt * rbt, int key);
 void insert(struct Rbt * rbt, int key, char * value);
 void show(struct Rbt * rbt);
 

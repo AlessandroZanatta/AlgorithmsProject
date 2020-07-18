@@ -40,12 +40,12 @@ int main(int argc, char** argv){
         }else if(strcmp(token, "remove") == 0){
 
             key = atoi(strtok(NULL, " "));
-            struct Node * node = find(avl, key);
+            struct NodeAvl * node = find(avl, key);
             delete(avl, node);
         } else if(strcmp(token, "find") == 0){ // find
 
             key = atoi(strtok(NULL, " "));
-            struct Node * node = find(avl, key);
+            struct NodeAvl * node = find(avl, key);
             printf("%s", node->value);
         } else {
             printf("ERROR, token not recognized!\n");

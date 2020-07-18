@@ -13,27 +13,27 @@
  * Bst data structure to hold a BST
  */
 struct Avl{
-    struct Node * root;
+    struct NodeAvl * root;
 };
 
 /**
- * Node of a generic binary tree
+ * NodeAvl of a generic binary tree
  */
-struct Node{
+struct NodeAvl{
     int key;
     char value[BUFFER];
     int height;
-    struct Node * left;
-    struct Node * right;
-    struct Node * parent;
+    struct NodeAvl * left;
+    struct NodeAvl * right;
+    struct NodeAvl * parent;
 };
 
 
 struct Avl * create_avl();
 void destroy_avl(struct Avl * avl);
-struct Node * find(struct Avl * avl, int key);
+struct NodeAvl * find(struct Avl * avl, int key);
 void insert(struct Avl * avl, int key, char * value);
 void show(struct Avl * avl);
-void delete(struct Avl * avl, struct Node * node);
+void delete(struct Avl * avl, struct NodeAvl * node);
 
 #endif //ALGORITHMPROJECT_AVL_H

@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 // here i suppose -1 is not a valid key, might need to find a better way to do this tho...
-struct Node NIL = {-1, {0,0,0,0,0,0,0,0,0,0}, BLACK, NULL, NULL, NULL};
+struct NodeRbt NIL = {-1, {0,0,0,0,0,0,0,0,0,0}, BLACK, NULL, NULL, NULL};
 
 /**
  * Creates an empty RBT
@@ -27,8 +27,8 @@ struct Rbt * create_rbt(){
  * @param value the value of the node
  * @return his pointer in the heap
  */
-struct Node * create_node(int key, char * value){
-    struct Node * new_node = (struct Node *) malloc(sizeof(struct Node));
+struct NodeRbt * create_node(int key, char * value){
+    struct NodeRbt * new_node = (struct NodeRbt *) malloc(sizeof(struct NodeRbt));
 
     new_node->key = key;
 
@@ -50,7 +50,7 @@ struct Node * create_node(int key, char * value){
  * Recursively destroys a tree
  * @param node
  */
-void destroy_tree(struct Node * node) {
+void destroy_tree(struct NodeRbt * node) {
     if(node != &NIL){
         destroy_tree(node->left);
         destroy_tree(node->right);
@@ -73,8 +73,8 @@ void destroy_rbt(struct Rbt * rbt){
  * @param key the key
  * @return NULL if the key does not exist, the node containing the given key if it exist
  */
-struct Node * find(struct Rbt * rbt, int key){
-    struct Node * x = rbt->root;
+struct NodeRbt * find(struct Rbt * rbt, int key){
+    struct NodeRbt * x = rbt->root;
 
     while(x != NULL && x->key != key){
         if(key > x->key){
@@ -91,7 +91,7 @@ struct Node * find(struct Rbt * rbt, int key){
  * Inverts the color of the given node
  * @param node
  */
-void recolor(struct Node * node){
+void recolor(struct NodeRbt * node){
     if(node->color == RED){
         node->color = BLACK;
     } else {
@@ -104,7 +104,7 @@ void recolor(struct Node * node){
  * @param x the node we want to effectuate the rotation on
  * @param direction ROTATE_LEFT or ROTATE_RIGHT
  */
-void rotate(struct Rbt * rbt, struct Node * x, short direction){
+void rotate(struct Rbt * rbt, struct NodeRbt * x, short direction){
 
     if(direction == ROTATE_LEFT){
         if(x->parent == NULL){ // x is the root of the rbt
@@ -153,7 +153,7 @@ void rotate(struct Rbt * rbt, struct Node * x, short direction){
  * Fixes the RBT operating recolors/rotations (after an insertion)
  * @param node
  */
-void fixRBT(struct Rbt * rbt, struct Node * node) {
+void fixRBT(struct Rbt * rbt, struct NodeRbt * node) {
     if(node->parent == NULL){ // node is root of rbt
         node->color = BLACK;
     } else if(node->parent->color != BLACK){ // if parent color is not black, rbt needs to be fixed
@@ -212,10 +212,10 @@ void fixRBT(struct Rbt * rbt, struct Node * node) {
  * @param key
  */
 void insert(struct Rbt * rbt, int key, char * value){
-    struct Node * new_node = create_node(key, value);
+    struct NodeRbt * new_node = create_node(key, value);
 
-    struct Node * y = NULL;
-    struct Node * x = rbt->root;
+    struct NodeRbt * y = NULL;
+    struct NodeRbt * x = rbt->root;
 
     while(x != &NIL){
         y = x;
@@ -243,7 +243,7 @@ void insert(struct Rbt * rbt, int key, char * value){
     }
 }
 
-void show_rec(struct Node * node){
+void show_rec(struct NodeRbt * node){
     if(node == &NIL || strncmp(node->value, "", BUFFER) == 0){
         printf("NULL ");
     } else {
