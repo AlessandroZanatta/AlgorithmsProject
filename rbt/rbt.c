@@ -27,7 +27,7 @@ struct Rbt * create_rbt(){
  * @param value the value of the node
  * @return his pointer in the heap
  */
-struct NodeRbt * create_node(int key, char * value){
+struct NodeRbt * create_node_rbt(int key, char * value){
     struct NodeRbt * new_node = (struct NodeRbt *) malloc(sizeof(struct NodeRbt));
 
     new_node->key = key;
@@ -50,10 +50,10 @@ struct NodeRbt * create_node(int key, char * value){
  * Recursively destroys a tree
  * @param node
  */
-void destroy_tree(struct NodeRbt * node) {
+void destroy_tree_rbt(struct NodeRbt * node) {
     if(node != &NIL){
-        destroy_tree(node->left);
-        destroy_tree(node->right);
+        destroy_tree_rbt(node->left);
+        destroy_tree_rbt(node->right);
         free(node);
     }
 }
@@ -63,7 +63,7 @@ void destroy_tree(struct NodeRbt * node) {
  * @param rbt to delete
  */
 void destroy_rbt(struct Rbt * rbt){
-    destroy_tree(rbt->root);
+    destroy_tree_rbt(rbt->root);
     free(rbt);
 }
 
@@ -73,7 +73,7 @@ void destroy_rbt(struct Rbt * rbt){
  * @param key the key
  * @return NULL if the key does not exist, the node containing the given key if it exist
  */
-struct NodeRbt * find(struct Rbt * rbt, int key){
+struct NodeRbt * findRbt(struct Rbt * rbt, int key){
     struct NodeRbt * x = rbt->root;
 
     while(x != NULL && x->key != key){
@@ -211,8 +211,8 @@ void fixRBT(struct Rbt * rbt, struct NodeRbt * node) {
  * @param rbt
  * @param key
  */
-void insert(struct Rbt * rbt, int key, char * value){
-    struct NodeRbt * new_node = create_node(key, value);
+void insertRbt(struct Rbt * rbt, int key, char * value){
+    struct NodeRbt * new_node = create_node_rbt(key, value);
 
     struct NodeRbt * y = NULL;
     struct NodeRbt * x = rbt->root;
@@ -243,7 +243,7 @@ void insert(struct Rbt * rbt, int key, char * value){
     }
 }
 
-void show_rec(struct NodeRbt * node){
+void show_rec_rbt(struct NodeRbt * node){
     if(node == &NIL || strncmp(node->value, "", BUFFER) == 0){
         printf("NULL ");
     } else {
@@ -253,8 +253,8 @@ void show_rec(struct NodeRbt * node){
         } else {
             printf("black ");
         }
-        show_rec(node->left);
-        show_rec(node->right);
+        show_rec_rbt(node->left);
+        show_rec_rbt(node->right);
     }
 }
 
@@ -262,8 +262,8 @@ void show_rec(struct NodeRbt * node){
  * Prints the given bst in reverse polish notation
  * @param bst
  */
-void show(struct Rbt * rbt){
-    show_rec(rbt->root);
+void showRbt(struct Rbt * rbt){
+    show_rec_rbt(rbt->root);
 }
 
 

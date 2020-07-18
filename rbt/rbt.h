@@ -32,8 +32,8 @@ struct NodeRbt{
 
 struct Rbt * create_rbt();
 void destroy_rbt(struct Rbt * rbt);
-struct NodeRbt * find(struct Rbt * rbt, int key);
-void insert(struct Rbt * rbt, int key, char * value);
-void show(struct Rbt * rbt);
+struct NodeRbt * findRbt(struct Rbt * rbt, int key);
+void insertRbt(struct Rbt * rbt, int key, char * value);
+void showRbt(struct Rbt * rbt);
 
 #endif //ALGORITHMPROJECT_RBT_H

@@ -6,8 +6,8 @@
 #define ALGORITHMPROJECT_AVL_H
 
 #define BUFFER 10
-#define ROTATE_LEFT 0
-#define ROTATE_RIGHT 1
+#define ROTATE_LEFT 2
+#define ROTATE_RIGHT 3
 
 /**
  * Bst data structure to hold a BST
@@ -31,9 +31,9 @@ struct NodeAvl{
 
 struct Avl * create_avl();
 void destroy_avl(struct Avl * avl);
-struct NodeAvl * find(struct Avl * avl, int key);
-void insert(struct Avl * avl, int key, char * value);
-void show(struct Avl * avl);
-void delete(struct Avl * avl, struct NodeAvl * node);
+struct NodeAvl * findAvl(struct Avl * avl, int key);
+void insertAvl(struct Avl * avl, int key, char * value);
+void showAvl(struct Avl * avl);
+void deleteAvl(struct Avl * avl, struct NodeAvl * node);
 
 #endif //ALGORITHMPROJECT_AVL_H

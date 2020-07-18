@@ -24,28 +24,28 @@ int main(int argc, char** argv){
         token = strtok(input, " ");
         if(strcmp(token, "show\n") == 0){
 
-            show(avl);
+            showAvl(avl);
         } else if(strcmp(token, "clear\n") == 0){
 
             destroy_avl(avl);
             avl = create_avl();
-        } else if(strcmp(token, "insert") == 0) {
+        } else if(strcmp(token, "insertAvl") == 0) {
 
             key = atoi(strtok(NULL, " ")); // atoi is fine there
             value = strtok(NULL, " ");
             unsigned int length = strlen(value);
             value[length - 1] = '\0';
 
-            insert(avl, key, value);
+            insertAvl(avl, key, value);
         }else if(strcmp(token, "remove") == 0){
 
             key = atoi(strtok(NULL, " "));
-            struct NodeAvl * node = find(avl, key);
-            delete(avl, node);
-        } else if(strcmp(token, "find") == 0){ // find
+            struct NodeAvl * node = findAvl(avl, key);
+            deleteAvl(avl, node);
+        } else if(strcmp(token, "findAvl") == 0){ // findAvl
 
             key = atoi(strtok(NULL, " "));
-            struct NodeAvl * node = find(avl, key);
+            struct NodeAvl * node = findAvl(avl, key);
             printf("%s", node->value);
         } else {
             printf("ERROR, token not recognized!\n");

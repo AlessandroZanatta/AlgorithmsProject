@@ -24,7 +24,7 @@ int main(int argc, char** argv){
         token = strtok(input, " ");
         if(strcmp(token, "show\n") == 0){
 
-            show(rbt);
+            showRbt(rbt);
         } else if(strcmp(token, "clear\n") == 0){
 
             destroy_rbt(rbt);
@@ -36,11 +36,11 @@ int main(int argc, char** argv){
             unsigned int length = strlen(value);
             value[length-1] = '\0';
 
-            insert(rbt, key, value);
+            insertRbt(rbt, key, value);
         } else if(strcmp(token, "find") == 0){ // find
 
             key = atoi(strtok(NULL, " "));
-            struct NodeRbt * node = find(rbt, key);
+            struct NodeRbt * node = findRbt(rbt, key);
             printf("%s", node->value);
         } else {
             printf("ERROR, token not recognized!\n");

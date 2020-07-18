@@ -26,7 +26,7 @@ struct Avl * create_avl(){
  * @param value the value of the node
  * @return his pointer in the heap
  */
-struct NodeAvl * create_node(int key, char * value){
+struct NodeAvl * create_node_avl(int key, char * value){
     struct NodeAvl * new_node = (struct NodeAvl *) malloc(sizeof(struct NodeAvl));
 
     new_node->key = key;
@@ -70,7 +70,7 @@ int balanceFactor(struct NodeAvl * node){
  * @param y
  * @return max(x,y)
  */
-int max(int x, int y){
+int max_avl(int x, int y){
     if (x > y) {
         return x;
     } else {
@@ -82,20 +82,20 @@ int max(int x, int y){
  * Recursively destroys a tree
  * @param node
  */
-void destroy_tree(struct NodeAvl * node) {
+void destroy_tree_avl(struct NodeAvl * node) {
     if(node != NULL){
-        destroy_tree(node->left);
-        destroy_tree(node->right);
+        destroy_tree_avl(node->left);
+        destroy_tree_avl(node->right);
         free(node);
     }
 }
 
 /**
  * De-allocates a rbt completely (every single Node)
- * @param rbt to delete
+ * @param rbt to deleteAvl
  */
 void destroy_avl(struct Avl * avl){
-    destroy_tree(avl->root);
+    destroy_tree_avl(avl->root);
     free(avl);
 }
 
@@ -105,7 +105,7 @@ void destroy_avl(struct Avl * avl){
  * @param key the key
  * @return NULL if the key does not exist, the node containing the given key if it exist
  */
-struct NodeAvl * find(struct Avl * avl, int key){
+struct NodeAvl * findAvl(struct Avl * avl, int key){
     struct NodeAvl * x = avl->root;
 
     while(x != NULL && x->key != key){
@@ -124,20 +124,7 @@ struct NodeAvl * find(struct Avl * avl, int key){
  * @param node the subtree
  * @return the Node containing the biggest key among the ones in the subtree of
  */
-struct NodeAvl * max_node(struct NodeAvl * node){
-    while(node->right != NULL){
-        node = node->right;
-    }
-
-    return node;
-}
-
-/**
- * Finds the Node containing the biggest key in the subtree of node
- * @param node the subtree
- * @return the Node containing the biggest key among the ones in the subtree of
- */
-struct NodeAvl * min_node(struct NodeAvl * node){
+struct NodeAvl * min_node_avl(struct NodeAvl * node){
     while(node->left != NULL){
         node = node->left;
     }
@@ -151,7 +138,7 @@ struct NodeAvl * min_node(struct NodeAvl * node){
  * @param x the node we want to perform the rotation on
  * @param direction ROTATE_LEFT or ROTATE_RIGHT
  */
-struct NodeAvl * rotate(struct Avl * avl, struct NodeAvl * x, short direction){
+struct NodeAvl * rotate_avl(struct Avl * avl, struct NodeAvl * x, short direction){
 
     if(direction == ROTATE_LEFT){
         if(x->parent == NULL){ // x is the root of the avl
@@ -206,12 +193,12 @@ struct NodeAvl * rotate(struct Avl * avl, struct NodeAvl * x, short direction){
 void updateHeights(struct NodeAvl * x){
 
     if(x->right != NULL){
-        x->right->height = 1 + max(height(x->right->right), height(x->right->left));
+        x->right->height = 1 + max_avl(height(x->right->right), height(x->right->left));
     }
     if(x->left != NULL){
-        x->left->height = 1 + max(height(x->left->right),height(x->left->left));
+        x->left->height = 1 + max_avl(height(x->left->right),height(x->left->left));
     }
-    x->height = 1 + max(height(x->right), height(x->left));
+    x->height = 1 + max_avl(height(x->right), height(x->left));
 }
 
 /**
@@ -223,7 +210,7 @@ void updateHeights(struct NodeAvl * x){
 void fixAvl(struct Avl * avl, struct NodeAvl * node, int key) {
 
     if(node != NULL){
-        node->height = 1 + max(height(node->left), height(node->right));
+        node->height = 1 + max_avl(height(node->left), height(node->right));
         int balance = balanceFactor(node);
 
         struct NodeAvl * x = node;
@@ -231,27 +218,27 @@ void fixAvl(struct Avl * avl, struct NodeAvl * node, int key) {
         if(balance > 1 && node->left != NULL){
             if(key < node->left->key){ // LL-unbalance
 
-                x = rotate(avl, node, ROTATE_RIGHT);
+                x = rotate_avl(avl, node, ROTATE_RIGHT);
                 updateHeights(x);
             } else if(key > node->left->key) { // LR-unbalance
 
-                x = rotate(avl, node->left, ROTATE_LEFT);
+                x = rotate_avl(avl, node->left, ROTATE_LEFT);
                 updateHeights(x);
 
-                x = rotate(avl, node, ROTATE_RIGHT);
+                x = rotate_avl(avl, node, ROTATE_RIGHT);
                 updateHeights(x);
             }
         } else if(balance < -1 && node->right != NULL){
             if(key > node->right->key){ // RR-unbalance
 
-                x = rotate(avl, node, ROTATE_LEFT);
+                x = rotate_avl(avl, node, ROTATE_LEFT);
                 updateHeights(x);
             } else if(key < node->right->key) { // RL-unbalance
 
-                x = rotate(avl, node->right, ROTATE_RIGHT);
+                x = rotate_avl(avl, node->right, ROTATE_RIGHT);
                 updateHeights(x);
 
-                x = rotate(avl, node, ROTATE_LEFT);
+                x = rotate_avl(avl, node, ROTATE_LEFT);
                 updateHeights(x);
             }
         }
@@ -269,7 +256,7 @@ void fixAvl(struct Avl * avl, struct NodeAvl * node, int key) {
 void fixAvlDelete(struct Avl * avl, struct NodeAvl * node) {
 
     if(node != NULL){
-        node->height = 1 + max(height(node->left), height(node->right));
+        node->height = 1 + max_avl(height(node->left), height(node->right));
         int balance = balanceFactor(node);
 
         struct NodeAvl * x = node;
@@ -277,27 +264,27 @@ void fixAvlDelete(struct Avl * avl, struct NodeAvl * node) {
         if(balance > 1 && node->left != NULL){
             if(balanceFactor(node->left) >= 0){ // LL-unbalance
 
-                x = rotate(avl, node, ROTATE_RIGHT);
+                x = rotate_avl(avl, node, ROTATE_RIGHT);
                 updateHeights(x);
             } else if(balanceFactor(node->left) < 0) { // LR-unbalance
 
-                x = rotate(avl, node->left, ROTATE_LEFT);
+                x = rotate_avl(avl, node->left, ROTATE_LEFT);
                 updateHeights(x);
 
-                x = rotate(avl, node, ROTATE_RIGHT);
+                x = rotate_avl(avl, node, ROTATE_RIGHT);
                 updateHeights(x);
             }
         } else if(balance < -1 && node->right != NULL){
             if(balanceFactor(node->right) <= 0){ // RR-unbalance
 
-                x = rotate(avl, node, ROTATE_LEFT);
+                x = rotate_avl(avl, node, ROTATE_LEFT);
                 updateHeights(x);
             } else if(balanceFactor(node->right) > 0) { // RL-unbalance
 
-                x = rotate(avl, node->right, ROTATE_RIGHT);
+                x = rotate_avl(avl, node->right, ROTATE_RIGHT);
                 updateHeights(x);
 
-                x = rotate(avl, node, ROTATE_LEFT);
+                x = rotate_avl(avl, node, ROTATE_LEFT);
                 updateHeights(x);
             }
         }
@@ -312,8 +299,8 @@ void fixAvlDelete(struct Avl * avl, struct NodeAvl * node) {
  * @param key
  * @param value
  */
-void insert(struct Avl * avl, int key, char * value){
-    struct NodeAvl * new_node = create_node(key, value);
+void insertAvl(struct Avl * avl, int key, char * value){
+    struct NodeAvl * new_node = create_node_avl(key, value);
 
     struct NodeAvl * y = NULL;
     struct NodeAvl * x = avl->root;
@@ -343,11 +330,10 @@ void insert(struct Avl * avl, int key, char * value){
 }
 
 /**
- * TODO this code is not the best but i do not remember the order of operations done to make this more compact (and readable)
  * @param avl the avl
- * @param node the node containing the key we want to delete
+ * @param node the node containing the key we want to deleteAvl
  */
-void delete(struct Avl * avl, struct NodeAvl * node){
+void deleteAvl(struct Avl * avl, struct NodeAvl * node){
 
     if(node->left == NULL || node->right == NULL){ // at least one child is NULL, easier to solve!
         struct NodeAvl * x = NULL;
@@ -380,25 +366,25 @@ void delete(struct Avl * avl, struct NodeAvl * node){
 
         free(node);
     } else { // it has two children, so i use the predecessor/successor (here i chose successor, but it does not matter)
-        struct NodeAvl * real_delete = min_node(node->right);
+        struct NodeAvl * real_delete = min_node_avl(node->right);
 
         node->key = real_delete->key;
         strcpy(node->value, real_delete->value);
 
-        // there should be a complete swap to make the delete procedure formally correct,
+        // there should be a complete swap to make the deleteAvl procedure formally correct,
         // but this works as well and it takes less computational time
 
-        delete(avl, real_delete);
+        deleteAvl(avl, real_delete);
     }
 }
 
-void show_rec(struct NodeAvl * node){
+void show_rec_avl(struct NodeAvl * node){
     if(node == NULL || strncmp(node->value, "", BUFFER) == 0){
         printf("NULL ");
     } else {
         printf("%d:%s:%d ", node->key, node->value, node->height);
-        show_rec(node->left);
-        show_rec(node->right);
+        show_rec_avl(node->left);
+        show_rec_avl(node->right);
     }
 }
 
@@ -406,8 +392,8 @@ void show_rec(struct NodeAvl * node){
  * Prints the given bst in reverse polish notation
  * @param bst
  */
-void show(struct Avl * avl){
-    show_rec(avl->root);
+void showAvl(struct Avl * avl){
+    show_rec_avl(avl->root);
 }
 
 
