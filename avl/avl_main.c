@@ -11,8 +11,8 @@ int main(int argc, char** argv){
 
     int buffer = 30;
     char input [buffer];
-    char * token = (char *) malloc(buffer * sizeof(char));
-    char * value = (char *) malloc(buffer * sizeof(char));
+    char * token;
+    char * value;
     int key;
 
     struct Avl * avl = create_avl();
@@ -56,8 +56,6 @@ int main(int argc, char** argv){
     }
 
     // printf("Exiting...\n");
-    //destroy_rbt(avl);
-    //free(token);
-    //free(value);
+    destroy_avl(avl);
     exit(0);
 }
