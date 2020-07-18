@@ -23,11 +23,12 @@ double getInitTime(double resolution, int length, unsigned long seed){
     struct timespec start,end;
     double times [ITERATIONS];
     int * array = (int *) malloc(sizeof(int) * length);
-    int counter = 0;
+    int counter;
     MTRand prng;
 
     for(int i = 0; i < ITERATIONS; i++){
 
+        counter = 0;
         clock_gettime(CLOCK_MONOTONIC_RAW, &start);
         do{
             prng = seedRand(seed+i);
@@ -66,10 +67,12 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     int * array = (int *) malloc(sizeof(int) * real_length);
 
-    int counter = 0;
+    int counter;
     MTRand prng;
 
     for(int i = 0; i < ITERATIONS; i++){
+
+        counter = 0;
 
         clock_gettime(CLOCK_MONOTONIC_RAW, &start);
         do{
@@ -134,7 +137,7 @@ int main(){
 
     printf("Resolution %.17g\n", resolution);
 
-    /*
+
     output = fopen("../first_part/times/basic_times.txt", "w");
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
@@ -165,7 +168,7 @@ int main(){
     }
 
     fclose(output);
-    */
+
 
     // Evaluate algorithms when k changes using a sample of 75.000 elements
     // We should only see a difference using heap-select
@@ -195,7 +198,7 @@ int main(){
 
     fclose(output);
 
-    /*
+
     // Evalute heap-select when k and n changes
     output = fopen("../first_part/times/heap3D.txt", "w");
     fprintf(output, "N,K,T2,D2\n");
@@ -247,5 +250,4 @@ int main(){
     }
 
     fclose(output);
-    */
 }
