@@ -11,8 +11,8 @@ int main(int argc, char** argv){
 
     int buffer = 30;
     char input [buffer];
-    char * token = (char *) malloc(buffer * sizeof(char));
-    char * value = (char *) malloc(buffer * sizeof(char));
+    char * token;
+    char * value;
     int key;
 
     struct Rbt * rbt = create_rbt();
@@ -51,8 +51,6 @@ int main(int argc, char** argv){
     }
 
     // printf("Exiting...\n");
-    //destroy_rbt(rbt);
-    //free(token);
-    //free(value);
+    destroy_rbt(rbt);
     exit(0);
 }

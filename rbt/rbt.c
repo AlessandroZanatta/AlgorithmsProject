@@ -51,7 +51,7 @@ struct Node * create_node(int key, char * value){
  * @param node
  */
 void destroy_tree(struct Node * node) {
-    if(node != NULL){
+    if(node != &NIL){
         destroy_tree(node->left);
         destroy_tree(node->right);
         free(node);
