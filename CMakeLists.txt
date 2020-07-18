@@ -18,8 +18,11 @@ add_executable(MedianSelectMain first_part/medianselect_main.c first_part/select
         first_part/select_fun.h first_part/utils.h first_part/utils.c heap/minheap.c
         heap/minheap.h heap/maxheap.c heap/maxheap.h)
 
-add_executable(Times first_part/select_fun.c
+add_executable(TimesFirst first_part/select_fun.c
         first_part/select_fun.h first_part/utils.h first_part/utils.c heap/minheap.c
         heap/minheap.h heap/maxheap.c heap/maxheap.h first_part/times.c)
 
-target_link_libraries(Times m)
+target_link_libraries(TimesFirst m)
+
+add_executable(TimesSecond second_part/times.c avl/avl.c avl/avl.h
+        bst/bst.c bst/bst.h rbt/rbt.c rbt/rbt.h second_part/utils.c second_part/utils.h)
