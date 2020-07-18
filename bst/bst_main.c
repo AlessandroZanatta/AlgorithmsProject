@@ -11,8 +11,8 @@ int main(int argc, char** argv){
 
     int buffer = 30;
     char input [buffer];
-    char * token = (char *) malloc(buffer * sizeof(char));
-    char * value = (char *) malloc(buffer * sizeof(char));
+    char * token;
+    char * value;
     int key;
 
     struct Bst * bst = create_bst();
@@ -23,7 +23,6 @@ int main(int argc, char** argv){
         // printf("Now executing: '%s'", input);
         token = strtok(input, " ");
         if(strcmp(token, "show\n") == 0){
-
             show(bst);
         } else if(strcmp(token, "clear\n") == 0){
 
@@ -33,8 +32,6 @@ int main(int argc, char** argv){
 
             key = atoi(strtok(NULL, " ")); // atoi is fine there
             value = strtok(NULL, " ");
-            unsigned int length = strlen(value);
-            value[length-1] = '\0';
 
             insert(bst, key, value);
         } else if(strcmp(token, "remove") == 0){
@@ -58,7 +55,5 @@ int main(int argc, char** argv){
 
     // printf("Exiting...\n");
     destroy_bst(bst);
-    free(token);
-    free(value);
     exit(0);
 }
