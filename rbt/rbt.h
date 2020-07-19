@@ -10,8 +10,13 @@
 #define BLACK 1
 #define ROTATE_LEFT 2
 #define ROTATE_RIGHT 3
+
+// here i suppose -1 is not a valid key, might need to find a better way to do this tho...
+struct NodeRbt NIL;
+
+
 /**
- * Bst data structure to hold a RBT
+ * Rbt data structure to hold a RBT
  */
 struct Rbt{
     struct NodeRbt * root;

@@ -6,10 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-// here i suppose -1 is not a valid key, might need to find a better way to do this tho...
 struct NodeRbt NIL = {-1, {0,0,0,0,0,0,0,0,0,0}, BLACK, NULL, NULL, NULL};
-
 /**
  * Creates an empty RBT
  * @return the pointer to it (in the heap)
@@ -76,7 +73,7 @@ void destroy_rbt(struct Rbt * rbt){
 struct NodeRbt * findRbt(struct Rbt * rbt, int key){
     struct NodeRbt * x = rbt->root;
 
-    while(x != NULL && x->key != key){
+    while(x != &NIL && x->key != key){
         if(key > x->key){
             x = x->right;
         } else {
