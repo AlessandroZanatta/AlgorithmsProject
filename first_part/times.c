@@ -123,6 +123,109 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 }
 
 
+double getInitTimeOrdered(double resolution, int length, unsigned long long int seed) {
+    struct timespec start,end;
+    double times [ITERATIONS];
+    int * array = (int *) malloc(sizeof(int) * length);
+    int counter;
+    MTRand prng;
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        counter = 0;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+            prng = seedRand(seed+i);
+            for(int j = 0; j < length; j++){
+                if(genRand(&prng) <= 0.05){ // with a 5% probability, generate a random number instead of an ordered integer
+                    array[j] = (int) genRandLong(&prng);
+                } else {
+                    array[j] = j;
+                }
+            }
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+        } while(getDifference(start, end) <= resolution * ((1 / 0.005) + 1));
+        times[i] = getDifference(start, end) / counter;
+
+    }
+
+    quicksortDouble(times, 0, ITERATIONS - 1);
+    return times[(int) (ITERATIONS/2)];
+
+}
+
+void getSelectTimeOrdered(double resolution, int length, unsigned long seed, double timeInit, int k, int (*selectFunction)(int *, int, int), double * time){
+
+    struct timespec start,end;
+    double times [ITERATIONS];
+
+    // check if we are using heapselect. In this case, we want to leave the first cell of the array empty (heapsize!)
+    int real_length = (selectFunction == heapselect) ? length+1 : length;
+
+    int * array = (int *) malloc(sizeof(int) * real_length);
+
+    int counter;
+    MTRand prng;
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        counter = 0;
+
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+            prng = seedRand(seed+i);
+            for(int j = real_length-length; j < real_length; j++){
+                if(genRand(&prng) <= 0.05){ // with a 5% probability, generate a random number instead of an ordered integer
+                    array[j] = (int) genRandLong(&prng);
+                } else {
+                    array[j] = j;
+                }
+            }
+
+            selectFunction(array, length, k); // length as in both cases there are effectively length elements
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+        } while(getDifference(start, end) <= timeInit + resolution * ((1 / 0.005) + 1));
+        times[i] = getDifference(start, end) / counter - timeInit; // - timeInit as i don't have to count initialization time
+
+    }
+
+    free(array);
+
+    /*
+    double mean = 0;
+    double std = 0;
+
+    for(int i = 0; i < ITERATIONS; i++){
+        mean += times[i];
+        std += (times[i] * times[i]);
+    }
+
+    mean /= ITERATIONS;
+    std = sqrt(std/ITERATIONS - mean*mean);
+
+    time[0] = mean;
+    time[1] = std;
+    */
+
+    // Using medians
+    quicksortDouble(times, 0, ITERATIONS-1);
+
+    time[0] = times[(int) (ITERATIONS / 2)];
+    for(int i = 0; i < ITERATIONS; i++){
+        times[i] = (time[0] - times[i]) >= 0 ? (time[0] - times[i]) : (time[0] - times[i])*(-1); // abs(time[0] - times[i])
+    }
+
+    quicksortDouble(times, 0, ITERATIONS-1);
+
+    time[1] = times[(int) (ITERATIONS / 2)];
+
+}
+
+
 int main(){
     double resolution = getMedianResolution();
 
@@ -136,8 +239,7 @@ int main(){
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
     printf("Resolution %.17g\n", resolution);
-
-
+    
     output = fopen("../first_part/times/basic_times.txt", "w");
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
@@ -244,6 +346,37 @@ int main(){
                 array_length, k,
                 quickTime[0], quickTime[1],
                 heapTime[0], heapTime[1],
+                medianTime[0], medianTime[1]);
+
+        array_length = (int) (array_length * 1.32);
+    }
+
+    fclose(output);
+
+    output = fopen("../first_part/times/ordered.txt", "w");
+    fprintf(output, "N,K,T1,D1,T3,D3\n");
+    printf("N K T1 D1 T3 D3\n");
+
+    array_length = 100;
+    int k;
+    for(int i = 0; i < 40; i++){
+
+        k = (int) (3*array_length/4);
+
+        printf("%d %d ", array_length, k);
+
+
+        initTime = getInitTimeOrdered(resolution, array_length, seed);
+
+        getSelectTimeOrdered(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        printf("%.17g %.17g  ", quickTime[0], quickTime[1]);
+
+        getSelectTimeOrdered(resolution, array_length, seed, initTime, k, medianselect, medianTime);
+        printf("%.17g %.17g\n", medianTime[0], medianTime[1]);
+
+        fprintf(output, "%d,%d,%.17g,%.17g,%.17g,%.17g\n",
+                array_length, k,
+                quickTime[0], quickTime[1],
                 medianTime[0], medianTime[1]);
 
         array_length = (int) (array_length * 1.32);
