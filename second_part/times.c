@@ -7,9 +7,8 @@
 #include "../rbt/rbt.h"
 #include "utils.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-#define ITERATIONS 20
+#define ITERATIONS 60
 
 /**
  * Computes the median time of a random generation of "elements" integers
@@ -65,7 +64,7 @@ void elaborateTimes(double * times, double * result) {
     result[1] = times[(int) (ITERATIONS / 2)];
 }
 
-double getBstTime(double resolution, int elements, unsigned long seed, double initTime, double * result){
+void getBstTime(double resolution, int elements, unsigned long seed, double initTime, double * result){
 
     struct timespec start,end;
     double times [ITERATIONS];
@@ -87,8 +86,8 @@ double getBstTime(double resolution, int elements, unsigned long seed, double in
 
                 key = (int) genRandLong(&prng);
 
-                if (find(bst, key) != NULL) {
-                    insert(bst, key,""); // insertAvl just an empty string, requires less computation (plus: what should I even write here anyway?)
+                if (find(bst, key) == NULL) {
+                    insert(bst, key,""); // insert just an empty string, requires less computation (plus: what should I even write here anyway?)
                 }
             }
 
@@ -98,6 +97,86 @@ double getBstTime(double resolution, int elements, unsigned long seed, double in
             // destroy current bst (de-allocate everything) and allocate a new one
             destroy_bst(bst);
             bst = create_bst();
+        } while(getDifference(start, end) <= (initTime + resolution * ((1 / 0.005) + 1)) );
+        times[i] = getDifference(start, end) / counter - initTime;
+    }
+
+    elaborateTimes(times, result);
+}
+
+void getAvlTime(double resolution, int elements, unsigned long long int seed, double initTime, double result[2]) {
+
+    struct timespec start,end;
+    double times [ITERATIONS];
+
+    int counter;
+    int key;
+    MTRand prng;
+
+    struct Avl * avl = create_avl();
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        counter = 0;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+
+            prng = seedRand(seed+i);
+            for(int j = 0; j < elements; j++) {
+
+                key = (int) genRandLong(&prng);
+
+                if (findAvl(avl, key) == NULL) {
+                    insertAvl(avl, key, ""); // insert just an empty string, requires less computation (plus: what should I even write here anyway?)
+                }
+            }
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+
+            // destroy current avl (de-allocate everything) and allocate a new one
+            destroy_avl(avl);
+            avl = create_avl();
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
+        times[i] = getDifference(start, end) / counter - initTime;
+    }
+
+    elaborateTimes(times, result);
+}
+
+void getRbtTime(double resolution, int elements, unsigned long long int seed, double initTime, double result[2]) {
+
+    struct timespec start,end;
+    double times [ITERATIONS];
+
+    int counter;
+    int key;
+    MTRand prng;
+
+    struct Rbt * rbt = create_rbt();
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        counter = 0;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+
+            prng = seedRand(seed+i);
+            for(int j = 0; j < elements; j++) {
+
+                key = (int) genRandLong(&prng);
+
+                if (findRbt(rbt, key) == &NIL) {
+                    insertRbt(rbt, key, ""); // insert just an empty string, requires less computation (plus: what should I even write here anyway?)
+                }
+            }
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+
+            // destroy current rbt (de-allocate everything) and allocate a new one
+            destroy_rbt(rbt);
+            rbt = create_rbt();
         } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
         times[i] = getDifference(start, end) / counter - initTime;
     }
@@ -109,7 +188,7 @@ int main(){
     double resolution = getMedianResolution();
 
     int elements = 500;
-    double initTime = 0;
+    double initTime;
     double bstTime [2];
     double avlTime [2];
     double rbtTime [2];
@@ -117,7 +196,7 @@ int main(){
 
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
-    printf("Resolution %.17g\n", resolution);
+    printf("Resolution %.17g ns\n", resolution*1000000000);
 
     output = fopen("../second_part/times/basic_times.txt", "w");
     fprintf(output, "N,T1,D1,T2,D2,T3,D3\n");
@@ -126,19 +205,17 @@ int main(){
 
         printf("%d ", elements);
 
-        initTime = getInitTime(resolution, elements, seed);
-        printf("%.17g ", initTime);
+        initTime = getInitTime(resolution, elements, seed); // time needed to chose "elements" pseudo-random integers (using MT)
+        // printf("%.17g ", initTime);
 
         getBstTime(resolution, elements, seed, initTime, bstTime);
         printf("%.17g %.17g  ", bstTime[0], bstTime[1]);
 
-        /*
-        getAvlTime(resolution, elements, seed, initTime, bstTime);
+        getAvlTime(resolution, elements, seed, initTime, avlTime);
         printf("%.17g %.17g ", avlTime[0], avlTime[1]);
 
-        getRbtTime(resolution, elements, seed, initTime, bstTime);
+        getRbtTime(resolution, elements, seed, initTime, rbtTime);
         printf("%.17g %.17g", rbtTime[0], rbtTime[1]);
-        */
 
         printf("\n");
 
