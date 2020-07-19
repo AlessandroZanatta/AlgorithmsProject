@@ -62,7 +62,7 @@ Il tempo ammortizzato per l'esecuzione di tali operazioni è dato dal tempo tota
 
 
 Si richiede di stimare il tempo ammortizzato al variare di <img src="https://render.githubusercontent.com/render/math?math=n">
-con un errore relativo limitato
+con un errore relativo limitato superiormente da  <img src="https://render.githubusercontent.com/render/math?math=0.01"> (1%).
 
 ## Modalità di consegna
 
