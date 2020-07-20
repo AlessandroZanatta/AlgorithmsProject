@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[italian]{babel}
+\usepackage{animate}
 
 \title{Relazione per il Primo Progetto di Algoritmi e Strutture Dati e Laboratorio}
 \date{16-07-2020}
@@ -149,7 +150,7 @@
 	\\
 	Pertanto, è logico che l'algoritmo QuickSelect risulti, in pratica, più efficiente rispetto a MedianSelect, in quanto il primo sceglierà comunque, mediamente, dei buoni perni (a causa della casualità dell'input), svolgendo una quantità di lavoro minore rispetto alla sua versione ottimizzata. Entrambi gli algoritmi hanno quindi tempo di esecuzione lineare per vettori generati casualmente. 
 	\\ 
-	A comprovare questo fatto si ha il grafico sottostante, che dimostra come l'algoritmo QuickSelect sia effettivamente meno efficiente (e, in particolare, impieghi un tempo più che lineare) se il vettore di input è fortemente ordinato. La scelta di utilizzare $k=\frac{3}{4}n$, dettata da tempi di esecuzione di QuickSort molto lunghi, non permette di 
+	A comprovare questo fatto si ha il grafico sottostante, che dimostra come l'algoritmo QuickSelect sia effettivamente meno efficiente (e, in particolare, impieghi un tempo più che lineare) se il vettore di input è fortemente ordinato. La scelta di utilizzare $k=\frac{3}{4}n$, dettata da tempi di esecuzione molto lunghi, non permette di esprimere a pieno il costo quadratico dell'algoritmo QuickSelect.
 	
 	\begin{figure}[h!]		
 		\centering
@@ -158,7 +159,7 @@
   		\label{fig:graph2}
 	\end{figure}
 	
-	A fronte di queste considerazioni, appare sensato anche il tempo di esecuzione dell'algoritmo HeapSelect. Questo infatti è denotato da una non linearità giustificata dalla scelta di $k=\frac{n}{3}$
+	A fronte di queste considerazioni, appare sensato anche il grafico del tempo di esecuzione dell'algoritmo HeapSelect. Questo infatti è denotato da una non linearità giustificata dalla scelta di $k=\frac{n}{3}$. Si nota inoltre 
 		
 	\newpage
 	
@@ -211,4 +212,7 @@ Il caso più interessante è quello di HeapSelect. Il suo costo è effettivament
 
 	\section{Conclusioni}
 	I risultati ottenuti sono stati molto interessanti e, a tratti, inaspettati. L'analisi sperimentale degli algoritmi in questione ha certamente contribuito ad una maggior consapevolezza nell'uso degli stessi.
+	
+	\animategraphics[autoplay,loop]{12}{images/Heap3D-}{0}{122}
+	
 \end{document}

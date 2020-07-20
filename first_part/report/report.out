@@ -1,0 +1,9 @@
+\BOOKMARK [1][-]{section.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.2}{Aspettative teoriche}{}% 2
+\BOOKMARK [1][-]{section.3}{Note implementative}{}% 3
+\BOOKMARK [1][-]{section.4}{Calcolo del tempi di esecuzione}{}% 4
+\BOOKMARK [1][-]{section.5}{Analisi degli algoritmi}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Lunghezza n dell'array variabile e k=n3}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Lunghezza n=75000 e k variabile in [0,n-1]}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.3}{Lunghezza n variabile e k=1}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Conclusioni}{}% 9
