@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.7.16)  20 JUL 2020 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.7.16)  20 JUL 2020 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -248,20 +248,20 @@ Package: ocgbase 2019/11/04 v0.17 support package for ocgx2.sty
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -285,8 +285,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \it@ocap on input line 12.
-LaTeX Info: Redefining \it@ccap on input line 12.
+LaTeX Info: Redefining \it@ocap on input line 13.
+LaTeX Info: Redefining \it@ccap on input line 13.
 
 
 File italian.ldf warning: 
@@ -294,7 +294,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 12.
+italian.ldf    on input line 13.
 
 \AtBeginShipoutBox=\box51
 [1
@@ -305,7 +305,7 @@ italian.ldf    on input line 12.
 
  [1]
 [2] [3] [4]
-Overfull \hbox (4.44879pt too wide) in paragraph at lines 89--90
+Overfull \hbox (4.44879pt too wide) in paragraph at lines 90--91
  \OT1/cmr/bx/n/10 Ri-so-lu-zio-ne[] \OT1/cmr/m/n/10 Si ^^Re scel-to di uti-liz-
 za-re il clock of-fer-to dal-la fun-zio-ne $[]$.
  []
@@ -314,10 +314,10 @@ za-re il clock of-fer-to dal-la fun-zio-ne $[]$.
 <images/All_Basic_Times.png, id=50, 505.89pt x 505.89pt>
 File: images/All_Basic_Times.png Graphic file (type png)
 <use images/All_Basic_Times.png>
-Package pdftex.def Info: images/All_Basic_Times.png  used on input line 140.
+Package pdftex.def Info: images/All_Basic_Times.png  used on input line 141.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--154
+Underfull \hbox (badness 10000) in paragraph at lines 146--155
 
  []
 
@@ -326,847 +326,891 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--154
 File: images/MoM_Quick_graph_ordered.png Graphic file (type png)
 <use images/MoM_Quick_graph_ordered.png>
 Package pdftex.def Info: images/MoM_Quick_graph_ordered.png  used on input line
- 157.
+ 158.
 (pdftex.def)             Requested size: 241.49895pt x 241.50444pt.
  [9 <./images/MoM_Quick_graph_ordered.png>]
 <images/MoM_Quick_graph.png, id=63, 505.89pt x 505.89pt>
 File: images/MoM_Quick_graph.png Graphic file (type png)
 <use images/MoM_Quick_graph.png>
-Package pdftex.def Info: images/MoM_Quick_graph.png  used on input line 170.
+Package pdftex.def Info: images/MoM_Quick_graph.png  used on input line 171.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
 
 [10 <./images/MoM_Quick_graph.png>]
 <images/HeapSelect_Kvariable.png, id=69, 505.89pt x 505.89pt>
 File: images/HeapSelect_Kvariable.png Graphic file (type png)
 <use images/HeapSelect_Kvariable.png>
-Package pdftex.def Info: images/HeapSelect_Kvariable.png  used on input line 17
-9.
+Package pdftex.def Info: images/HeapSelect_Kvariable.png  used on input line 18
+0.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
  [11 <./images/HeapSelect_Kvariable.png>]
 <images/HeapSelect3d_in2d.png, id=75, 505.89pt x 505.89pt>
 File: images/HeapSelect3d_in2d.png Graphic file (type png)
 <use images/HeapSelect3d_in2d.png>
-Package pdftex.def Info: images/HeapSelect3d_in2d.png  used on input line 191.
+Package pdftex.def Info: images/HeapSelect3d_in2d.png  used on input line 192.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
 
 [12 <./images/HeapSelect3d_in2d.png (PNG copy)>]
 <images/Grafico_Con_K1.png, id=81, 505.89pt x 505.89pt>
 File: images/Grafico_Con_K1.png Graphic file (type png)
 <use images/Grafico_Con_K1.png>
-Package pdftex.def Info: images/Grafico_Con_K1.png  used on input line 203.
+Package pdftex.def Info: images/Grafico_Con_K1.png  used on input line 204.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
  [13 <./images/Grafico_Con_K1.png>]
 
-LaTeX Warning: Reference `anim@abspage0' on page 14 undefined on input line 216
+LaTeX Warning: Reference `anim@abspage0' on page 14 undefined on input line 217
 .
 
-<images/Heap3D-0.png, id=87, 658.46pt x 531.9875pt>
-File: images/Heap3D-0.png Graphic file (type png)
-<use images/Heap3D-0.png>
-Package pdftex.def Info: images/Heap3D-0.png  used on input line 216.
+<images/gif/animate_0.pdf, id=87, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_0.pdf Graphic file (type pdf)
+<use images/gif/animate_0.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_0.pdf , page1 used on input line 21
+7.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/Heap3D-0.png> <a0,fr0>
-<images/Heap3D-1.png, id=94, 506.89375pt x 494.84875pt>
-File: images/Heap3D-1.png Graphic file (type png)
-<use images/Heap3D-1.png>
-Package pdftex.def Info: images/Heap3D-1.png  used on input line 216.
-(pdftex.def)             Requested size: 506.89252pt x 494.84755pt.
- <./images/Heap3D-1.png> <a0,fr1>
-<images/Heap3D-2.png, id=103, 509.905pt x 497.86pt>
-File: images/Heap3D-2.png Graphic file (type png)
-<use images/Heap3D-2.png>
-Package pdftex.def Info: images/Heap3D-2.png  used on input line 216.
-(pdftex.def)             Requested size: 509.90375pt x 497.85878pt.
- <./images/Heap3D-2.png> <a0,fr2>
-<images/Heap3D-3.png, id=112, 512.91624pt x 499.8675pt>
-File: images/Heap3D-3.png Graphic file (type png)
-<use images/Heap3D-3.png>
-Package pdftex.def Info: images/Heap3D-3.png  used on input line 216.
-(pdftex.def)             Requested size: 512.915pt x 499.86627pt.
- <./images/Heap3D-3.png> <a0,fr3>
-<images/Heap3D-4.png, id=121, 513.92pt x 499.8675pt>
-File: images/Heap3D-4.png Graphic file (type png)
-<use images/Heap3D-4.png>
-Package pdftex.def Info: images/Heap3D-4.png  used on input line 216.
-(pdftex.def)             Requested size: 513.91873pt x 499.86627pt.
- <./images/Heap3D-4.png>
-<a0,fr4>
-<images/Heap3D-5.png, id=130, 514.92375pt x 500.87125pt>
-File: images/Heap3D-5.png Graphic file (type png)
-<use images/Heap3D-5.png>
-Package pdftex.def Info: images/Heap3D-5.png  used on input line 216.
-(pdftex.def)             Requested size: 514.92249pt x 500.87001pt.
- <./images/Heap3D-5.png> <a0,fr5>
-<images/Heap3D-6.png, id=139, 515.9275pt x 499.8675pt>
-File: images/Heap3D-6.png Graphic file (type png)
-<use images/Heap3D-6.png>
-Package pdftex.def Info: images/Heap3D-6.png  used on input line 216.
-(pdftex.def)             Requested size: 515.92624pt x 499.86627pt.
- <./images/Heap3D-6.png> <a0,fr6>
-<images/Heap3D-7.png, id=148, 516.93124pt x 499.8675pt>
-File: images/Heap3D-7.png Graphic file (type png)
-<use images/Heap3D-7.png>
-Package pdftex.def Info: images/Heap3D-7.png  used on input line 216.
-(pdftex.def)             Requested size: 516.92998pt x 499.86627pt.
- <./images/Heap3D-7.png> <a0,fr7>
-<images/Heap3D-8.png, id=157, 520.94624pt x 499.8675pt>
-File: images/Heap3D-8.png Graphic file (type png)
-<use images/Heap3D-8.png>
-Package pdftex.def Info: images/Heap3D-8.png  used on input line 216.
-(pdftex.def)             Requested size: 520.94498pt x 499.86627pt.
- <./images/Heap3D-8.png> <a0,fr8>
-<images/Heap3D-9.png, id=166, 524.96124pt x 499.8675pt>
-File: images/Heap3D-9.png Graphic file (type png)
-<use images/Heap3D-9.png>
-Package pdftex.def Info: images/Heap3D-9.png  used on input line 216.
-(pdftex.def)             Requested size: 524.95996pt x 499.86627pt.
- <./images/Heap3D-9.png> <a0,fr9>
-<images/Heap3D-10.png, id=175, 526.96875pt x 499.8675pt>
-File: images/Heap3D-10.png Graphic file (type png)
-<use images/Heap3D-10.png>
-Package pdftex.def Info: images/Heap3D-10.png  used on input line 216.
-(pdftex.def)             Requested size: 526.96745pt x 499.86627pt.
- <./images/Heap3D-10.png> <a0,fr10>
-<images/Heap3D-11.png, id=184, 531.9875pt x 501.875pt>
-File: images/Heap3D-11.png Graphic file (type png)
-<use images/Heap3D-11.png>
-Package pdftex.def Info: images/Heap3D-11.png  used on input line 216.
-(pdftex.def)             Requested size: 531.9862pt x 501.87376pt.
- <./images/Heap3D-11.png>
-<a0,fr11>
-<images/Heap3D-12.png, id=193, 534.99875pt x 501.875pt>
-File: images/Heap3D-12.png Graphic file (type png)
-<use images/Heap3D-12.png>
-Package pdftex.def Info: images/Heap3D-12.png  used on input line 216.
-(pdftex.def)             Requested size: 534.99744pt x 501.87376pt.
- <./images/Heap3D-12.png> <a0,fr12>
-<images/Heap3D-13.png, id=202, 540.0175pt x 498.86375pt>
-File: images/Heap3D-13.png Graphic file (type png)
-<use images/Heap3D-13.png>
-Package pdftex.def Info: images/Heap3D-13.png  used on input line 216.
-(pdftex.def)             Requested size: 540.01617pt x 498.86253pt.
- <./images/Heap3D-13.png>
-<a0,fr13>
-<images/Heap3D-14.png, id=211, 544.0325pt x 495.8525pt>
-File: images/Heap3D-14.png Graphic file (type png)
-<use images/Heap3D-14.png>
-Package pdftex.def Info: images/Heap3D-14.png  used on input line 216.
-(pdftex.def)             Requested size: 544.03117pt x 495.85129pt.
- <./images/Heap3D-14.png> <a0,fr14>
-<images/Heap3D-15.png, id=220, 548.0475pt x 495.8525pt>
-File: images/Heap3D-15.png Graphic file (type png)
-<use images/Heap3D-15.png>
-Package pdftex.def Info: images/Heap3D-15.png  used on input line 216.
-(pdftex.def)             Requested size: 548.04616pt x 495.85129pt.
- <./images/Heap3D-15.png>
-<a0,fr15>
-<images/Heap3D-16.png, id=229, 552.0625pt x 495.8525pt>
-File: images/Heap3D-16.png Graphic file (type png)
-<use images/Heap3D-16.png>
-Package pdftex.def Info: images/Heap3D-16.png  used on input line 216.
-(pdftex.def)             Requested size: 552.06114pt x 495.85129pt.
- <./images/Heap3D-16.png> <a0,fr16>
-<images/Heap3D-17.png, id=238, 555.07375pt x 491.8375pt>
-File: images/Heap3D-17.png Graphic file (type png)
-<use images/Heap3D-17.png>
-Package pdftex.def Info: images/Heap3D-17.png  used on input line 216.
-(pdftex.def)             Requested size: 555.07237pt x 491.83629pt.
- <./images/Heap3D-17.png>
-<a0,fr17>
-<images/Heap3D-18.png, id=247, 563.10374pt x 491.8375pt>
-File: images/Heap3D-18.png Graphic file (type png)
-<use images/Heap3D-18.png>
-Package pdftex.def Info: images/Heap3D-18.png  used on input line 216.
-(pdftex.def)             Requested size: 563.10237pt x 491.83629pt.
- <./images/Heap3D-18.png> <a0,fr18>
-<images/Heap3D-19.png, id=256, 567.11874pt x 491.8375pt>
-File: images/Heap3D-19.png Graphic file (type png)
-<use images/Heap3D-19.png>
-Package pdftex.def Info: images/Heap3D-19.png  used on input line 216.
-(pdftex.def)             Requested size: 567.11736pt x 491.83629pt.
- <./images/Heap3D-19.png>
-<a0,fr19>
-<images/Heap3D-20.png, id=266, 570.13pt x 492.84125pt>
-File: images/Heap3D-20.png Graphic file (type png)
-<use images/Heap3D-20.png>
-Package pdftex.def Info: images/Heap3D-20.png  used on input line 216.
-(pdftex.def)             Requested size: 570.12862pt x 492.84003pt.
- <./images/Heap3D-20.png> <a0,fr20>
-<images/Heap3D-21.png, id=275, 575.14874pt x 492.84125pt>
-File: images/Heap3D-21.png Graphic file (type png)
-<use images/Heap3D-21.png>
-Package pdftex.def Info: images/Heap3D-21.png  used on input line 216.
-(pdftex.def)             Requested size: 575.14734pt x 492.84003pt.
- <./images/Heap3D-21.png>
-<a0,fr21>
-<images/Heap3D-22.png, id=284, 579.16376pt x 491.8375pt>
-File: images/Heap3D-22.png Graphic file (type png)
-<use images/Heap3D-22.png>
-Package pdftex.def Info: images/Heap3D-22.png  used on input line 216.
-(pdftex.def)             Requested size: 579.16234pt x 491.83629pt.
- <./images/Heap3D-22.png> <a0,fr22>
-<images/Heap3D-23.png, id=293, 582.175pt x 491.8375pt>
-File: images/Heap3D-23.png Graphic file (type png)
-<use images/Heap3D-23.png>
-Package pdftex.def Info: images/Heap3D-23.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 491.83629pt.
- <./images/Heap3D-23.png>
-<a0,fr23>
-<images/Heap3D-24.png, id=302, 586.19pt x 491.8375pt>
-File: images/Heap3D-24.png Graphic file (type png)
-<use images/Heap3D-24.png>
-Package pdftex.def Info: images/Heap3D-24.png  used on input line 216.
-(pdftex.def)             Requested size: 586.18857pt x 491.83629pt.
- <./images/Heap3D-24.png> <a0,fr24>
-<images/Heap3D-25.png, id=311, 591.20876pt x 491.8375pt>
-File: images/Heap3D-25.png Graphic file (type png)
-<use images/Heap3D-25.png>
-Package pdftex.def Info: images/Heap3D-25.png  used on input line 216.
-(pdftex.def)             Requested size: 591.2073pt x 491.83629pt.
- <./images/Heap3D-25.png>
-<a0,fr25>
-<images/Heap3D-26.png, id=320, 592.2125pt x 490.83376pt>
-File: images/Heap3D-26.png Graphic file (type png)
-<use images/Heap3D-26.png>
-Package pdftex.def Info: images/Heap3D-26.png  used on input line 216.
-(pdftex.def)             Requested size: 592.21104pt x 490.83255pt.
- <./images/Heap3D-26.png> <a0,fr26>
-<images/Heap3D-27.png, id=329, 596.2275pt x 490.83376pt>
-File: images/Heap3D-27.png Graphic file (type png)
-<use images/Heap3D-27.png>
-Package pdftex.def Info: images/Heap3D-27.png  used on input line 216.
-(pdftex.def)             Requested size: 596.22604pt x 490.83255pt.
- <./images/Heap3D-27.png>
-<a0,fr27>
-<images/Heap3D-28.png, id=338, 599.23875pt x 488.82625pt>
-File: images/Heap3D-28.png Graphic file (type png)
-<use images/Heap3D-28.png>
-Package pdftex.def Info: images/Heap3D-28.png  used on input line 216.
-(pdftex.def)             Requested size: 599.23729pt x 488.82504pt.
- <./images/Heap3D-28.png> <a0,fr28>
-<images/Heap3D-29.png, id=347, 601.24625pt x 486.81876pt>
-File: images/Heap3D-29.png Graphic file (type png)
-<use images/Heap3D-29.png>
-Package pdftex.def Info: images/Heap3D-29.png  used on input line 216.
-(pdftex.def)             Requested size: 601.24477pt x 486.81757pt.
- <./images/Heap3D-29.png>
-<a0,fr29>
-<images/Heap3D-30.png, id=356, 602.25pt x 485.815pt>
-File: images/Heap3D-30.png Graphic file (type png)
-<use images/Heap3D-30.png>
-Package pdftex.def Info: images/Heap3D-30.png  used on input line 216.
-(pdftex.def)             Requested size: 602.24852pt x 485.81381pt.
- <./images/Heap3D-30.png> <a0,fr30>
-<images/Heap3D-31.png, id=365, 602.25pt x 483.8075pt>
-File: images/Heap3D-31.png Graphic file (type png)
-<use images/Heap3D-31.png>
-Package pdftex.def Info: images/Heap3D-31.png  used on input line 216.
-(pdftex.def)             Requested size: 602.24852pt x 483.80632pt.
- <./images/Heap3D-31.png>
-<a0,fr31>
-<images/Heap3D-32.png, id=374, 604.2575pt x 483.8075pt>
-File: images/Heap3D-32.png Graphic file (type png)
-<use images/Heap3D-32.png>
-Package pdftex.def Info: images/Heap3D-32.png  used on input line 216.
-(pdftex.def)             Requested size: 604.25603pt x 483.80632pt.
- <./images/Heap3D-32.png> <a0,fr32>
-<images/Heap3D-33.png, id=383, 608.2725pt x 482.80376pt>
-File: images/Heap3D-33.png Graphic file (type png)
-<use images/Heap3D-33.png>
-Package pdftex.def Info: images/Heap3D-33.png  used on input line 216.
-(pdftex.def)             Requested size: 608.27103pt x 482.80258pt.
- <./images/Heap3D-33.png>
-<a0,fr33>
-<images/Heap3D-34.png, id=392, 614.295pt x 481.8pt>
-File: images/Heap3D-34.png Graphic file (type png)
-<use images/Heap3D-34.png>
-Package pdftex.def Info: images/Heap3D-34.png  used on input line 216.
-(pdftex.def)             Requested size: 614.29349pt x 481.79881pt.
- <./images/Heap3D-34.png> <a0,fr34>
-<images/Heap3D-35.png, id=401, 618.31pt x 479.7925pt>
-File: images/Heap3D-35.png Graphic file (type png)
-<use images/Heap3D-35.png>
-Package pdftex.def Info: images/Heap3D-35.png  used on input line 216.
-(pdftex.def)             Requested size: 618.30849pt x 479.7913pt.
- <./images/Heap3D-35.png>
-<a0,fr35>
-<images/Heap3D-36.png, id=410, 619.31375pt x 478.78876pt>
-File: images/Heap3D-36.png Graphic file (type png)
-<use images/Heap3D-36.png>
-Package pdftex.def Info: images/Heap3D-36.png  used on input line 216.
-(pdftex.def)             Requested size: 619.31224pt x 478.78758pt.
- <./images/Heap3D-36.png> <a0,fr36>
-<images/Heap3D-37.png, id=419, 623.32875pt x 480.79625pt>
-File: images/Heap3D-37.png Graphic file (type png)
-<use images/Heap3D-37.png>
-Package pdftex.def Info: images/Heap3D-37.png  used on input line 216.
-(pdftex.def)             Requested size: 623.32722pt x 480.79506pt.
- <./images/Heap3D-37.png>
-<a0,fr37>
-<images/Heap3D-38.png, id=428, 625.33624pt x 478.78876pt>
-File: images/Heap3D-38.png Graphic file (type png)
-<use images/Heap3D-38.png>
-Package pdftex.def Info: images/Heap3D-38.png  used on input line 216.
-(pdftex.def)             Requested size: 625.33472pt x 478.78758pt.
- <./images/Heap3D-38.png> <a0,fr38>
-<images/Heap3D-39.png, id=437, 627.34375pt x 477.785pt>
-File: images/Heap3D-39.png Graphic file (type png)
-<use images/Heap3D-39.png>
-Package pdftex.def Info: images/Heap3D-39.png  used on input line 216.
-(pdftex.def)             Requested size: 627.34221pt x 477.78383pt.
- <./images/Heap3D-39.png>
+ <./images/gif/animate_0.pdf> <a0,fr0>
+<images/gif/animate_1.pdf, id=99, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_1.pdf Graphic file (type pdf)
+<use images/gif/animate_1.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_1.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_1.pdf> <a0,fr1>
+<images/gif/animate_2.pdf, id=111, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_2.pdf Graphic file (type pdf)
+<use images/gif/animate_2.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_2.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_2.pdf> <a0,fr2>
+<images/gif/animate_3.pdf, id=123, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_3.pdf Graphic file (type pdf)
+<use images/gif/animate_3.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_3.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_3.pdf> <a0,fr3>
+<images/gif/animate_4.pdf, id=135, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_4.pdf Graphic file (type pdf)
+<use images/gif/animate_4.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_4.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_4.pdf> <a0,fr4>
+<images/gif/animate_5.pdf, id=147, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_5.pdf Graphic file (type pdf)
+<use images/gif/animate_5.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_5.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_5.pdf> <a0,fr5>
+<images/gif/animate_6.pdf, id=159, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_6.pdf Graphic file (type pdf)
+<use images/gif/animate_6.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_6.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_6.pdf> <a0,fr6>
+<images/gif/animate_7.pdf, id=171, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_7.pdf Graphic file (type pdf)
+<use images/gif/animate_7.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_7.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_7.pdf> <a0,fr7>
+<images/gif/animate_8.pdf, id=183, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_8.pdf Graphic file (type pdf)
+<use images/gif/animate_8.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_8.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_8.pdf> <a0,fr8>
+<images/gif/animate_9.pdf, id=195, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_9.pdf Graphic file (type pdf)
+<use images/gif/animate_9.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_9.pdf , page1 used on input line 21
+7.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_9.pdf> <a0,fr9>
+<images/gif/animate_10.pdf, id=208, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_10.pdf Graphic file (type pdf)
+<use images/gif/animate_10.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_10.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_10.pdf> <a0,fr10>
+<images/gif/animate_11.pdf, id=220, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_11.pdf Graphic file (type pdf)
+<use images/gif/animate_11.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_11.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_11.pdf> <a0,fr11>
+<images/gif/animate_12.pdf, id=232, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_12.pdf Graphic file (type pdf)
+<use images/gif/animate_12.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_12.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_12.pdf> <a0,fr12>
+<images/gif/animate_13.pdf, id=244, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_13.pdf Graphic file (type pdf)
+<use images/gif/animate_13.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_13.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_13.pdf> <a0,fr13>
+<images/gif/animate_14.pdf, id=256, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_14.pdf Graphic file (type pdf)
+<use images/gif/animate_14.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_14.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_14.pdf> <a0,fr14>
+<images/gif/animate_15.pdf, id=268, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_15.pdf Graphic file (type pdf)
+<use images/gif/animate_15.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_15.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_15.pdf> <a0,fr15>
+<images/gif/animate_16.pdf, id=280, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_16.pdf Graphic file (type pdf)
+<use images/gif/animate_16.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_16.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_16.pdf> <a0,fr16>
+<images/gif/animate_17.pdf, id=292, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_17.pdf Graphic file (type pdf)
+<use images/gif/animate_17.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_17.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_17.pdf> <a0,fr17>
+<images/gif/animate_18.pdf, id=304, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_18.pdf Graphic file (type pdf)
+<use images/gif/animate_18.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_18.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_18.pdf> <a0,fr18>
+<images/gif/animate_19.pdf, id=316, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_19.pdf Graphic file (type pdf)
+<use images/gif/animate_19.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_19.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_19.pdf> <a0,fr19>
+<images/gif/animate_20.pdf, id=328, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_20.pdf Graphic file (type pdf)
+<use images/gif/animate_20.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_20.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_20.pdf> <a0,fr20>
+<images/gif/animate_21.pdf, id=340, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_21.pdf Graphic file (type pdf)
+<use images/gif/animate_21.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_21.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_21.pdf> <a0,fr21>
+<images/gif/animate_22.pdf, id=352, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_22.pdf Graphic file (type pdf)
+<use images/gif/animate_22.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_22.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_22.pdf> <a0,fr22>
+<images/gif/animate_23.pdf, id=364, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_23.pdf Graphic file (type pdf)
+<use images/gif/animate_23.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_23.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_23.pdf> <a0,fr23>
+<images/gif/animate_24.pdf, id=376, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_24.pdf Graphic file (type pdf)
+<use images/gif/animate_24.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_24.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_24.pdf> <a0,fr24>
+<images/gif/animate_25.pdf, id=388, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_25.pdf Graphic file (type pdf)
+<use images/gif/animate_25.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_25.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_25.pdf> <a0,fr25>
+<images/gif/animate_26.pdf, id=400, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_26.pdf Graphic file (type pdf)
+<use images/gif/animate_26.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_26.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_26.pdf> <a0,fr26>
+<images/gif/animate_27.pdf, id=413, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_27.pdf Graphic file (type pdf)
+<use images/gif/animate_27.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_27.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_27.pdf> <a0,fr27>
+<images/gif/animate_28.pdf, id=425, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_28.pdf Graphic file (type pdf)
+<use images/gif/animate_28.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_28.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_28.pdf> <a0,fr28>
+<images/gif/animate_29.pdf, id=437, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_29.pdf Graphic file (type pdf)
+<use images/gif/animate_29.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_29.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_29.pdf> <a0,fr29>
+<images/gif/animate_30.pdf, id=449, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_30.pdf Graphic file (type pdf)
+<use images/gif/animate_30.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_30.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_30.pdf> <a0,fr30>
+<images/gif/animate_31.pdf, id=461, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_31.pdf Graphic file (type pdf)
+<use images/gif/animate_31.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_31.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_31.pdf> <a0,fr31>
+<images/gif/animate_32.pdf, id=473, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_32.pdf Graphic file (type pdf)
+<use images/gif/animate_32.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_32.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_32.pdf> <a0,fr32>
+<images/gif/animate_33.pdf, id=485, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_33.pdf Graphic file (type pdf)
+<use images/gif/animate_33.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_33.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_33.pdf> <a0,fr33>
+<images/gif/animate_34.pdf, id=497, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_34.pdf Graphic file (type pdf)
+<use images/gif/animate_34.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_34.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_34.pdf> <a0,fr34>
+<images/gif/animate_35.pdf, id=509, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_35.pdf Graphic file (type pdf)
+<use images/gif/animate_35.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_35.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_35.pdf> <a0,fr35>
+<images/gif/animate_36.pdf, id=521, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_36.pdf Graphic file (type pdf)
+<use images/gif/animate_36.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_36.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_36.pdf> <a0,fr36>
+<images/gif/animate_37.pdf, id=533, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_37.pdf Graphic file (type pdf)
+<use images/gif/animate_37.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_37.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_37.pdf> <a0,fr37>
+<images/gif/animate_38.pdf, id=545, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_38.pdf Graphic file (type pdf)
+<use images/gif/animate_38.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_38.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_38.pdf> <a0,fr38>
+<images/gif/animate_39.pdf, id=557, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_39.pdf Graphic file (type pdf)
+<use images/gif/animate_39.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_39.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_39.pdf>
 <a0,fr39>
-<images/Heap3D-40.png, id=446, 629.35126pt x 478.78876pt>
-File: images/Heap3D-40.png Graphic file (type png)
-<use images/Heap3D-40.png>
-Package pdftex.def Info: images/Heap3D-40.png  used on input line 216.
-(pdftex.def)             Requested size: 629.34972pt x 478.78758pt.
- <./images/Heap3D-40.png> <a0,fr40>
-<images/Heap3D-41.png, id=455, 630.355pt x 478.78876pt>
-File: images/Heap3D-41.png Graphic file (type png)
-<use images/Heap3D-41.png>
-Package pdftex.def Info: images/Heap3D-41.png  used on input line 216.
-(pdftex.def)             Requested size: 630.35345pt x 478.78758pt.
- <./images/Heap3D-41.png>
-<a0,fr41>
-<images/Heap3D-42.png, id=464, 629.35126pt x 476.78125pt>
-File: images/Heap3D-42.png Graphic file (type png)
-<use images/Heap3D-42.png>
-Package pdftex.def Info: images/Heap3D-42.png  used on input line 216.
-(pdftex.def)             Requested size: 629.34972pt x 476.78008pt.
- <./images/Heap3D-42.png> <a0,fr42>
-<images/Heap3D-43.png, id=473, 629.35126pt x 476.78125pt>
-File: images/Heap3D-43.png Graphic file (type png)
-<use images/Heap3D-43.png>
-Package pdftex.def Info: images/Heap3D-43.png  used on input line 216.
-(pdftex.def)             Requested size: 629.34972pt x 476.78008pt.
- <./images/Heap3D-43.png>
-<a0,fr43>
-<images/Heap3D-44.png, id=482, 626.34pt x 476.78125pt>
-File: images/Heap3D-44.png Graphic file (type png)
-<use images/Heap3D-44.png>
-Package pdftex.def Info: images/Heap3D-44.png  used on input line 216.
-(pdftex.def)             Requested size: 626.33846pt x 476.78008pt.
- <./images/Heap3D-44.png> <a0,fr44>
-<images/Heap3D-45.png, id=491, 625.33624pt x 474.77374pt>
-File: images/Heap3D-45.png Graphic file (type png)
-<use images/Heap3D-45.png>
-Package pdftex.def Info: images/Heap3D-45.png  used on input line 216.
-(pdftex.def)             Requested size: 625.33472pt x 474.77258pt.
- <./images/Heap3D-45.png>
-<a0,fr45>
-<images/Heap3D-46.png, id=500, 618.31pt x 473.77pt>
-File: images/Heap3D-46.png Graphic file (type png)
-<use images/Heap3D-46.png>
-Package pdftex.def Info: images/Heap3D-46.png  used on input line 216.
-(pdftex.def)             Requested size: 618.30849pt x 473.76884pt.
- <./images/Heap3D-46.png> <a0,fr46>
-<images/Heap3D-47.png, id=509, 612.2875pt x 470.75874pt>
-File: images/Heap3D-47.png Graphic file (type png)
-<use images/Heap3D-47.png>
-Package pdftex.def Info: images/Heap3D-47.png  used on input line 216.
-(pdftex.def)             Requested size: 612.28601pt x 470.7576pt.
- <./images/Heap3D-47.png>
-<a0,fr47>
-<images/Heap3D-48.png, id=518, 607.26875pt x 469.755pt>
-File: images/Heap3D-48.png Graphic file (type png)
-<use images/Heap3D-48.png>
-Package pdftex.def Info: images/Heap3D-48.png  used on input line 216.
-(pdftex.def)             Requested size: 607.26727pt x 469.75386pt.
- <./images/Heap3D-48.png> <a0,fr48>
-<images/Heap3D-49.png, id=527, 601.24625pt x 469.755pt>
-File: images/Heap3D-49.png Graphic file (type png)
-<use images/Heap3D-49.png>
-Package pdftex.def Info: images/Heap3D-49.png  used on input line 216.
-(pdftex.def)             Requested size: 601.24477pt x 469.75386pt.
- <./images/Heap3D-49.png>
-<a0,fr49>
-<images/Heap3D-50.png, id=536, 593.21625pt x 469.755pt>
-File: images/Heap3D-50.png Graphic file (type png)
-<use images/Heap3D-50.png>
-Package pdftex.def Info: images/Heap3D-50.png  used on input line 216.
-(pdftex.def)             Requested size: 593.2148pt x 469.75386pt.
- <./images/Heap3D-50.png> <a0,fr50>
-<images/Heap3D-51.png, id=545, 582.175pt x 470.75874pt>
-File: images/Heap3D-51.png Graphic file (type png)
-<use images/Heap3D-51.png>
-Package pdftex.def Info: images/Heap3D-51.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 470.7576pt.
- <./images/Heap3D-51.png>
-<a0,fr51>
-<images/Heap3D-52.png, id=554, 580.1675pt x 473.77pt>
-File: images/Heap3D-52.png Graphic file (type png)
-<use images/Heap3D-52.png>
-Package pdftex.def Info: images/Heap3D-52.png  used on input line 216.
-(pdftex.def)             Requested size: 580.16606pt x 473.76884pt.
- <./images/Heap3D-52.png> <a0,fr52>
-<images/Heap3D-53.png, id=563, 580.1675pt x 473.77pt>
-File: images/Heap3D-53.png Graphic file (type png)
-<use images/Heap3D-53.png>
-Package pdftex.def Info: images/Heap3D-53.png  used on input line 216.
-(pdftex.def)             Requested size: 580.16606pt x 473.76884pt.
- <./images/Heap3D-53.png>
-<a0,fr53>
-<images/Heap3D-54.png, id=573, 582.175pt x 473.77pt>
-File: images/Heap3D-54.png Graphic file (type png)
-<use images/Heap3D-54.png>
-Package pdftex.def Info: images/Heap3D-54.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 473.76884pt.
- <./images/Heap3D-54.png> <a0,fr54>
-<images/Heap3D-55.png, id=582, 579.16376pt x 474.77374pt>
-File: images/Heap3D-55.png Graphic file (type png)
-<use images/Heap3D-55.png>
-Package pdftex.def Info: images/Heap3D-55.png  used on input line 216.
-(pdftex.def)             Requested size: 579.16234pt x 474.77258pt.
- <./images/Heap3D-55.png>
-<a0,fr55>
-<images/Heap3D-56.png, id=591, 580.1675pt x 474.77374pt>
-File: images/Heap3D-56.png Graphic file (type png)
-<use images/Heap3D-56.png>
-Package pdftex.def Info: images/Heap3D-56.png  used on input line 216.
-(pdftex.def)             Requested size: 580.16606pt x 474.77258pt.
- <./images/Heap3D-56.png> <a0,fr56>
-<images/Heap3D-57.png, id=600, 581.17125pt x 475.7775pt>
-File: images/Heap3D-57.png Graphic file (type png)
-<use images/Heap3D-57.png>
-Package pdftex.def Info: images/Heap3D-57.png  used on input line 216.
-(pdftex.def)             Requested size: 581.16983pt x 475.77632pt.
- <./images/Heap3D-57.png>
-<a0,fr57>
-<images/Heap3D-58.png, id=609, 579.16376pt x 477.785pt>
-File: images/Heap3D-58.png Graphic file (type png)
-<use images/Heap3D-58.png>
-Package pdftex.def Info: images/Heap3D-58.png  used on input line 216.
-(pdftex.def)             Requested size: 579.16234pt x 477.78383pt.
- <./images/Heap3D-58.png> <a0,fr58>
-<images/Heap3D-59.png, id=618, 582.175pt x 477.785pt>
-File: images/Heap3D-59.png Graphic file (type png)
-<use images/Heap3D-59.png>
-Package pdftex.def Info: images/Heap3D-59.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 477.78383pt.
- <./images/Heap3D-59.png>
-<a0,fr59>
-<images/Heap3D-60.png, id=627, 582.175pt x 476.78125pt>
-File: images/Heap3D-60.png Graphic file (type png)
-<use images/Heap3D-60.png>
-Package pdftex.def Info: images/Heap3D-60.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 476.78008pt.
- <./images/Heap3D-60.png> <a0,fr60>
-<images/Heap3D-61.png, id=636, 581.17125pt x 475.7775pt>
-File: images/Heap3D-61.png Graphic file (type png)
-<use images/Heap3D-61.png>
-Package pdftex.def Info: images/Heap3D-61.png  used on input line 216.
-(pdftex.def)             Requested size: 581.16983pt x 475.77632pt.
- <./images/Heap3D-61.png>
-<a0,fr61>
-<images/Heap3D-62.png, id=645, 578.16pt x 473.77pt>
-File: images/Heap3D-62.png Graphic file (type png)
-<use images/Heap3D-62.png>
-Package pdftex.def Info: images/Heap3D-62.png  used on input line 216.
-(pdftex.def)             Requested size: 578.15858pt x 473.76884pt.
- <./images/Heap3D-62.png> <a0,fr62>
-<images/Heap3D-63.png, id=654, 582.175pt x 472.76625pt>
-File: images/Heap3D-63.png Graphic file (type png)
-<use images/Heap3D-63.png>
-Package pdftex.def Info: images/Heap3D-63.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 472.76509pt.
- <./images/Heap3D-63.png>
-<a0,fr63>
-<images/Heap3D-64.png, id=663, 591.20876pt x 472.76625pt>
-File: images/Heap3D-64.png Graphic file (type png)
-<use images/Heap3D-64.png>
-Package pdftex.def Info: images/Heap3D-64.png  used on input line 216.
-(pdftex.def)             Requested size: 591.2073pt x 472.76509pt.
- <./images/Heap3D-64.png> <a0,fr64>
-<images/Heap3D-65.png, id=672, 597.23125pt x 471.7625pt>
-File: images/Heap3D-65.png Graphic file (type png)
-<use images/Heap3D-65.png>
-Package pdftex.def Info: images/Heap3D-65.png  used on input line 216.
-(pdftex.def)             Requested size: 597.22978pt x 471.76134pt.
- <./images/Heap3D-65.png>
-<a0,fr65>
-<images/Heap3D-66.png, id=681, 603.25375pt x 470.75874pt>
-File: images/Heap3D-66.png Graphic file (type png)
-<use images/Heap3D-66.png>
-Package pdftex.def Info: images/Heap3D-66.png  used on input line 216.
-(pdftex.def)             Requested size: 603.25227pt x 470.7576pt.
- <./images/Heap3D-66.png> <a0,fr66>
-<images/Heap3D-67.png, id=690, 608.2725pt x 474.77374pt>
-File: images/Heap3D-67.png Graphic file (type png)
-<use images/Heap3D-67.png>
-Package pdftex.def Info: images/Heap3D-67.png  used on input line 216.
-(pdftex.def)             Requested size: 608.27103pt x 474.77258pt.
- <./images/Heap3D-67.png>
-<a0,fr67>
-<images/Heap3D-68.png, id=699, 612.2875pt x 473.77pt>
-File: images/Heap3D-68.png Graphic file (type png)
-<use images/Heap3D-68.png>
-Package pdftex.def Info: images/Heap3D-68.png  used on input line 216.
-(pdftex.def)             Requested size: 612.28601pt x 473.76884pt.
- <./images/Heap3D-68.png> <a0,fr68>
-<images/Heap3D-69.png, id=708, 615.29875pt x 474.77374pt>
-File: images/Heap3D-69.png Graphic file (type png)
-<use images/Heap3D-69.png>
-Package pdftex.def Info: images/Heap3D-69.png  used on input line 216.
-(pdftex.def)             Requested size: 615.29724pt x 474.77258pt.
- <./images/Heap3D-69.png>
-<a0,fr69>
-<images/Heap3D-70.png, id=717, 619.31375pt x 474.77374pt>
-File: images/Heap3D-70.png Graphic file (type png)
-<use images/Heap3D-70.png>
-Package pdftex.def Info: images/Heap3D-70.png  used on input line 216.
-(pdftex.def)             Requested size: 619.31224pt x 474.77258pt.
- <./images/Heap3D-70.png> <a0,fr70>
-<images/Heap3D-71.png, id=726, 622.325pt x 476.78125pt>
-File: images/Heap3D-71.png Graphic file (type png)
-<use images/Heap3D-71.png>
-Package pdftex.def Info: images/Heap3D-71.png  used on input line 216.
-(pdftex.def)             Requested size: 622.32347pt x 476.78008pt.
- <./images/Heap3D-71.png>
-<a0,fr71>
-<images/Heap3D-72.png, id=735, 624.3325pt x 477.785pt>
-File: images/Heap3D-72.png Graphic file (type png)
-<use images/Heap3D-72.png>
-Package pdftex.def Info: images/Heap3D-72.png  used on input line 216.
-(pdftex.def)             Requested size: 624.33098pt x 477.78383pt.
- <./images/Heap3D-72.png> <a0,fr72>
-<images/Heap3D-73.png, id=744, 627.34375pt x 478.78876pt>
-File: images/Heap3D-73.png Graphic file (type png)
-<use images/Heap3D-73.png>
-Package pdftex.def Info: images/Heap3D-73.png  used on input line 216.
-(pdftex.def)             Requested size: 627.34221pt x 478.78758pt.
- <./images/Heap3D-73.png>
-<a0,fr73>
-<images/Heap3D-74.png, id=753, 627.34375pt x 478.78876pt>
-File: images/Heap3D-74.png Graphic file (type png)
-<use images/Heap3D-74.png>
-Package pdftex.def Info: images/Heap3D-74.png  used on input line 216.
-(pdftex.def)             Requested size: 627.34221pt x 478.78758pt.
- <./images/Heap3D-74.png> <a0,fr74>
-<images/Heap3D-75.png, id=762, 628.3475pt x 478.78876pt>
-File: images/Heap3D-75.png Graphic file (type png)
-<use images/Heap3D-75.png>
-Package pdftex.def Info: images/Heap3D-75.png  used on input line 216.
-(pdftex.def)             Requested size: 628.34596pt x 478.78758pt.
- <./images/Heap3D-75.png>
-<a0,fr75>
-<images/Heap3D-76.png, id=771, 628.3475pt x 478.78876pt>
-File: images/Heap3D-76.png Graphic file (type png)
-<use images/Heap3D-76.png>
-Package pdftex.def Info: images/Heap3D-76.png  used on input line 216.
-(pdftex.def)             Requested size: 628.34596pt x 478.78758pt.
- <./images/Heap3D-76.png> <a0,fr76>
-<images/Heap3D-77.png, id=780, 629.35126pt x 477.785pt>
-File: images/Heap3D-77.png Graphic file (type png)
-<use images/Heap3D-77.png>
-Package pdftex.def Info: images/Heap3D-77.png  used on input line 216.
-(pdftex.def)             Requested size: 629.34972pt x 477.78383pt.
- <./images/Heap3D-77.png>
-<a0,fr77>
-<images/Heap3D-78.png, id=789, 628.3475pt x 478.78876pt>
-File: images/Heap3D-78.png Graphic file (type png)
-<use images/Heap3D-78.png>
-Package pdftex.def Info: images/Heap3D-78.png  used on input line 216.
-(pdftex.def)             Requested size: 628.34596pt x 478.78758pt.
- <./images/Heap3D-78.png> <a0,fr78>
-<images/Heap3D-79.png, id=798, 627.34375pt x 480.79625pt>
-File: images/Heap3D-79.png Graphic file (type png)
-<use images/Heap3D-79.png>
-Package pdftex.def Info: images/Heap3D-79.png  used on input line 216.
-(pdftex.def)             Requested size: 627.34221pt x 480.79506pt.
- <./images/Heap3D-79.png>
-<a0,fr79>
-<images/Heap3D-80.png, id=807, 625.33624pt x 481.8pt>
-File: images/Heap3D-80.png Graphic file (type png)
-<use images/Heap3D-80.png>
-Package pdftex.def Info: images/Heap3D-80.png  used on input line 216.
-(pdftex.def)             Requested size: 625.33472pt x 481.79881pt.
- <./images/Heap3D-80.png> <a0,fr80>
-<images/Heap3D-81.png, id=816, 622.325pt x 481.8pt>
-File: images/Heap3D-81.png Graphic file (type png)
-<use images/Heap3D-81.png>
-Package pdftex.def Info: images/Heap3D-81.png  used on input line 216.
-(pdftex.def)             Requested size: 622.32347pt x 481.79881pt.
- <./images/Heap3D-81.png>
-<a0,fr81>
-<images/Heap3D-82.png, id=825, 617.30624pt x 481.8pt>
-File: images/Heap3D-82.png Graphic file (type png)
-<use images/Heap3D-82.png>
-Package pdftex.def Info: images/Heap3D-82.png  used on input line 216.
-(pdftex.def)             Requested size: 617.30473pt x 481.79881pt.
- <./images/Heap3D-82.png> <a0,fr82>
-<images/Heap3D-83.png, id=834, 614.295pt x 480.79625pt>
-File: images/Heap3D-83.png Graphic file (type png)
-<use images/Heap3D-83.png>
-Package pdftex.def Info: images/Heap3D-83.png  used on input line 216.
-(pdftex.def)             Requested size: 614.29349pt x 480.79506pt.
- <./images/Heap3D-83.png>
-<a0,fr83>
-<images/Heap3D-84.png, id=843, 610.28pt x 481.8pt>
-File: images/Heap3D-84.png Graphic file (type png)
-<use images/Heap3D-84.png>
-Package pdftex.def Info: images/Heap3D-84.png  used on input line 216.
-(pdftex.def)             Requested size: 610.2785pt x 481.79881pt.
- <./images/Heap3D-84.png> <a0,fr84>
-<images/Heap3D-85.png, id=852, 604.2575pt x 482.80376pt>
-File: images/Heap3D-85.png Graphic file (type png)
-<use images/Heap3D-85.png>
-Package pdftex.def Info: images/Heap3D-85.png  used on input line 216.
-(pdftex.def)             Requested size: 604.25603pt x 482.80258pt.
- <./images/Heap3D-85.png>
-<a0,fr85>
-<images/Heap3D-86.png, id=861, 601.24625pt x 482.80376pt>
-File: images/Heap3D-86.png Graphic file (type png)
-<use images/Heap3D-86.png>
-Package pdftex.def Info: images/Heap3D-86.png  used on input line 216.
-(pdftex.def)             Requested size: 601.24477pt x 482.80258pt.
- <./images/Heap3D-86.png> <a0,fr86>
-<images/Heap3D-87.png, id=871, 602.25pt x 484.81125pt>
-File: images/Heap3D-87.png Graphic file (type png)
-<use images/Heap3D-87.png>
-Package pdftex.def Info: images/Heap3D-87.png  used on input line 216.
-(pdftex.def)             Requested size: 602.24852pt x 484.81006pt.
- <./images/Heap3D-87.png>
-<a0,fr87>
-<images/Heap3D-88.png, id=880, 601.24625pt x 484.81125pt>
-File: images/Heap3D-88.png Graphic file (type png)
-<use images/Heap3D-88.png>
-Package pdftex.def Info: images/Heap3D-88.png  used on input line 216.
-(pdftex.def)             Requested size: 601.24477pt x 484.81006pt.
- <./images/Heap3D-88.png> <a0,fr88>
-<images/Heap3D-89.png, id=889, 601.24625pt x 484.81125pt>
-File: images/Heap3D-89.png Graphic file (type png)
-<use images/Heap3D-89.png>
-Package pdftex.def Info: images/Heap3D-89.png  used on input line 216.
-(pdftex.def)             Requested size: 601.24477pt x 484.81006pt.
- <./images/Heap3D-89.png>
-<a0,fr89>
-<images/Heap3D-90.png, id=898, 599.23875pt x 484.81125pt>
-File: images/Heap3D-90.png Graphic file (type png)
-<use images/Heap3D-90.png>
-Package pdftex.def Info: images/Heap3D-90.png  used on input line 216.
-(pdftex.def)             Requested size: 599.23729pt x 484.81006pt.
- <./images/Heap3D-90.png> <a0,fr90>
-<images/Heap3D-91.png, id=907, 597.23125pt x 484.81125pt>
-File: images/Heap3D-91.png Graphic file (type png)
-<use images/Heap3D-91.png>
-Package pdftex.def Info: images/Heap3D-91.png  used on input line 216.
-(pdftex.def)             Requested size: 597.22978pt x 484.81006pt.
- <./images/Heap3D-91.png>
-<a0,fr91>
-<images/Heap3D-92.png, id=916, 596.2275pt x 485.815pt>
-File: images/Heap3D-92.png Graphic file (type png)
-<use images/Heap3D-92.png>
-Package pdftex.def Info: images/Heap3D-92.png  used on input line 216.
-(pdftex.def)             Requested size: 596.22604pt x 485.81381pt.
- <./images/Heap3D-92.png> <a0,fr92>
-<images/Heap3D-93.png, id=925, 595.22375pt x 485.815pt>
-File: images/Heap3D-93.png Graphic file (type png)
-<use images/Heap3D-93.png>
-Package pdftex.def Info: images/Heap3D-93.png  used on input line 216.
-(pdftex.def)             Requested size: 595.2223pt x 485.81381pt.
- <./images/Heap3D-93.png>
-<a0,fr93>
-<images/Heap3D-94.png, id=934, 593.21625pt x 486.81876pt>
-File: images/Heap3D-94.png Graphic file (type png)
-<use images/Heap3D-94.png>
-Package pdftex.def Info: images/Heap3D-94.png  used on input line 216.
-(pdftex.def)             Requested size: 593.2148pt x 486.81757pt.
- <./images/Heap3D-94.png> <a0,fr94>
-<images/Heap3D-95.png, id=943, 589.20125pt x 486.81876pt>
-File: images/Heap3D-95.png Graphic file (type png)
-<use images/Heap3D-95.png>
-Package pdftex.def Info: images/Heap3D-95.png  used on input line 216.
-(pdftex.def)             Requested size: 589.1998pt x 486.81757pt.
- <./images/Heap3D-95.png>
-<a0,fr95>
-<images/Heap3D-96.png, id=952, 587.19376pt x 487.8225pt>
-File: images/Heap3D-96.png Graphic file (type png)
-<use images/Heap3D-96.png>
-Package pdftex.def Info: images/Heap3D-96.png  used on input line 216.
-(pdftex.def)             Requested size: 587.19232pt x 487.8213pt.
- <./images/Heap3D-96.png> <a0,fr96>
-<images/Heap3D-97.png, id=961, 582.175pt x 487.8225pt>
-File: images/Heap3D-97.png Graphic file (type png)
-<use images/Heap3D-97.png>
-Package pdftex.def Info: images/Heap3D-97.png  used on input line 216.
-(pdftex.def)             Requested size: 582.17358pt x 487.8213pt.
- <./images/Heap3D-97.png>
-<a0,fr97>
-<images/Heap3D-98.png, id=970, 578.16pt x 486.81876pt>
-File: images/Heap3D-98.png Graphic file (type png)
-<use images/Heap3D-98.png>
-Package pdftex.def Info: images/Heap3D-98.png  used on input line 216.
-(pdftex.def)             Requested size: 578.15858pt x 486.81757pt.
- <./images/Heap3D-98.png> <a0,fr98>
-<images/Heap3D-99.png, id=979, 576.1525pt x 487.8225pt>
-File: images/Heap3D-99.png Graphic file (type png)
-<use images/Heap3D-99.png>
-Package pdftex.def Info: images/Heap3D-99.png  used on input line 216.
-(pdftex.def)             Requested size: 576.15108pt x 487.8213pt.
- <./images/Heap3D-99.png>
-<a0,fr99>
-<images/Heap3D-100.png, id=988, 575.14874pt x 487.8225pt>
-File: images/Heap3D-100.png Graphic file (type png)
-<use images/Heap3D-100.png>
-Package pdftex.def Info: images/Heap3D-100.png  used on input line 216.
-(pdftex.def)             Requested size: 575.14734pt x 487.8213pt.
- <./images/Heap3D-100.png> <a0,fr100>
-<images/Heap3D-101.png, id=997, 572.1375pt x 487.8225pt>
-File: images/Heap3D-101.png Graphic file (type png)
-<use images/Heap3D-101.png>
-Package pdftex.def Info: images/Heap3D-101.png  used on input line 216.
-(pdftex.def)             Requested size: 572.1361pt x 487.8213pt.
- <./images/Heap3D-101.png>
-<a0,fr101>
-<images/Heap3D-102.png, id=1006, 570.13pt x 487.8225pt>
-File: images/Heap3D-102.png Graphic file (type png)
-<use images/Heap3D-102.png>
-Package pdftex.def Info: images/Heap3D-102.png  used on input line 216.
-(pdftex.def)             Requested size: 570.12862pt x 487.8213pt.
- <./images/Heap3D-102.png> <a0,fr102>
-<images/Heap3D-103.png, id=1015, 567.11874pt x 487.8225pt>
-File: images/Heap3D-103.png Graphic file (type png)
-<use images/Heap3D-103.png>
-Package pdftex.def Info: images/Heap3D-103.png  used on input line 216.
-(pdftex.def)             Requested size: 567.11736pt x 487.8213pt.
- <./images/Heap3D-103.png>
-<a0,fr103>
-<images/Heap3D-104.png, id=1024, 563.10374pt x 487.8225pt>
-File: images/Heap3D-104.png Graphic file (type png)
-<use images/Heap3D-104.png>
-Package pdftex.def Info: images/Heap3D-104.png  used on input line 216.
-(pdftex.def)             Requested size: 563.10237pt x 487.8213pt.
- <./images/Heap3D-104.png> <a0,fr104>
-<images/Heap3D-105.png, id=1033, 554.07pt x 487.8225pt>
-File: images/Heap3D-105.png Graphic file (type png)
-<use images/Heap3D-105.png>
-Package pdftex.def Info: images/Heap3D-105.png  used on input line 216.
-(pdftex.def)             Requested size: 554.06865pt x 487.8213pt.
- <./images/Heap3D-105.png>
-<a0,fr105>
-<images/Heap3D-106.png, id=1042, 548.0475pt x 486.81876pt>
-File: images/Heap3D-106.png Graphic file (type png)
-<use images/Heap3D-106.png>
-Package pdftex.def Info: images/Heap3D-106.png  used on input line 216.
-(pdftex.def)             Requested size: 548.04616pt x 486.81757pt.
- <./images/Heap3D-106.png> <a0,fr106>
-<images/Heap3D-107.png, id=1051, 543.02875pt x 486.81876pt>
-File: images/Heap3D-107.png Graphic file (type png)
-<use images/Heap3D-107.png>
-Package pdftex.def Info: images/Heap3D-107.png  used on input line 216.
-(pdftex.def)             Requested size: 543.0274pt x 486.81757pt.
- <./images/Heap3D-107.png>
-<a0,fr107>
-<images/Heap3D-108.png, id=1060, 540.0175pt x 485.815pt>
-File: images/Heap3D-108.png Graphic file (type png)
-<use images/Heap3D-108.png>
-Package pdftex.def Info: images/Heap3D-108.png  used on input line 216.
-(pdftex.def)             Requested size: 540.01617pt x 485.81381pt.
- <./images/Heap3D-108.png> <a0,fr108>
-<images/Heap3D-109.png, id=1069, 532.99126pt x 484.81125pt>
-File: images/Heap3D-109.png Graphic file (type png)
-<use images/Heap3D-109.png>
-Package pdftex.def Info: images/Heap3D-109.png  used on input line 216.
-(pdftex.def)             Requested size: 532.98996pt x 484.81006pt.
- <./images/Heap3D-109.png>
-<a0,fr109>
-<images/Heap3D-110.png, id=1078, 524.96124pt x 484.81125pt>
-File: images/Heap3D-110.png Graphic file (type png)
-<use images/Heap3D-110.png>
-Package pdftex.def Info: images/Heap3D-110.png  used on input line 216.
-(pdftex.def)             Requested size: 524.95996pt x 484.81006pt.
- <./images/Heap3D-110.png> <a0,fr110>
-<images/Heap3D-111.png, id=1087, 517.935pt x 482.80376pt>
-File: images/Heap3D-111.png Graphic file (type png)
-<use images/Heap3D-111.png>
-Package pdftex.def Info: images/Heap3D-111.png  used on input line 216.
-(pdftex.def)             Requested size: 517.93372pt x 482.80258pt.
- <./images/Heap3D-111.png>
-<a0,fr111>
-<images/Heap3D-112.png, id=1096, 519.9425pt x 482.80376pt>
-File: images/Heap3D-112.png Graphic file (type png)
-<use images/Heap3D-112.png>
-Package pdftex.def Info: images/Heap3D-112.png  used on input line 216.
-(pdftex.def)             Requested size: 519.94124pt x 482.80258pt.
- <./images/Heap3D-112.png> <a0,fr112>
-<images/Heap3D-113.png, id=1105, 516.93124pt x 482.80376pt>
-File: images/Heap3D-113.png Graphic file (type png)
-<use images/Heap3D-113.png>
-Package pdftex.def Info: images/Heap3D-113.png  used on input line 216.
-(pdftex.def)             Requested size: 516.92998pt x 482.80258pt.
- <./images/Heap3D-113.png>
+<images/gif/animate_40.pdf, id=569, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_40.pdf Graphic file (type pdf)
+<use images/gif/animate_40.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_40.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_40.pdf> <a0,fr40>
+<images/gif/animate_41.pdf, id=581, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_41.pdf Graphic file (type pdf)
+<use images/gif/animate_41.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_41.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_41.pdf> <a0,fr41>
+<images/gif/animate_42.pdf, id=593, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_42.pdf Graphic file (type pdf)
+<use images/gif/animate_42.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_42.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_42.pdf> <a0,fr42>
+<images/gif/animate_43.pdf, id=605, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_43.pdf Graphic file (type pdf)
+<use images/gif/animate_43.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_43.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_43.pdf> <a0,fr43>
+<images/gif/animate_44.pdf, id=618, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_44.pdf Graphic file (type pdf)
+<use images/gif/animate_44.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_44.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_44.pdf> <a0,fr44>
+<images/gif/animate_45.pdf, id=630, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_45.pdf Graphic file (type pdf)
+<use images/gif/animate_45.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_45.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_45.pdf> <a0,fr45>
+<images/gif/animate_46.pdf, id=642, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_46.pdf Graphic file (type pdf)
+<use images/gif/animate_46.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_46.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_46.pdf> <a0,fr46>
+<images/gif/animate_47.pdf, id=654, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_47.pdf Graphic file (type pdf)
+<use images/gif/animate_47.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_47.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_47.pdf> <a0,fr47>
+<images/gif/animate_48.pdf, id=666, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_48.pdf Graphic file (type pdf)
+<use images/gif/animate_48.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_48.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_48.pdf> <a0,fr48>
+<images/gif/animate_49.pdf, id=678, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_49.pdf Graphic file (type pdf)
+<use images/gif/animate_49.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_49.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_49.pdf> <a0,fr49>
+<images/gif/animate_50.pdf, id=690, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_50.pdf Graphic file (type pdf)
+<use images/gif/animate_50.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_50.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_50.pdf> <a0,fr50>
+<images/gif/animate_51.pdf, id=702, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_51.pdf Graphic file (type pdf)
+<use images/gif/animate_51.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_51.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_51.pdf> <a0,fr51>
+<images/gif/animate_52.pdf, id=714, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_52.pdf Graphic file (type pdf)
+<use images/gif/animate_52.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_52.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_52.pdf> <a0,fr52>
+<images/gif/animate_53.pdf, id=726, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_53.pdf Graphic file (type pdf)
+<use images/gif/animate_53.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_53.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_53.pdf> <a0,fr53>
+<images/gif/animate_54.pdf, id=738, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_54.pdf Graphic file (type pdf)
+<use images/gif/animate_54.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_54.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_54.pdf> <a0,fr54>
+<images/gif/animate_55.pdf, id=750, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_55.pdf Graphic file (type pdf)
+<use images/gif/animate_55.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_55.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_55.pdf> <a0,fr55>
+<images/gif/animate_56.pdf, id=762, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_56.pdf Graphic file (type pdf)
+<use images/gif/animate_56.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_56.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_56.pdf> <a0,fr56>
+<images/gif/animate_57.pdf, id=774, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_57.pdf Graphic file (type pdf)
+<use images/gif/animate_57.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_57.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_57.pdf> <a0,fr57>
+<images/gif/animate_58.pdf, id=786, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_58.pdf Graphic file (type pdf)
+<use images/gif/animate_58.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_58.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_58.pdf> <a0,fr58>
+<images/gif/animate_59.pdf, id=798, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_59.pdf Graphic file (type pdf)
+<use images/gif/animate_59.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_59.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_59.pdf> <a0,fr59>
+<images/gif/animate_60.pdf, id=811, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_60.pdf Graphic file (type pdf)
+<use images/gif/animate_60.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_60.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_60.pdf> <a0,fr60>
+<images/gif/animate_61.pdf, id=823, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_61.pdf Graphic file (type pdf)
+<use images/gif/animate_61.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_61.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_61.pdf> <a0,fr61>
+<images/gif/animate_62.pdf, id=835, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_62.pdf Graphic file (type pdf)
+<use images/gif/animate_62.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_62.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_62.pdf> <a0,fr62>
+<images/gif/animate_63.pdf, id=847, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_63.pdf Graphic file (type pdf)
+<use images/gif/animate_63.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_63.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_63.pdf> <a0,fr63>
+<images/gif/animate_64.pdf, id=859, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_64.pdf Graphic file (type pdf)
+<use images/gif/animate_64.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_64.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_64.pdf> <a0,fr64>
+<images/gif/animate_65.pdf, id=871, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_65.pdf Graphic file (type pdf)
+<use images/gif/animate_65.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_65.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_65.pdf> <a0,fr65>
+<images/gif/animate_66.pdf, id=883, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_66.pdf Graphic file (type pdf)
+<use images/gif/animate_66.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_66.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_66.pdf> <a0,fr66>
+<images/gif/animate_67.pdf, id=895, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_67.pdf Graphic file (type pdf)
+<use images/gif/animate_67.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_67.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_67.pdf> <a0,fr67>
+<images/gif/animate_68.pdf, id=907, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_68.pdf Graphic file (type pdf)
+<use images/gif/animate_68.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_68.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_68.pdf> <a0,fr68>
+<images/gif/animate_69.pdf, id=919, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_69.pdf Graphic file (type pdf)
+<use images/gif/animate_69.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_69.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_69.pdf> <a0,fr69>
+<images/gif/animate_70.pdf, id=931, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_70.pdf Graphic file (type pdf)
+<use images/gif/animate_70.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_70.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_70.pdf> <a0,fr70>
+<images/gif/animate_71.pdf, id=943, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_71.pdf Graphic file (type pdf)
+<use images/gif/animate_71.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_71.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_71.pdf> <a0,fr71>
+<images/gif/animate_72.pdf, id=955, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_72.pdf Graphic file (type pdf)
+<use images/gif/animate_72.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_72.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_72.pdf> <a0,fr72>
+<images/gif/animate_73.pdf, id=967, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_73.pdf Graphic file (type pdf)
+<use images/gif/animate_73.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_73.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_73.pdf> <a0,fr73>
+<images/gif/animate_74.pdf, id=979, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_74.pdf Graphic file (type pdf)
+<use images/gif/animate_74.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_74.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_74.pdf> <a0,fr74>
+<images/gif/animate_75.pdf, id=991, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_75.pdf Graphic file (type pdf)
+<use images/gif/animate_75.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_75.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_75.pdf> <a0,fr75>
+<images/gif/animate_76.pdf, id=1003, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_76.pdf Graphic file (type pdf)
+<use images/gif/animate_76.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_76.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_76.pdf> <a0,fr76>
+<images/gif/animate_77.pdf, id=1016, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_77.pdf Graphic file (type pdf)
+<use images/gif/animate_77.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_77.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_77.pdf> <a0,fr77>
+<images/gif/animate_78.pdf, id=1028, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_78.pdf Graphic file (type pdf)
+<use images/gif/animate_78.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_78.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_78.pdf> <a0,fr78>
+<images/gif/animate_79.pdf, id=1040, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_79.pdf Graphic file (type pdf)
+<use images/gif/animate_79.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_79.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_79.pdf> <a0,fr79>
+<images/gif/animate_80.pdf, id=1052, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_80.pdf Graphic file (type pdf)
+<use images/gif/animate_80.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_80.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_80.pdf> <a0,fr80>
+<images/gif/animate_81.pdf, id=1064, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_81.pdf Graphic file (type pdf)
+<use images/gif/animate_81.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_81.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_81.pdf> <a0,fr81>
+<images/gif/animate_82.pdf, id=1076, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_82.pdf Graphic file (type pdf)
+<use images/gif/animate_82.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_82.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_82.pdf> <a0,fr82>
+<images/gif/animate_83.pdf, id=1088, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_83.pdf Graphic file (type pdf)
+<use images/gif/animate_83.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_83.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_83.pdf> <a0,fr83>
+<images/gif/animate_84.pdf, id=1100, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_84.pdf Graphic file (type pdf)
+<use images/gif/animate_84.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_84.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_84.pdf> <a0,fr84>
+<images/gif/animate_85.pdf, id=1112, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_85.pdf Graphic file (type pdf)
+<use images/gif/animate_85.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_85.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_85.pdf> <a0,fr85>
+<images/gif/animate_86.pdf, id=1124, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_86.pdf Graphic file (type pdf)
+<use images/gif/animate_86.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_86.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_86.pdf> <a0,fr86>
+<images/gif/animate_87.pdf, id=1136, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_87.pdf Graphic file (type pdf)
+<use images/gif/animate_87.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_87.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_87.pdf> <a0,fr87>
+<images/gif/animate_88.pdf, id=1148, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_88.pdf Graphic file (type pdf)
+<use images/gif/animate_88.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_88.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_88.pdf> <a0,fr88>
+<images/gif/animate_89.pdf, id=1160, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_89.pdf Graphic file (type pdf)
+<use images/gif/animate_89.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_89.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_89.pdf> <a0,fr89>
+<images/gif/animate_90.pdf, id=1172, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_90.pdf Graphic file (type pdf)
+<use images/gif/animate_90.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_90.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_90.pdf> <a0,fr90>
+<images/gif/animate_91.pdf, id=1184, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_91.pdf Graphic file (type pdf)
+<use images/gif/animate_91.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_91.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_91.pdf> <a0,fr91>
+<images/gif/animate_92.pdf, id=1196, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_92.pdf Graphic file (type pdf)
+<use images/gif/animate_92.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_92.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_92.pdf> <a0,fr92>
+<images/gif/animate_93.pdf, id=1208, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_93.pdf Graphic file (type pdf)
+<use images/gif/animate_93.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_93.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_93.pdf> <a0,fr93>
+<images/gif/animate_94.pdf, id=1221, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_94.pdf Graphic file (type pdf)
+<use images/gif/animate_94.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_94.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_94.pdf> <a0,fr94>
+<images/gif/animate_95.pdf, id=1233, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_95.pdf Graphic file (type pdf)
+<use images/gif/animate_95.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_95.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_95.pdf> <a0,fr95>
+<images/gif/animate_96.pdf, id=1245, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_96.pdf Graphic file (type pdf)
+<use images/gif/animate_96.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_96.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_96.pdf> <a0,fr96>
+<images/gif/animate_97.pdf, id=1257, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_97.pdf Graphic file (type pdf)
+<use images/gif/animate_97.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_97.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_97.pdf> <a0,fr97>
+<images/gif/animate_98.pdf, id=1269, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_98.pdf Graphic file (type pdf)
+<use images/gif/animate_98.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_98.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_98.pdf> <a0,fr98>
+<images/gif/animate_99.pdf, id=1281, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_99.pdf Graphic file (type pdf)
+<use images/gif/animate_99.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_99.pdf , page1 used on input line 2
+17.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_99.pdf> <a0,fr99>
+<images/gif/animate_100.pdf, id=1293, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_100.pdf Graphic file (type pdf)
+<use images/gif/animate_100.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_100.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_100.pdf>
+<a0,fr100>
+<images/gif/animate_101.pdf, id=1305, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_101.pdf Graphic file (type pdf)
+<use images/gif/animate_101.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_101.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_101.pdf> <a0,fr101>
+<images/gif/animate_102.pdf, id=1317, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_102.pdf Graphic file (type pdf)
+<use images/gif/animate_102.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_102.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_102.pdf> <a0,fr102>
+<images/gif/animate_103.pdf, id=1329, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_103.pdf Graphic file (type pdf)
+<use images/gif/animate_103.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_103.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_103.pdf> <a0,fr103>
+<images/gif/animate_104.pdf, id=1341, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_104.pdf Graphic file (type pdf)
+<use images/gif/animate_104.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_104.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_104.pdf> <a0,fr104>
+<images/gif/animate_105.pdf, id=1353, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_105.pdf Graphic file (type pdf)
+<use images/gif/animate_105.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_105.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_105.pdf> <a0,fr105>
+<images/gif/animate_106.pdf, id=1365, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_106.pdf Graphic file (type pdf)
+<use images/gif/animate_106.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_106.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_106.pdf> <a0,fr106>
+<images/gif/animate_107.pdf, id=1377, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_107.pdf Graphic file (type pdf)
+<use images/gif/animate_107.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_107.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_107.pdf> <a0,fr107>
+<images/gif/animate_108.pdf, id=1389, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_108.pdf Graphic file (type pdf)
+<use images/gif/animate_108.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_108.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_108.pdf> <a0,fr108>
+<images/gif/animate_109.pdf, id=1401, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_109.pdf Graphic file (type pdf)
+<use images/gif/animate_109.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_109.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_109.pdf> <a0,fr109>
+<images/gif/animate_110.pdf, id=1414, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_110.pdf Graphic file (type pdf)
+<use images/gif/animate_110.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_110.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_110.pdf> <a0,fr110>
+<images/gif/animate_111.pdf, id=1426, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_111.pdf Graphic file (type pdf)
+<use images/gif/animate_111.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_111.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_111.pdf> <a0,fr111>
+<images/gif/animate_112.pdf, id=1438, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_112.pdf Graphic file (type pdf)
+<use images/gif/animate_112.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_112.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_112.pdf> <a0,fr112>
+<images/gif/animate_113.pdf, id=1450, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_113.pdf Graphic file (type pdf)
+<use images/gif/animate_113.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_113.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_113.pdf>
 <a0,fr113>
-<images/Heap3D-114.png, id=1114, 517.935pt x 482.80376pt>
-File: images/Heap3D-114.png Graphic file (type png)
-<use images/Heap3D-114.png>
-Package pdftex.def Info: images/Heap3D-114.png  used on input line 216.
-(pdftex.def)             Requested size: 517.93372pt x 482.80258pt.
- <./images/Heap3D-114.png> <a0,fr114>
-<images/Heap3D-115.png, id=1123, 516.93124pt x 482.80376pt>
-File: images/Heap3D-115.png Graphic file (type png)
-<use images/Heap3D-115.png>
-Package pdftex.def Info: images/Heap3D-115.png  used on input line 216.
-(pdftex.def)             Requested size: 516.92998pt x 482.80258pt.
- <./images/Heap3D-115.png>
-<a0,fr115>
-<images/Heap3D-116.png, id=1132, 514.92375pt x 483.8075pt>
-File: images/Heap3D-116.png Graphic file (type png)
-<use images/Heap3D-116.png>
-Package pdftex.def Info: images/Heap3D-116.png  used on input line 216.
-(pdftex.def)             Requested size: 514.92249pt x 483.80632pt.
- <./images/Heap3D-116.png> <a0,fr116>
-<images/Heap3D-117.png, id=1141, 513.92pt x 483.8075pt>
-File: images/Heap3D-117.png Graphic file (type png)
-<use images/Heap3D-117.png>
-Package pdftex.def Info: images/Heap3D-117.png  used on input line 216.
-(pdftex.def)             Requested size: 513.91873pt x 483.80632pt.
- <./images/Heap3D-117.png>
-<a0,fr117>
-<images/Heap3D-118.png, id=1150, 510.90875pt x 483.8075pt>
-File: images/Heap3D-118.png Graphic file (type png)
-<use images/Heap3D-118.png>
-Package pdftex.def Info: images/Heap3D-118.png  used on input line 216.
-(pdftex.def)             Requested size: 510.9075pt x 483.80632pt.
- <./images/Heap3D-118.png> <a0,fr118>
-<images/Heap3D-119.png, id=1159, 508.90125pt x 483.8075pt>
-File: images/Heap3D-119.png Graphic file (type png)
-<use images/Heap3D-119.png>
-Package pdftex.def Info: images/Heap3D-119.png  used on input line 216.
-(pdftex.def)             Requested size: 508.90001pt x 483.80632pt.
- <./images/Heap3D-119.png>
-<a0,fr119>
-<images/Heap3D-120.png, id=1169, 508.90125pt x 484.81125pt>
-File: images/Heap3D-120.png Graphic file (type png)
-<use images/Heap3D-120.png>
-Package pdftex.def Info: images/Heap3D-120.png  used on input line 216.
-(pdftex.def)             Requested size: 508.90001pt x 484.81006pt.
- <./images/Heap3D-120.png> <a0,fr120>
-<images/Heap3D-121.png, id=1178, 506.89375pt x 484.81125pt>
-File: images/Heap3D-121.png Graphic file (type png)
-<use images/Heap3D-121.png>
-Package pdftex.def Info: images/Heap3D-121.png  used on input line 216.
-(pdftex.def)             Requested size: 506.89252pt x 484.81006pt.
- <./images/Heap3D-121.png>
-<a0,fr121>
-<images/Heap3D-122.png, id=1187, 503.8825pt x 484.81125pt>
-File: images/Heap3D-122.png Graphic file (type png)
-<use images/Heap3D-122.png>
-Package pdftex.def Info: images/Heap3D-122.png  used on input line 216.
-(pdftex.def)             Requested size: 503.88127pt x 484.81006pt.
- <./images/Heap3D-122.png> <a0,fr122>
-Overfull \hbox (328.4584pt too wide) in paragraph at lines 216--217
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][] 
- []
-
-[14] [15] (./report.aux
-
-Package pdfbase Warning: Rerun to get internal references right!
-
-)
+<images/gif/animate_114.pdf, id=1462, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_114.pdf Graphic file (type pdf)
+<use images/gif/animate_114.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_114.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_114.pdf> <a0,fr114>
+<images/gif/animate_115.pdf, id=1474, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_115.pdf Graphic file (type pdf)
+<use images/gif/animate_115.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_115.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_115.pdf> <a0,fr115>
+<images/gif/animate_116.pdf, id=1486, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_116.pdf Graphic file (type pdf)
+<use images/gif/animate_116.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_116.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_116.pdf> <a0,fr116>
+<images/gif/animate_117.pdf, id=1498, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_117.pdf Graphic file (type pdf)
+<use images/gif/animate_117.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_117.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_117.pdf> <a0,fr117>
+<images/gif/animate_118.pdf, id=1510, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_118.pdf Graphic file (type pdf)
+<use images/gif/animate_118.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_118.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_118.pdf> <a0,fr118>
+<images/gif/animate_119.pdf, id=1522, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_119.pdf Graphic file (type pdf)
+<use images/gif/animate_119.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_119.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_119.pdf> <a0,fr119>
+<images/gif/animate_120.pdf, id=1534, page=1, 658.46pt x 531.9875pt>
+File: images/gif/animate_120.pdf Graphic file (type pdf)
+<use images/gif/animate_120.pdf, page 1>
+Package pdftex.def Info: images/gif/animate_120.pdf , page1 used on input line 
+217.
+(pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
+ <./images/gif/animate_120.pdf> <a0,fr120> [14]
+(./report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1175,13 +1219,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 6189 strings out of 482367
- 104962 string characters out of 5946517
- 366525 words of memory out of 5000000
- 21762 multiletter control sequences out of 15000+600000
+ 5933 strings out of 482367
+ 106777 string characters out of 5946517
+ 369482 words of memory out of 5000000
+ 21508 multiletter control sequences out of 15000+600000
  538056 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 45i,12n,42p,791b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,12n,59p,791b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/kalex/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
@@ -1196,10 +1240,10 @@ nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (16 pages, 8816613 bytes).
+Output written on report.pdf (15 pages, 12080207 bytes).
 PDF statistics:
- 1258 PDF objects out of 1440 (max. 8388607)
- 592 compressed objects within 6 object streams
+ 1631 PDF objects out of 1728 (max. 8388607)
+ 959 compressed objects within 10 object streams
  0 named destinations out of 1000 (max. 500000)
- 2862 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2876 words of extra memory for PDF output out of 10000 (max. 10000000)
 
