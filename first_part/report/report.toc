@@ -1,8 +1,22 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \contentsline {section}{\numberline {1}Introduzione}{2}%
-\contentsline {section}{\numberline {2}Valutazione degli algoritmi}{3}%
-\contentsline {subsection}{\numberline {2.1}Lunghezza $n$ dell'array variabile e $k=\frac {n}{3}$}{4}%
-\contentsline {subsection}{\numberline {2.2}Lunghezza $n=75000$ e $k$ variabile in $[0,n-1]$}{6}%
-\contentsline {subsection}{\numberline {2.3}Lunghezza $n$ variabile e $k=1$}{8}%
-\contentsline {section}{\numberline {3}Conclusioni}{9}%
+\contentsline {section}{\numberline {2}Aspettative teoriche}{3}%
+\contentsline {paragraph}{QuickSelect}{3}%
+\contentsline {paragraph}{HeapSelect}{3}%
+\contentsline {paragraph}{MedianSelect}{3}%
+\contentsline {section}{\numberline {3}Note implementative}{4}%
+\contentsline {paragraph}{HeapSelect}{4}%
+\contentsline {paragraph}{MedianSelect}{4}%
+\contentsline {paragraph}{Generazione di numeri pseudo-casuali}{4}%
+\contentsline {section}{\numberline {4}Calcolo del tempi di esecuzione}{5}%
+\contentsline {paragraph}{Risoluzione}{5}%
+\contentsline {paragraph}{Scomputazione dell'inizializzazione}{5}%
+\contentsline {paragraph}{Tempo di esecuzione degli algoritmi}{5}%
+\contentsline {paragraph}{Errore relativo massimo totale}{6}%
+\contentsline {paragraph}{Problematiche riscontrate}{6}%
+\contentsline {section}{\numberline {5}Analisi degli algoritmi}{7}%
+\contentsline {subsection}{\numberline {5.1}Lunghezza $n$ dell'array variabile e $k=\frac {n}{3}$}{8}%
+\contentsline {subsection}{\numberline {5.2}Lunghezza $n=75000$ e $k$ variabile in $[0,n-1]$}{10}%
+\contentsline {subsection}{\numberline {5.3}Lunghezza $n$ variabile e $k=1$}{13}%
+\contentsline {section}{\numberline {6}Conclusioni}{14}%
