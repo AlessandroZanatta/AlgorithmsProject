@@ -60,11 +60,11 @@
 	\newpage
 	
 	\section{Note implementative}
+	\label{section:impl_notes}
 	Si discutono ora alcune scelte implementative effettuate.
 	
 	\paragraph{HeapSelect}
 	L'algoritmo HeapSelect è stato implementato tenendo conto del parametro $k$. In particolare, l'algoritmo utilizzerà delle minheap se $k\leq \frac{n}{2}$, altrimenti userà delle maxheap. In questo modo, vengono effettuati al più $\frac{n}{2}$ estrazioni dalla seconda heap. \\ Considerata l'implementazione, è necessario riformulare le ipotesi enunciate finora. \\ Il costo dell'algoritmo è ora definito come:
-	
 	
 	\[
 		T\left(n\right) =
@@ -72,6 +72,8 @@
 				O\left(n + k\log{k}\right)  & \text{se $0\leq k \leq \frac{n}{2}$,} \\
 				O\left(n + \left(n-k\right)\cdot\log{\left(n-k\right)}\right) & \text{se $\frac{n}{2} < k \leq n-1$} 
 			\end{cases}
+			\tag{1}
+			\label{eq:heap}
 	\]
 	
 	Risulta quindi ovvio che il costo massimo dell'algoritmo si otterrà per $k\approx \frac{n}{2} \in \Theta\left(n\right)$. Sebbene asintoticamente l'algoritmo pare avere un costo identico, è molto probabile che i tempi di esecuzione sperimentali rispecchieranno questa implementazione.
@@ -151,21 +153,25 @@
 	\\
 	Pertanto, è logico che l'algoritmo QuickSelect risulti, in pratica, più efficiente rispetto a MedianSelect, in quanto il primo sceglierà comunque, mediamente, dei buoni perni (a causa della casualità dell'input), svolgendo una quantità di lavoro minore rispetto alla sua versione ottimizzata. Entrambi gli algoritmi hanno quindi tempo di esecuzione lineare per vettori generati casualmente. 
 	\\ 
-	A comprovare questo fatto si ha il grafico sottostante, che dimostra come l'algoritmo QuickSelect sia effettivamente meno efficiente (e, in particolare, impieghi un tempo più che lineare) se il vettore di input è fortemente ordinato. La scelta di utilizzare $k=\frac{3}{4}n$, dettata da tempi di esecuzione molto lunghi, non permette di esprimere a pieno il costo quadratico dell'algoritmo QuickSelect.
+	A comprovare questo fatto si ha il grafico sottostante, che dimostra come l'algoritmo QuickSelect sia effettivamente meno efficiente (e, in particolare, impieghi un tempo più che lineare) se il vettore di input è fortemente ordinato. La scelta di utilizzare $k=\frac{3}{4}\cdot n$, dettata da tempi di esecuzione molto lunghi, non permette di esprimere a pieno il costo quadratico dell'algoritmo QuickSelect.
 	
 	\begin{figure}[h!]		
 		\centering
   		\includegraphics[width=0.7\columnwidth]{images/MoM_Quick_graph_ordered.png}
-  		\caption{Tempo di esecuzione a confronto per $n$ variabile e $k=\frac{3}{4}	n$ per un array molto ordinato}
+  		\caption{Tempo di esecuzione a confronto per $n$ variabile e $k=\frac{3}{4}\cdot n$ per un array molto ordinato}
   		\label{fig:graph2}
 	\end{figure}
 	
-	A fronte di queste considerazioni, appare sensato anche il grafico del tempo di esecuzione dell'algoritmo HeapSelect. Questo infatti è denotato da una non linearità giustificata dalla scelta di $k=\frac{n}{3}$. Si nota inoltre 
+	Si può inoltre notare una maggiore deviazione mediana assoluta per l'algoritmo QuickSelect rispetto a MedianSelect. Questo è giustificato dal fatto che l'algoritmo MedianSelect, scegliendo sempre un buon perno, compie una quantità di lavoro sempre simile, mentre QuickSelect è più variabile data la scelta del perno casuale che potrebbe, o meno, portare a chiamate ricorsive sbilanciate.
+	\\\\
+	A fronte di queste considerazioni, il grafico del tempo di esecuzione di HeapSelect risulta in linea con le ipotesi teoriche formulate precedentemente. Questo infatti è denotato da una non linearità giustificata dalla scelta di $k=\frac{n}{3}$. 
+	\\
+	Si può inoltre notare come la deviazione mediana assoluta sia minore per le esecuzioni di HeapSelect rispetto a quella degli altri due algoritmi. Ciò è linea con il funzionamento dell'algoritmo stesso: dato che il numero di operazioni di $extract$ eseguite da HeapSelect è, per $k$ fissato, sempre uguale, risulta ragionevole che complessivamente il costo dell'algoritmo in diverse esecuzioni sia molto simile.
 		
 	\newpage
 	
 	\subsection{Lunghezza $n=75000$ e $k$ variabile in $[0,n-1]$}
-	Dato che il tempo di esecuzione dell'algoritmo HeapSelect risulta dipendente da $k$ mentre quello di QuickSelect e MedianSelect non lo è, analizziamo il comportamento degli algoritmi al variare di questo parametro.
+	Dato che il tempo di esecuzione dell'algoritmo HeapSelect è dipendente da $k$ mentre quello di QuickSelect e MedianSelect non dovrebbe esserlo, analizziamo il comportamento degli algoritmi al variare di questo parametro.
 	
 	\begin{figure}[h!]
   		\includegraphics[width=\linewidth]{images/MoM_Quick_graph.png}
@@ -173,7 +179,7 @@
   		\label{fig:graph3}
 	\end{figure}
 	
-	Dal grafico si nota subito come gli algoritmi QuickSelect e MedianSelect non siano influenzati dal parametro che stiamo considerando. Questo era prevedibile, dato che il costo asintotico degli algoritmi non è, infatti, influenzato dal parametro $k$. Questi due algoritmi impiegano infatti tempo lineare anche al variare di $k$.
+	Dal grafico si può subito notare come gli algoritmi QuickSelect e MedianSelect non siano effettivamente influenzati dal parametro che stiamo considerando. Questo era prevedibile, dato che il costo asintotico degli algoritmi non è influenzato dal parametro $k$. Questi due algoritmi impiegano infatti tempo pressocchè lineare anche al variare di $k$.
 	\newpage
 	
 	\begin{figure}[h!]
@@ -182,11 +188,13 @@
   		\label{fig:graph4}
 	\end{figure}
 	
-Il caso più interessante è quello di HeapSelect. Il suo costo è effettivamente influenzato da $k$ e questo lo si può notare anche nei tempi sperimentali ottenuti. In particolare, dato che l'algoritmo è stato implementato in modo da scegliere di utilizzare opportunamente min-heaps o max-heaps in base al parametro $k$, si nota come il tempo di esecuzione cresce fino a $k=\frac{n}{2}$ per poi tornare a discendere, in accordo col costo asintotico che, data l'implementazione, andrebbe effettivamente riscritto come:
+	Il caso più interessante è quello di HeapSelect. Il suo costo è effettivamente influenzato da $k$ e questo lo si può notare anche nei tempi sperimentali ottenuti. In particolare, il grafico conferma quanto si era ipotizzato in precedenza nelle Note Implementative (sezione \ref{section:impl_notes}). 
+	\\
+	Il tempo di esecuzione dell'algoritmo cresce fino a $\frac{n}{2}$, per poi tornare a discendere. Questo è in linea con l'equazione \eqref{eq:heap} che riporta il costo modificato di HeapSelect.
 	
 	
 	\newpage
-	Si può osservare anche questo plot 3D in cui variano sia $n$ che $k$. La forma complessiva del grafico è in linea con quanto osservato finora.
+	Si può osservare anche questo plot 3D in cui variano sia $n$ che $k$. La forma complessiva del grafico è in linea con quanto osservato finora. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -207,12 +215,14 @@ Il caso più interessante è quello di HeapSelect. Il suo costo è effettivament
   		\label{fig:graph6}
 	\end{figure}
 	
-	Dal grafico si può notare come le aspettative siano effettivamente state rispettate. QuickSort continua ad essere l'algoritmo più efficiente per gli stessi motivi di cui sopra, ma ora HeapSelect risulta più efficiente di MedianSelect in quanto deve effettuare una quantità di lavoro sempre lineare (e minore di quella che compie MedianSelect per la scelta di un buon perno).
+	Dal grafico si può notare come le aspettative teoriche siano effettivamente state rispettate. QuickSort continua ad essere l'algoritmo più efficiente per gli stessi motivi di cui sopra, ma ora HeapSelect risulta più efficiente di MedianSelect in quanto deve effettuare una quantità di lavoro sempre lineare (e minore di quella che compie MedianSelect per la scelta di un buon perno).
 	
 	
 	\newpage
 
 	\section{Conclusioni}
 	I risultati ottenuti sono stati molto interessanti e, a tratti, inaspettati. L'analisi sperimentale degli algoritmi in questione ha certamente contribuito ad una maggior consapevolezza nell'uso degli stessi.
+	\\
+	Si può trarre la seguente conclusione dall'analisi sperimentale effettuata sugli algoritmi: ogni algoritmo ha dei punti di forza e di debolezza. In particolare, QuickSort risulta sempre il più efficiente per array di input casuali, HeapSelect risulta il più stabile e anche il più efficiente per $k\approx 1 $ o $k \approx n$, mentre MedianSelect risulta un algoritmo ottimo per qualsiasi array di input.
 	
 \end{document}
