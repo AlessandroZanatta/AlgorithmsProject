@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define ITERATIONS 60
+#define ITERATIONS 100
 
 /**
  * Computes the median time of a random initialization of a vector of given length
@@ -92,7 +92,7 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     free(array);
 
-    /*
+
     double mean = 0;
     double std = 0;
 
@@ -106,8 +106,8 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     time[0] = mean;
     time[1] = std;
-    */
 
+/*
     // Using medians
     quicksortDouble(times, 0, ITERATIONS-1);
 
@@ -119,7 +119,7 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
     quicksortDouble(times, 0, ITERATIONS-1);
 
     time[1] = times[(int) (ITERATIONS / 2)];
-
+*/
 }
 
 
@@ -234,6 +234,7 @@ int main(){
     double quickTime [2];
     double heapTime [2];
     double medianTime [2];
+    int num_points;
     FILE * output;
 
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
@@ -278,7 +279,7 @@ int main(){
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
     array_length = 75000;
-    int num_points = 250;
+    num_points = 250;
     for(int k = 0; k < array_length; k += array_length/num_points){
 
         initTime = getInitTime(resolution, array_length, seed);
@@ -305,7 +306,7 @@ int main(){
     output = fopen("../first_part/times/heap3D.txt", "w");
     fprintf(output, "N,K,T2,D2\n");
     array_length = 100;
-    num_points = 10;
+    num_points = 19;
     for(int i = 0; i < 30; i++){
         for(int k = 0; k < array_length; k += (int) array_length/num_points){
 
@@ -319,6 +320,7 @@ int main(){
     }
 
     fclose(output);
+
 
     // Evaluate algorithms difference for k = 1, as heap-select should be pretty fast (Theta(n), in theory)
     output = fopen("../first_part/times/times_k1.txt", "w");
@@ -358,7 +360,6 @@ int main(){
     printf("N K T1 D1 T3 D3\n");
 
     array_length = 100;
-    int k;
     for(int i = 0; i < 40; i++){
 
         k = (int) (3*array_length/4);
@@ -383,4 +384,5 @@ int main(){
     }
 
     fclose(output);
+
 }
