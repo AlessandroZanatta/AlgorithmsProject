@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage[italian]{babel}
 \usepackage{animate}
-
+\usepackage{verbatim}
 
 \title{Relazione per il Primo Progetto di Algoritmi e Strutture Dati e Laboratorio}
 \date{16-07-2020}
@@ -114,18 +114,21 @@
 			dove $initialization$ è il tempo calcolato al primo punto.
 	\end{itemize}
 	
+	% the paragraph under this does not fit in the current page :/
 	\newpage
 	
 	\paragraph{Errore relativo massimo totale}
 	Calcolando i tempi nei modi indicati negli ultimi due paragrafi si è ottenuto un errore relativo complessivo $\leq1\%$. L'errore relativo totale è, infatti, dato dalla somma degli errori. Essendoci quindi due misurazioni affette da errore\footnote{La prima è quella relativa al calcolo del tempo di inizializzazione, la seconda è quella relativa al tempo di esecuzione dell'algoritmo.}, entrambe con errore relativo pari o minore a $0.5\%$, l'errore relativo massimo totale è effettivamente dell'$1\%$.
 	
-	
+	\begin{comment}
 	\paragraph{Problematiche riscontrate}
 	Durante le prime misurazioni, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere dei tempi migliori, cioè meno sensibili ad outliers e rumore, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathclose|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori casuali.
+	\end{comment}
+	
 	
 	\newpage	
 	\section{Analisi degli algoritmi}
-	Per la valutazione dei tre diversi algoritmi sono stati utilizzati diversi criteri e sono state valutate diverse casistiche ritenute interessanti. In particolare, ci si soffermerà sui seguenti casi:
+	Per la valutazione dei tre diversi algoritmi sono stati utilizzati diversi criteri e sono state considerate diverse casistiche ritenute interessanti. In particolare, ci si soffermerà sui seguenti casi:
 	
 	\begin{itemize}
 		\item Lunghezza $n$ dell'array variabile e $k=\frac{n}{3}$

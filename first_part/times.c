@@ -195,7 +195,7 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
 
     free(array);
 
-    /*
+
     double mean = 0;
     double std = 0;
 
@@ -209,8 +209,9 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
 
     time[0] = mean;
     time[1] = std;
-    */
 
+
+    /*
     // Using medians
     quicksortDouble(times, 0, ITERATIONS-1);
 
@@ -222,7 +223,7 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
     quicksortDouble(times, 0, ITERATIONS-1);
 
     time[1] = times[(int) (ITERATIONS / 2)];
-
+    */
 }
 
 
@@ -236,17 +237,18 @@ int main(){
     double medianTime [2];
     int num_points;
     FILE * output;
+    int k;
 
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
     printf("Resolution %.17g\n", resolution);
-    
+    /*
     output = fopen("../first_part/times/basic_times.txt", "w");
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 40; i++){
 
-        int k = (int) array_length/3;
+        k = (int) array_length/3;
 
         printf("%d %d ", array_length, k);
 
@@ -354,7 +356,7 @@ int main(){
     }
 
     fclose(output);
-
+*/
     output = fopen("../first_part/times/ordered.txt", "w");
     fprintf(output, "N,K,T1,D1,T3,D3\n");
     printf("N K T1 D1 T3 D3\n");
@@ -362,7 +364,7 @@ int main(){
     array_length = 100;
     for(int i = 0; i < 40; i++){
 
-        k = (int) (3*array_length/4);
+        k = (int) (array_length/2);
 
         printf("%d %d ", array_length, k);
 
