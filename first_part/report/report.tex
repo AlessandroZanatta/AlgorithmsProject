@@ -51,8 +51,9 @@
 	Ci si aspetta che l'algoritmo QuickSelect, al verificarsi del caso peggiore, sia il meno efficiente fra i tre, dato il suo costo asintotico maggiore. Nel caso medio, tuttavia, questo algoritmo potrebbe risultare più efficiente di HeapSelect e di MedianSelect.
 	
 	\paragraph{HeapSelect}
+	\label{section:theory}
 	L'algoritmo HeapSelect, in quanto dipendente da $k$, avrà costo differente in base al parametro $k$.
-	In particolare, il costo sarà $\Theta\left(n\right)$ nel caso in cui $k\in\Theta(1)$ e di $O\left(n + k\cdot\log{k}\right)$ per $k\in\Theta\left(n\right)$. L'algoritmo sarà particolarmente efficiente, quindi, per $k$ costante, mentre tenderà a essere piuttosto inefficiente per $k\approx n$.\footnote{Dato che si è scelto di implementare l'algoritmo HeapSelect utilizzando opportunamente minheaps o maxheaps (in base al parametro $k$), il costo dell'algoritmo sarà differente. Il costo effettivo sarà discusso nelle prossime pagine.}
+	In particolare, il costo sarà $\Theta\left(n\right)$ nel caso in cui $k\in\Theta(1)$ e di $O\left(n + k\cdot\log{k}\right)$ per $k\in\Theta\left(n\right)$. L'algoritmo sarà particolarmente efficiente, quindi, per $k$ costante, mentre tenderà a essere piuttosto inefficiente per $k\approx n$.\footnote{Dato che si è scelto di implementare l'algoritmo HeapSelect utilizzando opportunamente minheaps o maxheaps (in base al parametro $k$), il costo dell'algoritmo sarà differente. Il costo effettivo sarà discusso nelle prossime pagine.} 
 	
 	\paragraph{MedianSelect}
 	Infine, consideriamo l'algoritmo MedianSelect. Questo algoritmo, considerato che è una versione ottimizzata di QuickSelect	e che il costo asintotico è, nel caso peggiore, minore di quello di QuickSelect, dovrebbe risultare più efficiente. In particolare, per $k\approx n$, MedianSelect dovrebbe essere più efficiente sia di QuickSelect che di HeapSelect\footnote{Come già riportato, per l'implementazione scelta il costo sarà diverso e verrà discusso nella prossima sezione dell'elaborato.}.
@@ -158,15 +159,13 @@
 	
 	\begin{figure}[h!]		
 		\centering
-  		\includegraphics[width=0.7\columnwidth]{images/MoM_Quick_graph_ordered.png}
+  		\includegraphics[width=\columnwidth]{images/MoM_Quick_graph_ordered_k1.png}
   		\caption{Tempo di esecuzione a confronto per $n$ variabile e $k=1$ per un array molto ordinato}
   		\label{fig:graph2}
 	\end{figure}
 	
 	Si può inoltre notare una maggiore deviazione mediana assoluta per l'algoritmo QuickSelect rispetto a MedianSelect. Questo è giustificato dal fatto che l'algoritmo MedianSelect, scegliendo sempre un buon perno, compie una quantità di lavoro sempre simile, mentre QuickSelect è più variabile data la scelta del perno casuale che potrebbe, o meno, portare a chiamate ricorsive sbilanciate.
-	
-	% This didn't fit on the current page, might as well go to a new one	
-	\newpage
+	\\\\
 	A fronte di queste considerazioni, il grafico del tempo di esecuzione di HeapSelect risulta in linea con le ipotesi teoriche formulate precedentemente. Questo infatti è denotato da una non linearità giustificata dalla scelta di $k=\frac{n}{3}$. 
 	\\
 	Si può inoltre notare come la deviazione mediana assoluta sia minore per HeapSelect rispetto a quella degli altri due algoritmi. Ciò è giustificato dal funzionamento della procedura stessa: dato che il numero di operazioni di $extract$ eseguite da HeapSelect è, per $k$ fissato, sempre uguale, risulta ragionevole che complessivamente il costo dell'algoritmo in diverse esecuzioni sia molto simile. 
@@ -203,7 +202,7 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\animategraphics[height=0.8\linewidth, autoplay]{12}{images/gif/animate_}{0}{122}
+		\animategraphics[height=0.8\linewidth, autoplay]{12}{images/gif/heap3d-}{0}{121}
   		\caption{Tempo di esecuzione di HeapSelect per $n$ e $k$ variabili}
   		\label{fig:graph5}
 	\end{figure}
@@ -216,18 +215,26 @@
 	
 	\begin{figure}[h!]
   		\includegraphics[width=\linewidth]{images/Grafico_Con_K1.png}
-  		\caption{Tempo di esecuzione di HeapSelect per $n$ e $k$ variabili}
+  		\caption{Tempo di esecuzione per $n$ variabile a $k=1$}
   		\label{fig:graph6}
 	\end{figure}
 	
 	Dal grafico si può notare come le aspettative teoriche siano effettivamente state rispettate. QuickSelect continua ad essere l'algoritmo più efficiente per gli stessi motivi di cui sopra (sezione \ref{subsection:nvar_k_n3}), ma ora HeapSelect risulta più efficiente di MedianSelect in quanto deve effettuare una quantità di lavoro sempre lineare (e minore di quella che compie MedianSelect per la scelta di un buon perno e le successive chiamate ricorsive).
-	
+		
+	\newpage
+
+	\begin{figure}[h!]
+  		\includegraphics[width=\linewidth]{images/All_graph_ordered_k1.png}
+  		\caption{Tempo di esecuzione per $n$ variabile a $k=1$ per un array molto ordinato}
+  		\label{fig:graph6}
+	\end{figure}
+	Come si può notare, HeapSelect risulta l'algoritmo più efficiente, fra quelli in analisi, nel caso di array di input fortemente ordinati e $k=1$. Ciò è in linea con le aspettative teoriche enunciate nella sezione \ref{section:theory}.
 	
 	\newpage
 
 	\section{Conclusioni}
 	I risultati ottenuti sono stati molto interessanti e, a tratti, inaspettati. L'analisi sperimentale degli algoritmi in questione ha certamente contribuito ad una maggior consapevolezza nell'uso degli stessi.
 	\\
-	Si può trarre la seguente conclusione dall'analisi sperimentale effettuata sugli algoritmi: ogni algoritmo ha dei punti di forza e di debolezza. In particolare, QuickSort risulta sempre il più efficiente per array di input casuali, HeapSelect risulta il più stabile e anche il più efficiente per $k\approx 1 $ o $k \approx n$, mentre MedianSelect risulta un algoritmo ottimo per qualsiasi array di input.
+	Si può trarre la seguente conclusione dall'analisi sperimentale effettuata sugli algoritmi: ogni algoritmo ha dei punti di forza e di debolezza. In particolare, QuickSort risulta sempre il più efficiente per array di input casuali, HeapSelect risulta il più stabile e anche molto efficiente per $k\approx 1 $ o $k \approx n$, mentre MedianSelect si conferma essere un algoritmo ottimo per qualsiasi array di input.
 	
 \end{document}
