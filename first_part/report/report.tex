@@ -154,12 +154,12 @@
 	\\
 	Pertanto, è logico che l'algoritmo QuickSelect risulti, in pratica, più efficiente rispetto a MedianSelect, in quanto il primo sceglierà comunque, mediamente, dei buoni perni (a causa della casualità dell'input), svolgendo una quantità di lavoro minore rispetto alla sua versione ottimizzata. Entrambi gli algoritmi hanno quindi tempo di esecuzione lineare per vettori generati casualmente. 
 	\\ 
-	A comprovare questo fatto si ha il grafico sottostante, che dimostra come l'algoritmo QuickSelect sia effettivamente meno efficiente (e, in particolare, impieghi un tempo più che lineare) se il vettore di input è fortemente ordinato. La scelta di utilizzare $k=\frac{3}{4}\cdot n$, dettata da tempi di esecuzione molto lunghi, non permette di esprimere a pieno il costo quadratico dell'algoritmo QuickSelect.
+	A comprovare questo fatto si ha il grafico sottostante, che dimostra come l'algoritmo QuickSelect sia effettivamente meno efficiente (e, in particolare, impieghi un tempo più che lineare) se il vettore di input è fortemente ordinato.
 	
 	\begin{figure}[h!]		
 		\centering
   		\includegraphics[width=0.7\columnwidth]{images/MoM_Quick_graph_ordered.png}
-  		\caption{Tempo di esecuzione a confronto per $n$ variabile e $k=\frac{3}{4}\cdot n$ per un array molto ordinato}
+  		\caption{Tempo di esecuzione a confronto per $n$ variabile e $k=1$ per un array molto ordinato}
   		\label{fig:graph2}
 	\end{figure}
 	
