@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.7.16)  21 JUL 2020 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.7.16)  22 JUL 2020 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,10 +320,10 @@ za-re il clock of-fer-to dal-la fun-zio-ne $[]$.
 <images/All_Basic_Times.png, id=50, 505.89pt x 505.89pt>
 File: images/All_Basic_Times.png Graphic file (type png)
 <use images/All_Basic_Times.png>
-Package pdftex.def Info: images/All_Basic_Times.png  used on input line 146.
+Package pdftex.def Info: images/All_Basic_Times.png  used on input line 144.
 (pdftex.def)             Requested size: 310.4979pt x 310.4991pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--160
+Underfull \hbox (badness 10000) in paragraph at lines 149--158
 
  []
 
@@ -332,14 +332,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--160
 File: images/MoM_Quick_graph_ordered.png Graphic file (type png)
 <use images/MoM_Quick_graph_ordered.png>
 Package pdftex.def Info: images/MoM_Quick_graph_ordered.png  used on input line
- 163.
+ 161.
 (pdftex.def)             Requested size: 241.49895pt x 241.50444pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--173
-
- []
-
-[9 <./images/MoM_Quick_graph_ordered.png>] [10]
+ [9 <./images/MoM_Quick_graph_ordered.png>]
+[10]
 <images/MoM_Quick_graph.png, id=67, 505.89pt x 505.89pt>
 File: images/MoM_Quick_graph.png Graphic file (type png)
 <use images/MoM_Quick_graph.png>
@@ -349,891 +345,886 @@ Package pdftex.def Info: images/MoM_Quick_graph.png  used on input line 180.
 <images/HeapSelect_Kvariable.png, id=73, 505.89pt x 505.89pt>
 File: images/HeapSelect_Kvariable.png Graphic file (type png)
 <use images/HeapSelect_Kvariable.png>
-Package pdftex.def Info: images/HeapSelect_Kvariable.png  used on input line 18
-9.
+Package pdftex.def Info: images/HeapSelect_Kvariable.png  used on input line 19
+1.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
  [12 <./images/HeapSelect_Kvariable.png>]
 <images/gif/animate_0.pdf, id=80, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_0.pdf Graphic file (type pdf)
 <use images/gif/animate_0.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_0.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_0.pdf>
-<a0,fr0>
+ <./images/gif/animate_0.pdf> <a0,fr0>
 <images/gif/animate_1.pdf, id=92, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_1.pdf Graphic file (type pdf)
 <use images/gif/animate_1.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_1.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_1.pdf> <a0,fr1>
 <images/gif/animate_2.pdf, id=104, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_2.pdf Graphic file (type pdf)
 <use images/gif/animate_2.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_2.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_2.pdf>
-<a0,fr2>
+ <./images/gif/animate_2.pdf> <a0,fr2>
 <images/gif/animate_3.pdf, id=116, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_3.pdf Graphic file (type pdf)
 <use images/gif/animate_3.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_3.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_3.pdf> <a0,fr3>
 <images/gif/animate_4.pdf, id=128, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_4.pdf Graphic file (type pdf)
 <use images/gif/animate_4.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_4.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_4.pdf>
-<a0,fr4>
+ <./images/gif/animate_4.pdf> <a0,fr4>
 <images/gif/animate_5.pdf, id=140, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_5.pdf Graphic file (type pdf)
 <use images/gif/animate_5.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_5.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_5.pdf> <a0,fr5>
 <images/gif/animate_6.pdf, id=152, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_6.pdf Graphic file (type pdf)
 <use images/gif/animate_6.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_6.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_6.pdf>
-<a0,fr6>
+ <./images/gif/animate_6.pdf> <a0,fr6>
 <images/gif/animate_7.pdf, id=164, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_7.pdf Graphic file (type pdf)
 <use images/gif/animate_7.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_7.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_7.pdf> <a0,fr7>
 <images/gif/animate_8.pdf, id=176, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_8.pdf Graphic file (type pdf)
 <use images/gif/animate_8.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_8.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_8.pdf>
-<a0,fr8>
+ <./images/gif/animate_8.pdf> <a0,fr8>
 <images/gif/animate_9.pdf, id=188, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_9.pdf Graphic file (type pdf)
 <use images/gif/animate_9.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_9.pdf , page1 used on input line 20
-4.
+6.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_9.pdf> <a0,fr9>
 <images/gif/animate_10.pdf, id=200, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_10.pdf Graphic file (type pdf)
 <use images/gif/animate_10.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_10.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_10.pdf>
-<a0,fr10>
+ <./images/gif/animate_10.pdf> <a0,fr10>
 <images/gif/animate_11.pdf, id=213, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_11.pdf Graphic file (type pdf)
 <use images/gif/animate_11.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_11.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_11.pdf> <a0,fr11>
 <images/gif/animate_12.pdf, id=225, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_12.pdf Graphic file (type pdf)
 <use images/gif/animate_12.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_12.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_12.pdf> <a0,fr12>
 <images/gif/animate_13.pdf, id=237, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_13.pdf Graphic file (type pdf)
 <use images/gif/animate_13.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_13.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_13.pdf> <a0,fr13>
 <images/gif/animate_14.pdf, id=249, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_14.pdf Graphic file (type pdf)
 <use images/gif/animate_14.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_14.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_14.pdf> <a0,fr14>
 <images/gif/animate_15.pdf, id=261, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_15.pdf Graphic file (type pdf)
 <use images/gif/animate_15.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_15.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_15.pdf> <a0,fr15>
 <images/gif/animate_16.pdf, id=273, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_16.pdf Graphic file (type pdf)
 <use images/gif/animate_16.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_16.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_16.pdf> <a0,fr16>
 <images/gif/animate_17.pdf, id=285, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_17.pdf Graphic file (type pdf)
 <use images/gif/animate_17.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_17.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_17.pdf> <a0,fr17>
 <images/gif/animate_18.pdf, id=297, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_18.pdf Graphic file (type pdf)
 <use images/gif/animate_18.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_18.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_18.pdf> <a0,fr18>
 <images/gif/animate_19.pdf, id=309, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_19.pdf Graphic file (type pdf)
 <use images/gif/animate_19.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_19.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_19.pdf> <a0,fr19>
 <images/gif/animate_20.pdf, id=321, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_20.pdf Graphic file (type pdf)
 <use images/gif/animate_20.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_20.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_20.pdf> <a0,fr20>
 <images/gif/animate_21.pdf, id=333, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_21.pdf Graphic file (type pdf)
 <use images/gif/animate_21.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_21.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_21.pdf> <a0,fr21>
 <images/gif/animate_22.pdf, id=345, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_22.pdf Graphic file (type pdf)
 <use images/gif/animate_22.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_22.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_22.pdf> <a0,fr22>
 <images/gif/animate_23.pdf, id=357, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_23.pdf Graphic file (type pdf)
 <use images/gif/animate_23.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_23.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_23.pdf> <a0,fr23>
 <images/gif/animate_24.pdf, id=369, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_24.pdf Graphic file (type pdf)
 <use images/gif/animate_24.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_24.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_24.pdf> <a0,fr24>
 <images/gif/animate_25.pdf, id=381, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_25.pdf Graphic file (type pdf)
 <use images/gif/animate_25.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_25.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_25.pdf> <a0,fr25>
 <images/gif/animate_26.pdf, id=393, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_26.pdf Graphic file (type pdf)
 <use images/gif/animate_26.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_26.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_26.pdf> <a0,fr26>
 <images/gif/animate_27.pdf, id=406, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_27.pdf Graphic file (type pdf)
 <use images/gif/animate_27.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_27.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_27.pdf> <a0,fr27>
 <images/gif/animate_28.pdf, id=418, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_28.pdf Graphic file (type pdf)
 <use images/gif/animate_28.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_28.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_28.pdf> <a0,fr28>
 <images/gif/animate_29.pdf, id=430, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_29.pdf Graphic file (type pdf)
 <use images/gif/animate_29.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_29.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_29.pdf> <a0,fr29>
 <images/gif/animate_30.pdf, id=442, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_30.pdf Graphic file (type pdf)
 <use images/gif/animate_30.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_30.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_30.pdf> <a0,fr30>
 <images/gif/animate_31.pdf, id=454, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_31.pdf Graphic file (type pdf)
 <use images/gif/animate_31.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_31.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_31.pdf> <a0,fr31>
 <images/gif/animate_32.pdf, id=466, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_32.pdf Graphic file (type pdf)
 <use images/gif/animate_32.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_32.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_32.pdf> <a0,fr32>
 <images/gif/animate_33.pdf, id=478, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_33.pdf Graphic file (type pdf)
 <use images/gif/animate_33.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_33.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_33.pdf> <a0,fr33>
 <images/gif/animate_34.pdf, id=490, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_34.pdf Graphic file (type pdf)
 <use images/gif/animate_34.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_34.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_34.pdf> <a0,fr34>
 <images/gif/animate_35.pdf, id=502, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_35.pdf Graphic file (type pdf)
 <use images/gif/animate_35.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_35.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_35.pdf> <a0,fr35>
+ <./images/gif/animate_35.pdf>
+<a0,fr35>
 <images/gif/animate_36.pdf, id=514, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_36.pdf Graphic file (type pdf)
 <use images/gif/animate_36.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_36.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_36.pdf> <a0,fr36>
 <images/gif/animate_37.pdf, id=526, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_37.pdf Graphic file (type pdf)
 <use images/gif/animate_37.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_37.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_37.pdf> <a0,fr37>
 <images/gif/animate_38.pdf, id=538, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_38.pdf Graphic file (type pdf)
 <use images/gif/animate_38.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_38.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_38.pdf> <a0,fr38>
 <images/gif/animate_39.pdf, id=550, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_39.pdf Graphic file (type pdf)
 <use images/gif/animate_39.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_39.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_39.pdf> <a0,fr39>
 <images/gif/animate_40.pdf, id=562, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_40.pdf Graphic file (type pdf)
 <use images/gif/animate_40.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_40.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_40.pdf> <a0,fr40>
 <images/gif/animate_41.pdf, id=574, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_41.pdf Graphic file (type pdf)
 <use images/gif/animate_41.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_41.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_41.pdf> <a0,fr41>
 <images/gif/animate_42.pdf, id=586, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_42.pdf Graphic file (type pdf)
 <use images/gif/animate_42.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_42.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_42.pdf> <a0,fr42>
 <images/gif/animate_43.pdf, id=598, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_43.pdf Graphic file (type pdf)
 <use images/gif/animate_43.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_43.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_43.pdf> <a0,fr43>
 <images/gif/animate_44.pdf, id=611, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_44.pdf Graphic file (type pdf)
 <use images/gif/animate_44.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_44.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_44.pdf> <a0,fr44>
 <images/gif/animate_45.pdf, id=623, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_45.pdf Graphic file (type pdf)
 <use images/gif/animate_45.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_45.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_45.pdf> <a0,fr45>
 <images/gif/animate_46.pdf, id=635, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_46.pdf Graphic file (type pdf)
 <use images/gif/animate_46.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_46.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_46.pdf> <a0,fr46>
 <images/gif/animate_47.pdf, id=647, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_47.pdf Graphic file (type pdf)
 <use images/gif/animate_47.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_47.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_47.pdf> <a0,fr47>
 <images/gif/animate_48.pdf, id=659, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_48.pdf Graphic file (type pdf)
 <use images/gif/animate_48.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_48.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_48.pdf> <a0,fr48>
 <images/gif/animate_49.pdf, id=671, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_49.pdf Graphic file (type pdf)
 <use images/gif/animate_49.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_49.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_49.pdf> <a0,fr49>
 <images/gif/animate_50.pdf, id=683, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_50.pdf Graphic file (type pdf)
 <use images/gif/animate_50.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_50.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_50.pdf> <a0,fr50>
 <images/gif/animate_51.pdf, id=695, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_51.pdf Graphic file (type pdf)
 <use images/gif/animate_51.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_51.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_51.pdf> <a0,fr51>
 <images/gif/animate_52.pdf, id=707, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_52.pdf Graphic file (type pdf)
 <use images/gif/animate_52.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_52.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_52.pdf> <a0,fr52>
 <images/gif/animate_53.pdf, id=719, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_53.pdf Graphic file (type pdf)
 <use images/gif/animate_53.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_53.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_53.pdf> <a0,fr53>
 <images/gif/animate_54.pdf, id=731, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_54.pdf Graphic file (type pdf)
 <use images/gif/animate_54.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_54.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_54.pdf> <a0,fr54>
 <images/gif/animate_55.pdf, id=743, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_55.pdf Graphic file (type pdf)
 <use images/gif/animate_55.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_55.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_55.pdf> <a0,fr55>
 <images/gif/animate_56.pdf, id=755, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_56.pdf Graphic file (type pdf)
 <use images/gif/animate_56.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_56.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_56.pdf> <a0,fr56>
 <images/gif/animate_57.pdf, id=767, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_57.pdf Graphic file (type pdf)
 <use images/gif/animate_57.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_57.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_57.pdf> <a0,fr57>
 <images/gif/animate_58.pdf, id=779, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_58.pdf Graphic file (type pdf)
 <use images/gif/animate_58.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_58.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_58.pdf> <a0,fr58>
 <images/gif/animate_59.pdf, id=791, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_59.pdf Graphic file (type pdf)
 <use images/gif/animate_59.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_59.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_59.pdf> <a0,fr59>
 <images/gif/animate_60.pdf, id=803, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_60.pdf Graphic file (type pdf)
 <use images/gif/animate_60.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_60.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_60.pdf> <a0,fr60>
 <images/gif/animate_61.pdf, id=816, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_61.pdf Graphic file (type pdf)
 <use images/gif/animate_61.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_61.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_61.pdf> <a0,fr61>
 <images/gif/animate_62.pdf, id=828, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_62.pdf Graphic file (type pdf)
 <use images/gif/animate_62.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_62.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_62.pdf> <a0,fr62>
 <images/gif/animate_63.pdf, id=840, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_63.pdf Graphic file (type pdf)
 <use images/gif/animate_63.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_63.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_63.pdf> <a0,fr63>
 <images/gif/animate_64.pdf, id=852, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_64.pdf Graphic file (type pdf)
 <use images/gif/animate_64.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_64.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_64.pdf> <a0,fr64>
 <images/gif/animate_65.pdf, id=864, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_65.pdf Graphic file (type pdf)
 <use images/gif/animate_65.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_65.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_65.pdf> <a0,fr65>
 <images/gif/animate_66.pdf, id=876, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_66.pdf Graphic file (type pdf)
 <use images/gif/animate_66.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_66.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_66.pdf> <a0,fr66>
 <images/gif/animate_67.pdf, id=888, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_67.pdf Graphic file (type pdf)
 <use images/gif/animate_67.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_67.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_67.pdf> <a0,fr67>
 <images/gif/animate_68.pdf, id=900, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_68.pdf Graphic file (type pdf)
 <use images/gif/animate_68.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_68.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_68.pdf> <a0,fr68>
 <images/gif/animate_69.pdf, id=912, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_69.pdf Graphic file (type pdf)
 <use images/gif/animate_69.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_69.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_69.pdf> <a0,fr69>
 <images/gif/animate_70.pdf, id=924, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_70.pdf Graphic file (type pdf)
 <use images/gif/animate_70.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_70.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_70.pdf> <a0,fr70>
 <images/gif/animate_71.pdf, id=936, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_71.pdf Graphic file (type pdf)
 <use images/gif/animate_71.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_71.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_71.pdf>
-<a0,fr71>
+ <./images/gif/animate_71.pdf> <a0,fr71>
 <images/gif/animate_72.pdf, id=948, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_72.pdf Graphic file (type pdf)
 <use images/gif/animate_72.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_72.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_72.pdf> <a0,fr72>
 <images/gif/animate_73.pdf, id=960, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_73.pdf Graphic file (type pdf)
 <use images/gif/animate_73.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_73.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_73.pdf> <a0,fr73>
 <images/gif/animate_74.pdf, id=972, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_74.pdf Graphic file (type pdf)
 <use images/gif/animate_74.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_74.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_74.pdf> <a0,fr74>
 <images/gif/animate_75.pdf, id=984, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_75.pdf Graphic file (type pdf)
 <use images/gif/animate_75.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_75.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_75.pdf> <a0,fr75>
 <images/gif/animate_76.pdf, id=996, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_76.pdf Graphic file (type pdf)
 <use images/gif/animate_76.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_76.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_76.pdf> <a0,fr76>
 <images/gif/animate_77.pdf, id=1009, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_77.pdf Graphic file (type pdf)
 <use images/gif/animate_77.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_77.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_77.pdf> <a0,fr77>
 <images/gif/animate_78.pdf, id=1021, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_78.pdf Graphic file (type pdf)
 <use images/gif/animate_78.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_78.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_78.pdf> <a0,fr78>
 <images/gif/animate_79.pdf, id=1033, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_79.pdf Graphic file (type pdf)
 <use images/gif/animate_79.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_79.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_79.pdf> <a0,fr79>
 <images/gif/animate_80.pdf, id=1045, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_80.pdf Graphic file (type pdf)
 <use images/gif/animate_80.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_80.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_80.pdf> <a0,fr80>
 <images/gif/animate_81.pdf, id=1057, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_81.pdf Graphic file (type pdf)
 <use images/gif/animate_81.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_81.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_81.pdf> <a0,fr81>
 <images/gif/animate_82.pdf, id=1069, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_82.pdf Graphic file (type pdf)
 <use images/gif/animate_82.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_82.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_82.pdf> <a0,fr82>
 <images/gif/animate_83.pdf, id=1081, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_83.pdf Graphic file (type pdf)
 <use images/gif/animate_83.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_83.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_83.pdf> <a0,fr83>
 <images/gif/animate_84.pdf, id=1093, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_84.pdf Graphic file (type pdf)
 <use images/gif/animate_84.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_84.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_84.pdf> <a0,fr84>
 <images/gif/animate_85.pdf, id=1105, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_85.pdf Graphic file (type pdf)
 <use images/gif/animate_85.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_85.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_85.pdf> <a0,fr85>
 <images/gif/animate_86.pdf, id=1117, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_86.pdf Graphic file (type pdf)
 <use images/gif/animate_86.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_86.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_86.pdf> <a0,fr86>
 <images/gif/animate_87.pdf, id=1129, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_87.pdf Graphic file (type pdf)
 <use images/gif/animate_87.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_87.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_87.pdf> <a0,fr87>
 <images/gif/animate_88.pdf, id=1141, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_88.pdf Graphic file (type pdf)
 <use images/gif/animate_88.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_88.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_88.pdf> <a0,fr88>
 <images/gif/animate_89.pdf, id=1153, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_89.pdf Graphic file (type pdf)
 <use images/gif/animate_89.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_89.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_89.pdf> <a0,fr89>
 <images/gif/animate_90.pdf, id=1165, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_90.pdf Graphic file (type pdf)
 <use images/gif/animate_90.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_90.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_90.pdf> <a0,fr90>
 <images/gif/animate_91.pdf, id=1177, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_91.pdf Graphic file (type pdf)
 <use images/gif/animate_91.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_91.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_91.pdf> <a0,fr91>
 <images/gif/animate_92.pdf, id=1189, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_92.pdf Graphic file (type pdf)
 <use images/gif/animate_92.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_92.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_92.pdf> <a0,fr92>
 <images/gif/animate_93.pdf, id=1201, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_93.pdf Graphic file (type pdf)
 <use images/gif/animate_93.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_93.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_93.pdf> <a0,fr93>
 <images/gif/animate_94.pdf, id=1214, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_94.pdf Graphic file (type pdf)
 <use images/gif/animate_94.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_94.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_94.pdf> <a0,fr94>
 <images/gif/animate_95.pdf, id=1226, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_95.pdf Graphic file (type pdf)
 <use images/gif/animate_95.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_95.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_95.pdf> <a0,fr95>
 <images/gif/animate_96.pdf, id=1238, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_96.pdf Graphic file (type pdf)
 <use images/gif/animate_96.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_96.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_96.pdf> <a0,fr96>
+ <./images/gif/animate_96.pdf>
+<a0,fr96>
 <images/gif/animate_97.pdf, id=1250, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_97.pdf Graphic file (type pdf)
 <use images/gif/animate_97.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_97.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_97.pdf> <a0,fr97>
 <images/gif/animate_98.pdf, id=1262, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_98.pdf Graphic file (type pdf)
 <use images/gif/animate_98.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_98.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_98.pdf> <a0,fr98>
 <images/gif/animate_99.pdf, id=1274, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_99.pdf Graphic file (type pdf)
 <use images/gif/animate_99.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_99.pdf , page1 used on input line 2
-04.
+06.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_99.pdf> <a0,fr99>
 <images/gif/animate_100.pdf, id=1286, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_100.pdf Graphic file (type pdf)
 <use images/gif/animate_100.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_100.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_100.pdf> <a0,fr100>
 <images/gif/animate_101.pdf, id=1298, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_101.pdf Graphic file (type pdf)
 <use images/gif/animate_101.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_101.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_101.pdf> <a0,fr101>
 <images/gif/animate_102.pdf, id=1310, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_102.pdf Graphic file (type pdf)
 <use images/gif/animate_102.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_102.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_102.pdf> <a0,fr102>
 <images/gif/animate_103.pdf, id=1322, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_103.pdf Graphic file (type pdf)
 <use images/gif/animate_103.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_103.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_103.pdf> <a0,fr103>
 <images/gif/animate_104.pdf, id=1334, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_104.pdf Graphic file (type pdf)
 <use images/gif/animate_104.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_104.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_104.pdf> <a0,fr104>
 <images/gif/animate_105.pdf, id=1346, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_105.pdf Graphic file (type pdf)
 <use images/gif/animate_105.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_105.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_105.pdf> <a0,fr105>
 <images/gif/animate_106.pdf, id=1358, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_106.pdf Graphic file (type pdf)
 <use images/gif/animate_106.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_106.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_106.pdf>
-<a0,fr106>
+ <./images/gif/animate_106.pdf> <a0,fr106>
 <images/gif/animate_107.pdf, id=1370, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_107.pdf Graphic file (type pdf)
 <use images/gif/animate_107.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_107.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_107.pdf> <a0,fr107>
 <images/gif/animate_108.pdf, id=1382, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_108.pdf Graphic file (type pdf)
 <use images/gif/animate_108.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_108.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_108.pdf> <a0,fr108>
 <images/gif/animate_109.pdf, id=1394, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_109.pdf Graphic file (type pdf)
 <use images/gif/animate_109.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_109.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_109.pdf> <a0,fr109>
 <images/gif/animate_110.pdf, id=1406, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_110.pdf Graphic file (type pdf)
 <use images/gif/animate_110.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_110.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_110.pdf> <a0,fr110>
 <images/gif/animate_111.pdf, id=1419, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_111.pdf Graphic file (type pdf)
 <use images/gif/animate_111.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_111.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_111.pdf> <a0,fr111>
+ <./images/gif/animate_111.pdf>
+<a0,fr111>
 <images/gif/animate_112.pdf, id=1431, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_112.pdf Graphic file (type pdf)
 <use images/gif/animate_112.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_112.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_112.pdf> <a0,fr112>
 <images/gif/animate_113.pdf, id=1443, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_113.pdf Graphic file (type pdf)
 <use images/gif/animate_113.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_113.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_113.pdf> <a0,fr113>
 <images/gif/animate_114.pdf, id=1455, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_114.pdf Graphic file (type pdf)
 <use images/gif/animate_114.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_114.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_114.pdf> <a0,fr114>
 <images/gif/animate_115.pdf, id=1467, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_115.pdf Graphic file (type pdf)
 <use images/gif/animate_115.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_115.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_115.pdf> <a0,fr115>
 <images/gif/animate_116.pdf, id=1479, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_116.pdf Graphic file (type pdf)
 <use images/gif/animate_116.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_116.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_116.pdf> <a0,fr116>
 <images/gif/animate_117.pdf, id=1491, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_117.pdf Graphic file (type pdf)
 <use images/gif/animate_117.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_117.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_117.pdf> <a0,fr117>
 <images/gif/animate_118.pdf, id=1503, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_118.pdf Graphic file (type pdf)
 <use images/gif/animate_118.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_118.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_118.pdf> <a0,fr118>
 <images/gif/animate_119.pdf, id=1515, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_119.pdf Graphic file (type pdf)
 <use images/gif/animate_119.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_119.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_119.pdf>
-<a0,fr119>
+ <./images/gif/animate_119.pdf> <a0,fr119>
 <images/gif/animate_120.pdf, id=1527, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_120.pdf Graphic file (type pdf)
 <use images/gif/animate_120.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_120.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_120.pdf> <a0,fr120>
 <images/gif/animate_121.pdf, id=1539, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_121.pdf Graphic file (type pdf)
 <use images/gif/animate_121.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_121.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
  <./images/gif/animate_121.pdf> <a0,fr121>
 <images/gif/animate_122.pdf, id=1551, page=1, 658.46pt x 531.9875pt>
 File: images/gif/animate_122.pdf Graphic file (type pdf)
 <use images/gif/animate_122.pdf, page 1>
 Package pdftex.def Info: images/gif/animate_122.pdf , page1 used on input line 
-204.
+206.
 (pdftex.def)             Requested size: 658.4584pt x 531.9862pt.
- <./images/gif/animate_122.pdf> <a0,fr122> [13]
+ <./images/gif/animate_122.pdf> <a0,fr122>
+[13]
 <images/Grafico_Con_K1.png, id=1573, 505.89pt x 505.89pt>
 File: images/Grafico_Con_K1.png Graphic file (type png)
 <use images/Grafico_Con_K1.png>
-Package pdftex.def Info: images/Grafico_Con_K1.png  used on input line 216.
+Package pdftex.def Info: images/Grafico_Con_K1.png  used on input line 218.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
  [14 <./images/Grafico_Con_K1.png>] [15] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5958 strings out of 482367
- 107477 string characters out of 5946517
- 366064 words of memory out of 5000000
- 21530 multiletter control sequences out of 15000+600000
+ 5959 strings out of 482367
+ 107499 string characters out of 5946517
+ 366059 words of memory out of 5000000
+ 21531 multiletter control sequences out of 15000+600000
  538056 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  45i,12n,42p,791b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1252,7 +1243,7 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (16 pages, 11886489 bytes).
+Output written on report.pdf (16 pages, 11888983 bytes).
 PDF statistics:
  1633 PDF objects out of 1728 (max. 8388607)
  963 compressed objects within 10 object streams

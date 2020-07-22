@@ -52,10 +52,10 @@
 	
 	\paragraph{HeapSelect}
 	L'algoritmo HeapSelect, in quanto dipendente da $k$, avrà costo differente in base al parametro $k$.
-	In particolare, il costo sarà $\Theta\left(n\right)$ nel caso in cui $k\in\Theta(1)$ e di $O\left(n + k\cdot\log{k}\right)$ per $k\in\Theta\left(n\right()$. L'algoritmo sarà particolarmente efficiente, quindi, per $k$ costante, mentre tenderà a essere piuttosto inefficiente per $k\approx n$.\footnote{Dato che si è scelto di implementare l'algoritmo HeapSelect utilizzando opportunamente minheaps o maxheaps (in base al parametro $k$), il costo dell'algoritmo sarà differente. Il costo effettivo sarà discusso nelle prossime pagine.}
+	In particolare, il costo sarà $\Theta\left(n\right)$ nel caso in cui $k\in\Theta(1)$ e di $O\left(n + k\cdot\log{k}\right)$ per $k\in\Theta\left(n\right)$. L'algoritmo sarà particolarmente efficiente, quindi, per $k$ costante, mentre tenderà a essere piuttosto inefficiente per $k\approx n$.\footnote{Dato che si è scelto di implementare l'algoritmo HeapSelect utilizzando opportunamente minheaps o maxheaps (in base al parametro $k$), il costo dell'algoritmo sarà differente. Il costo effettivo sarà discusso nelle prossime pagine.}
 	
 	\paragraph{MedianSelect}
-	Infine, consideriamo l'algoritmo MedianSelect. Questo algoritmo, considerato che è una versione ottimizzata di QuickSelect	e che il costo asintotico è, nel caso peggiore, minore di quello di QuickSelect, dovrebbe risultare più efficiente. In particolare, per $k\approx n$, MedianSelect dovrebbe essere più efficiente sia di QuickSelect che di HeapSelect.\footnote{Come già riportato, per l'implementazione scelta il costo sarà diverso e verrà discusso nella prossima sezione dell'elaborato.}
+	Infine, consideriamo l'algoritmo MedianSelect. Questo algoritmo, considerato che è una versione ottimizzata di QuickSelect	e che il costo asintotico è, nel caso peggiore, minore di quello di QuickSelect, dovrebbe risultare più efficiente. In particolare, per $k\approx n$, MedianSelect dovrebbe essere più efficiente sia di QuickSelect che di HeapSelect\footnote{Come già riportato, per l'implementazione scelta il costo sarà diverso e verrà discusso nella prossima sezione dell'elaborato.}.
 	
 	\newpage
 	
@@ -69,8 +69,8 @@
 	\[
 		T\left(n\right) =
 			\begin{cases}
-				O\left(n + k\log{k}\right)  & \text{se $0\leq k \leq \frac{n}{2}$,} \\
-				O\left(n + \left(n-k\right)\cdot\log{\left(n-k\right)}\right) & \text{se $\frac{n}{2} < k \leq n-1$} 
+				O\left(n + k\log{k}\right)  & \text{se $1\leq k \leq \frac{n}{2}$,} \\
+				O\left(n + \left(n-k\right)\cdot\log{\left(n-k\right)}\right) & \text{se $\frac{n}{2} < k \leq n$} 
 			\end{cases}
 			\tag{1}
 			\label{eq:heap}
@@ -79,7 +79,7 @@
 	Risulta quindi ovvio che il costo massimo dell'algoritmo si otterrà per $k\approx \frac{n}{2} \in \Theta\left(n\right)$. Sebbene asintoticamente l'algoritmo pare avere un costo identico, è molto probabile che i tempi di esecuzione sperimentali rispecchieranno questa implementazione.
 	
 	\paragraph{MedianSelect} 
-	Si è scelto di implementare l'algoritmo MedianSelect in place. Per farlo, si è semplicemente effettuato uno scambio della mediana calcolata sul singolo blocchetto di 5 elementi in una delle prime $\frac{n}{5}$ posizioni del vettore considerate dalla chiamata ricorsiva corrente. Si è inoltre trasformata la ricerca ricorsiva di un buon perno in iterativa. In questo modo si evita l'utilizzo dello spazio aggiutivo richiesto sullo stack dal frame di attivazione necessario per la chiamata ricorsiva stessa.
+	Si è scelto di implementare l'algoritmo MedianSelect in place. Per farlo, si è semplicemente effettuato uno scambio della mediana calcolata sul singolo blocchetto di 5 elementi in una delle prime $\lceil\frac{n}{5}\rceil$ posizioni del vettore considerate dalla chiamata ricorsiva corrente. Si è inoltre trasformata la ricerca ricorsiva di un buon perno in iterativa. In questo modo si evita l'utilizzo dello spazio aggiutivo richiesto sullo stack dal frame di attivazione necessario per la chiamata ricorsiva stessa.
 	
 	\paragraph{Generazione di numeri pseudo-casuali}
 	Dato che la funzione $\text{rand()}$ di C è piuttosto lenta e tende a fornire gli stessi interi dopo un numero relativamente piccolo di iterazioni, si utilizzerà una implementazione dell'algoritmo Mersenne Twister.
@@ -89,7 +89,7 @@
 	Si riportano di seguito alcune	considerazioni riguardo il calcolo dei tempi effettuato nell'elaborato.
 	
 	\paragraph{Risoluzione}
-	Si è scelto di utilizzare il clock offerto dalla funzione $\text{clock\_gettime}$. Il primo parametro della funzione indica il tipo di clock, mentre il secondo parametro è un puntatore ad una struct contentente il tempo all'istante della chiamata della funzione. Il tipo di clock utilizzato ($\text{CLOCK\_MONOTONIC\_RAW}$) è, come suggerito dal nome stesso, di tipo monotonico. \\ Per ottenere una misurazione della risoluzione migliore si è utilizzata la risoluzione mediana, calcolata su un campione di 10000 elementi.
+	Si è scelto di utilizzare il clock offerto dalla funzione $\text{clock\_gettime}$. Il primo parametro della funzione indica il tipo di clock, mentre il secondo parametro è un puntatore ad una struct contentente il tempo all'istante della chiamata a funzione. Il tipo di clock utilizzato ($\text{CLOCK\_MONOTONIC\_RAW}$) è, come suggerito dal nome stesso, di tipo monotonico. \\ Per ottenere una misurazione della risoluzione migliore si è utilizzata la risoluzione mediana, calcolata su un campione di 10000 elementi.
 	
 	\paragraph{Scomputazione dell'inizializzazione}
 	Al fine di scomputare correttamente dai tempi di esecuzione degli algoritmi il tempo di inizializzazione di un vettore casuale, si è utilizzata una funzione apposita che calcola il tempo mediano di tale operazione. Al fine di ottenere un errore relativo minore di $0.5\%$ si è ripetuta l'inizializzazione sufficienti volte affinché la seguente equazione fosse soddisfatta:
@@ -98,7 +98,7 @@
 		\text{diff}\left(end, start\right) > resolution \cdot \left(1+\frac{1}{0.005}\right)  
 	\]
 	
-	dove $\text{diff}$ indica l'intervallo temporale trascorso fra $start$ e $end$, $resolution$ è la risoluzione del clock utilizzato. \\ Questo procedimento è stato poi iterato un certo numero di volte e dal campione di dati ottenuto si è estratta la mediana.
+	dove $\text{diff}$ indica l'intervallo temporale trascorso fra $start$ e $end$ e $resolution$ è la risoluzione del clock utilizzato. \\ Questo procedimento è stato poi iterato un certo numero di volte e dal campione di dati ottenuto si è estratta la mediana.
 	
 	\paragraph{Tempo di esecuzione degli algoritmi}
 	Per ottenere misurazioni con errore relativo minore di $0.5\%$ si è operato nel seguente modo:
@@ -120,11 +120,8 @@
 	\paragraph{Errore relativo massimo totale}
 	Calcolando i tempi nei modi indicati negli ultimi due paragrafi si è ottenuto un errore relativo complessivo $\leq1\%$. L'errore relativo totale è, infatti, dato dalla somma degli errori. Essendoci quindi due misurazioni affette da errore\footnote{La prima è quella relativa al calcolo del tempo di inizializzazione, la seconda è quella relativa al tempo di esecuzione dell'algoritmo.}, entrambe con errore relativo pari o minore a $0.5\%$, l'errore relativo massimo totale è effettivamente dell'$1\%$.
 	
-	\begin{comment}
 	\paragraph{Problematiche riscontrate}
-	Durante le prime misurazioni, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere dei tempi migliori, cioè meno sensibili ad outliers e rumore, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathclose|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori casuali.
-	\end{comment}
-	
+	Durante le prime misurazioni, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere delle misurazioni migliori, cioè meno sensibili ad outliers e rumore, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathclose|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori casuali.
 	
 	\newpage	
 	\section{Analisi degli algoritmi}
@@ -139,6 +136,7 @@
 	\newpage
 	
 	\subsection{Lunghezza $n$ dell'array variabile e $k=\frac{n}{3}$}
+	\label{subsection:nvar_k_n3}
 	Iniziamo dall'analisi del grafico di un caso generale.
 	
 	\begin{figure}[h!]
@@ -166,10 +164,12 @@
 	\end{figure}
 	
 	Si può inoltre notare una maggiore deviazione mediana assoluta per l'algoritmo QuickSelect rispetto a MedianSelect. Questo è giustificato dal fatto che l'algoritmo MedianSelect, scegliendo sempre un buon perno, compie una quantità di lavoro sempre simile, mentre QuickSelect è più variabile data la scelta del perno casuale che potrebbe, o meno, portare a chiamate ricorsive sbilanciate.
-	\\\\
+	
+	% This didn't fit on the current page, might as well go to a new one	
+	\newpage
 	A fronte di queste considerazioni, il grafico del tempo di esecuzione di HeapSelect risulta in linea con le ipotesi teoriche formulate precedentemente. Questo infatti è denotato da una non linearità giustificata dalla scelta di $k=\frac{n}{3}$. 
 	\\
-	Si può inoltre notare come la deviazione mediana assoluta sia minore per le esecuzioni di HeapSelect rispetto a quella degli altri due algoritmi. Ciò è linea con il funzionamento dell'algoritmo stesso: dato che il numero di operazioni di $extract$ eseguite da HeapSelect è, per $k$ fissato, sempre uguale, risulta ragionevole che complessivamente il costo dell'algoritmo in diverse esecuzioni sia molto simile.
+	Si può inoltre notare come la deviazione mediana assoluta sia minore per HeapSelect rispetto a quella degli altri due algoritmi. Ciò è giustificato dal funzionamento della procedura stessa: dato che il numero di operazioni di $extract$ eseguite da HeapSelect è, per $k$ fissato, sempre uguale, risulta ragionevole che complessivamente il costo dell'algoritmo in diverse esecuzioni sia molto simile. 
 		
 	\newpage
 	
@@ -182,7 +182,9 @@
   		\label{fig:graph3}
 	\end{figure}
 	
-	Dal grafico si può subito notare come gli algoritmi QuickSelect e MedianSelect non siano effettivamente influenzati dal parametro che stiamo considerando. Questo era prevedibile, dato che il costo asintotico degli algoritmi non è influenzato dal parametro $k$. Questi due algoritmi impiegano infatti tempo pressocchè lineare anche al variare di $k$.
+	Dal grafico si può subito notare come gli algoritmi QuickSelect e MedianSelect non siano effettivamente influenzati dal parametro che stiamo considerando. Questo era prevedibile, dato che il costo asintotico degli algoritmi non è influenzato dal parametro $k$. Questi due algoritmi impiegano infatti tempo pressocchè lineare anche al variare di $k$. 
+	\\
+	Si può tuttavia notare una leggera non linearità nel grafico dei tempi di esecuzione di QuickSelect, influenzata soprattuto da valori di $k$ prossimi a $1$ o a $n$ e probabilmente causata da buone scelte casuali del perno.
 	\newpage
 	
 	\begin{figure}[h!]
@@ -218,7 +220,7 @@
   		\label{fig:graph6}
 	\end{figure}
 	
-	Dal grafico si può notare come le aspettative teoriche siano effettivamente state rispettate. QuickSort continua ad essere l'algoritmo più efficiente per gli stessi motivi di cui sopra, ma ora HeapSelect risulta più efficiente di MedianSelect in quanto deve effettuare una quantità di lavoro sempre lineare (e minore di quella che compie MedianSelect per la scelta di un buon perno).
+	Dal grafico si può notare come le aspettative teoriche siano effettivamente state rispettate. QuickSelect continua ad essere l'algoritmo più efficiente per gli stessi motivi di cui sopra (sezione \ref{subsection:nvar_k_n3}), ma ora HeapSelect risulta più efficiente di MedianSelect in quanto deve effettuare una quantità di lavoro sempre lineare (e minore di quella che compie MedianSelect per la scelta di un buon perno e le successive chiamate ricorsive).
 	
 	
 	\newpage

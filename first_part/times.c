@@ -10,6 +10,7 @@
 #include <math.h>
 
 #define ITERATIONS 100
+#define PROBABILITY 0.02
 
 /**
  * Computes the median time of a random initialization of a vector of given length
@@ -92,7 +93,7 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     free(array);
 
-
+    /*
     double mean = 0;
     double std = 0;
 
@@ -106,8 +107,8 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
 
     time[0] = mean;
     time[1] = std;
+     */
 
-/*
     // Using medians
     quicksortDouble(times, 0, ITERATIONS-1);
 
@@ -119,7 +120,6 @@ void getSelectTime(double resolution, int length, unsigned long seed, double tim
     quicksortDouble(times, 0, ITERATIONS-1);
 
     time[1] = times[(int) (ITERATIONS / 2)];
-*/
 }
 
 
@@ -137,7 +137,7 @@ double getInitTimeOrdered(double resolution, int length, unsigned long long int 
         do{
             prng = seedRand(seed+i);
             for(int j = 0; j < length; j++){
-                if(genRand(&prng) <= 0.05){ // with a 5% probability, generate a random number instead of an ordered integer
+                if(genRand(&prng) <= PROBABILITY){ // with a 5% probability, generate a random number instead of an ordered integer
                     array[j] = (int) genRandLong(&prng);
                 } else {
                     array[j] = j;
@@ -177,7 +177,7 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
         do{
             prng = seedRand(seed+i);
             for(int j = real_length-length; j < real_length; j++){
-                if(genRand(&prng) <= 0.05){ // with a 5% probability, generate a random number instead of an ordered integer
+                if(genRand(&prng) <= PROBABILITY){ // with a 5% probability, generate a random number instead of an ordered integer
                     array[j] = (int) genRandLong(&prng);
                 } else {
                     array[j] = j;
@@ -196,6 +196,7 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
     free(array);
 
 
+    /*
     double mean = 0;
     double std = 0;
 
@@ -209,9 +210,9 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
 
     time[0] = mean;
     time[1] = std;
+    */
 
 
-    /*
     // Using medians
     quicksortDouble(times, 0, ITERATIONS-1);
 
@@ -223,7 +224,6 @@ void getSelectTimeOrdered(double resolution, int length, unsigned long seed, dou
     quicksortDouble(times, 0, ITERATIONS-1);
 
     time[1] = times[(int) (ITERATIONS / 2)];
-    */
 }
 
 
@@ -242,7 +242,7 @@ int main(){
     unsigned long long seed = time(NULL); // get seed as the time since Unix Epoch
 
     printf("Resolution %.17g\n", resolution);
-    /*
+
     output = fopen("../first_part/times/basic_times.txt", "w");
     fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
     printf("N K T1 D1 T2 D2 T3 D3\n");
@@ -330,7 +330,7 @@ int main(){
     printf("N K T1 D1 T2 D2 T3 D3\n");
 
     array_length = 100;
-    int k = 1;
+    k = 1;
     for(int i = 0; i < 40; i++){
 
         printf("%d %d ", array_length, k);
@@ -356,7 +356,8 @@ int main(){
     }
 
     fclose(output);
-*/
+
+
     output = fopen("../first_part/times/ordered.txt", "w");
     fprintf(output, "N,K,T1,D1,T3,D3\n");
     printf("N K T1 D1 T3 D3\n");
@@ -387,4 +388,36 @@ int main(){
 
     fclose(output);
 
+    output = fopen("../first_part/times/orderedk1.txt", "w");
+    fprintf(output, "N,K,T1,D1,T2,D2,T3,D3\n");
+    printf("N K T1 D1 T2 D2 T3 D3\n");
+
+    array_length = 100;
+    k = 1;
+    for(int i = 0; i < 40; i++){
+
+        printf("%d %d ", array_length, k);
+
+
+        initTime = getInitTimeOrdered(resolution, array_length, seed);
+
+        getSelectTimeOrdered(resolution, array_length, seed, initTime, k, quickselect, quickTime);
+        printf("%.17g %.17g  ", quickTime[0], quickTime[1]);
+
+        getSelectTimeOrdered(resolution, array_length, seed, initTime, k, heapselect, heapTime);
+        printf("%.17g %.17g  ", heapTime[0], heapTime[1]);
+
+        getSelectTimeOrdered(resolution, array_length, seed, initTime, k, medianselect, medianTime);
+        printf("%.17g %.17g\n", medianTime[0], medianTime[1]);
+
+        fprintf(output, "%d,%d,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g\n",
+                array_length, k,
+                quickTime[0], quickTime[1],
+                heapTime[0], heapTime[1],
+                medianTime[0], medianTime[1]);
+
+        array_length = (int) (array_length * 1.32);
+    }
+
+    fclose(output);
 }
