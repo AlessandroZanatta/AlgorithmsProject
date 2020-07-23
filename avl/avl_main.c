@@ -29,7 +29,7 @@ int main(int argc, char** argv){
 
             destroy_avl(avl);
             avl = create_avl();
-        } else if(strcmp(token, "insertAvl") == 0) {
+        } else if(strcmp(token, "insert") == 0) {
 
             key = atoi(strtok(NULL, " ")); // atoi is fine there
             value = strtok(NULL, " ");
@@ -42,7 +42,7 @@ int main(int argc, char** argv){
             key = atoi(strtok(NULL, " "));
             struct NodeAvl * node = findAvl(avl, key);
             deleteAvl(avl, node);
-        } else if(strcmp(token, "findAvl") == 0){ // findAvl
+        } else if(strcmp(token, "find") == 0){ // findAvl
 
             key = atoi(strtok(NULL, " "));
             struct NodeAvl * node = findAvl(avl, key);
