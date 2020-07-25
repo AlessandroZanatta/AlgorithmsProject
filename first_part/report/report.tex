@@ -48,15 +48,15 @@
 	\end{itemize}
 	
 	\paragraph{QuickSelect}
-	Ci si aspetta che l'algoritmo QuickSelect, al verificarsi del caso peggiore, sia il meno efficiente fra i tre, dato il suo costo asintotico maggiore. Nel caso medio, tuttavia, questo algoritmo potrebbe risultare più efficiente di HeapSelect e di MedianSelect.
+	Ci si aspetta che l'algoritmo, al verificarsi del caso peggiore, sia il meno efficiente fra i tre, dato il suo costo asintotico maggiore. Nel caso medio, tuttavia, questo algoritmo potrebbe risultare più efficiente di HeapSelect e di MedianSelect.
 	
 	\paragraph{HeapSelect}
 	\label{section:theory}
-	L'algoritmo HeapSelect, in quanto dipendente da $k$, avrà costo differente in base al parametro $k$.
+	L'algoritmo, in quanto dipendente da $k$, avrà costo differente in base al parametro $k$.
 	In particolare, il costo sarà $\Theta\left(n\right)$ nel caso in cui $k\in\Theta(1)$ e di $O\left(n + k\cdot\log{k}\right)$ per $k\in\Theta\left(n\right)$. L'algoritmo sarà particolarmente efficiente, quindi, per $k$ costante, mentre tenderà a essere piuttosto inefficiente per $k\approx n$.\footnote{Dato che si è scelto di implementare l'algoritmo HeapSelect utilizzando opportunamente minheaps o maxheaps (in base al parametro $k$), il costo dell'algoritmo sarà differente. Il costo effettivo sarà discusso nelle prossime pagine.} 
 	
 	\paragraph{MedianSelect}
-	Infine, consideriamo l'algoritmo MedianSelect. Questo algoritmo, considerato che è una versione ottimizzata di QuickSelect	e che il costo asintotico è, nel caso peggiore, minore di quello di QuickSelect, dovrebbe risultare più efficiente. In particolare, per $k\approx n$, MedianSelect dovrebbe essere più efficiente sia di QuickSelect che di HeapSelect\footnote{Come già riportato, per l'implementazione scelta il costo sarà diverso e verrà discusso nella prossima sezione dell'elaborato.}.
+	Questo algoritmo, considerato che è una versione ottimizzata di QuickSelect	e che il costo asintotico è, nel caso peggiore, minore di quello di QuickSelect, dovrebbe risultare più efficiente. In particolare, per $k\approx n$, MedianSelect dovrebbe essere più efficiente sia di QuickSelect che di HeapSelect\footnote{Come già riportato, per l'implementazione scelta il costo sarà diverso e verrà discusso nella prossima sezione dell'elaborato.}.
 	
 	\newpage
 	
@@ -181,9 +181,7 @@
   		\label{fig:graph3}
 	\end{figure}
 	
-	Dal grafico si può subito notare come gli algoritmi QuickSelect e MedianSelect non siano effettivamente influenzati dal parametro che stiamo considerando. Questo era prevedibile, dato che il costo asintotico degli algoritmi non è influenzato dal parametro $k$. Questi due algoritmi impiegano infatti tempo pressocchè lineare anche al variare di $k$. 
-	\\
-	Si può tuttavia notare una leggera non linearità nel grafico dei tempi di esecuzione di QuickSelect, influenzata soprattuto da valori di $k$ prossimi a $1$ o a $n$ e probabilmente causata da buone scelte casuali del perno.
+	Dal grafico si può subito notare come gli algoritmi QuickSelect e MedianSelect non siano effettivamente influenzati dal parametro che stiamo considerando. Questo era prevedibile, dato che il costo asintotico degli algoritmi non è influenzato dal parametro $k$. Questi due algoritmi impiegano infatti tempo pressocchè lineare anche al variare di $k$.
 	\newpage
 	
 	\begin{figure}[h!]
