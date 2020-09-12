@@ -12,7 +12,7 @@
 #define ROTATE_RIGHT 3
 
 // here i suppose -1 is not a valid key, might need to find a better way to do this tho...
-struct NodeRbt NIL;
+extern struct NodeRbt NIL;
 
 
 /**
