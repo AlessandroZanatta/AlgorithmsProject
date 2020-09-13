@@ -2,23 +2,17 @@
 // Created by Alessandro Zanatta on 7/18/20.
 //
 
-#ifndef LIBS
-#define LIBS
 #include "../bst/bst.h"
 #include "../avl/avl.h"
 #include "../rbt/rbt.h"
 #include "utils.h"
 #include <stdio.h>
-#endif
 
-
-#define ITERATIONS 2
+#define ITERATIONS 10
 #define RANDOM_PROBABILITY 0.95
 #define POINTERS 1000
 
 
-// TODO forse il tempo ammortizzato che stai prendendo non è corretto, potrebbe essere che bisogna dividere per il numero di elementi!!
-// TODO i tempi delle find per RBT sono stranamente TANTO bassi, MOLTO MOLTO strano!
 /**
  * Computes the median time of a random generation of "elements" integers
  * @param resolution of the used clock
@@ -435,7 +429,7 @@ void getBstTimeFind(double resolution, int elements, unsigned long seed, double 
 
             clock_gettime(CLOCK_MONOTONIC_RAW, &end);
             counter++;
-        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.01) + 1) );
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
         times[i] = (getDifference(start, end) / counter - initTime) / elements;
         destroy_bst(bst);
     }
@@ -478,9 +472,8 @@ void getAvlTimeFind(double resolution, int elements, unsigned long long int seed
 
             clock_gettime(CLOCK_MONOTONIC_RAW, &end);
             counter++;
-        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.01) + 1) );
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
         times[i] = (getDifference(start, end) / counter - initTime) / elements;
-
         destroy_avl(avl);
     }
 
@@ -505,7 +498,7 @@ void getRbtTimeFind(double resolution, int elements, unsigned long long int seed
         prng = seedRand(seed+i);
         for(int j = 0; j < elements; j++){
             key = (int) genRandLong(&prng);
-            if(findRbt(rbt, key) == NULL){
+            if(findRbt(rbt, key) == &NIL){
                 insertRbt(rbt, key, "");
             }
         }
@@ -518,13 +511,12 @@ void getRbtTimeFind(double resolution, int elements, unsigned long long int seed
             for(int j = 0; j < elements; j++) {
 
                 key = (int) genRandLong(&prng);
-
                 findRbt(rbt, key);
             }
 
             clock_gettime(CLOCK_MONOTONIC_RAW, &end);
             counter++;
-        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.01) + 1) );
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
         times[i] = (getDifference(start, end) / counter - initTime) / elements;
         destroy_rbt(rbt);
     }
@@ -532,6 +524,161 @@ void getRbtTimeFind(double resolution, int elements, unsigned long long int seed
     elaborateTimes(times, result);
 }
 
+void getBstTimeFindOrdered(double resolution, int elements, unsigned long long int seed, double initTime, double result[2]) {
+    struct timespec start,end;
+    double times [ITERATIONS];
+
+    int counter;
+    int key;
+    MTRand prng;
+
+    struct Bst * bst;
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        // create tree
+        bst = create_bst();
+        prng = seedRand(seed+i);
+        for(int j = 0; j < elements; j++){
+            if(genRand(&prng) <= RANDOM_PROBABILITY){ // with RANDOM_PROBABILITY probability, generate a random number, otherwise use an ordered sequence
+                key = (int) genRandLong(&prng);
+            } else {
+                key = j;
+            }
+
+            if (find(bst, key) == NULL) {
+                insert(bst, key, ""); // insert just an empty string, requires less computation (plus: what should I even write here anyway?)
+            }
+        }
+
+        counter = 0;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+
+            prng = seedRand(seed+i);
+            for(int j = 0; j < elements; j++) {
+
+                if(genRand(&prng) <= RANDOM_PROBABILITY){ // with RANDOM_PROBABILITY probability, generate a random number, otherwise use an ordered sequence
+                    key = (int) genRandLong(&prng);
+                } else {
+                    key = j;
+                }
+                find(bst, key);
+            }
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
+        times[i] = (getDifference(start, end) / counter - initTime) / elements;
+        destroy_bst(bst);
+    }
+
+    elaborateTimes(times, result);
+}
+
+void getAvlTimeFindOrdered(double resolution, int elements, unsigned long long int seed, double initTime, double result[2]) {
+    struct timespec start,end;
+    double times [ITERATIONS];
+
+    int counter;
+    int key;
+    MTRand prng;
+
+    struct Avl * avl;
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        // create tree
+        avl = create_avl();
+        prng = seedRand(seed+i);
+        for(int j = 0; j < elements; j++){
+            if(genRand(&prng) <= RANDOM_PROBABILITY){ // with RANDOM_PROBABILITY probability, generate a random number, otherwise use an ordered sequence
+                key = (int) genRandLong(&prng);
+            } else {
+                key = j;
+            }
+
+            if (findAvl(avl, key) == NULL) {
+                insertAvl(avl, key, ""); // insert just an empty string, requires less computation (plus: what should I even write here anyway?)
+            }
+        }
+
+        counter = 0;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+
+            prng = seedRand(seed+i);
+            for(int j = 0; j < elements; j++) {
+
+                if(genRand(&prng) <= RANDOM_PROBABILITY){ // with RANDOM_PROBABILITY probability, generate a random number, otherwise use an ordered sequence
+                    key = (int) genRandLong(&prng);
+                } else {
+                    key = j;
+                }
+                findAvl(avl, key);
+            }
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
+        times[i] = (getDifference(start, end) / counter - initTime) / elements;
+        destroy_avl(avl);
+    }
+
+    elaborateTimes(times, result);
+}
+
+void getRbtTimeFindOrdered(double resolution, int elements, unsigned long long int seed, double initTime, double result[2]) {
+    struct timespec start,end;
+    double times [ITERATIONS];
+
+    int counter;
+    int key;
+    MTRand prng;
+
+    struct Rbt * rbt = create_rbt();
+
+    for(int i = 0; i < ITERATIONS; i++){
+
+        // create tree
+        rbt = create_rbt();
+        prng = seedRand(seed+i);
+        for(int j = 0; j < elements; j++){
+            if(genRand(&prng) <= RANDOM_PROBABILITY){ // with RANDOM_PROBABILITY probability, generate a random number, otherwise use an ordered sequence
+                key = (int) genRandLong(&prng);
+            } else {
+                key = j;
+            }
+
+            if (findRbt(rbt, key) == &NIL) {
+                insertRbt(rbt, key, ""); // insert just an empty string, requires less computation (plus: what should I even write here anyway?)
+            }
+        }
+
+        counter = 0;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+        do{
+
+            prng = seedRand(seed+i);
+            for(int j = 0; j < elements; j++) {
+
+                if(genRand(&prng) <= RANDOM_PROBABILITY){ // with RANDOM_PROBABILITY probability, generate a random number, otherwise use an ordered sequence
+                    key = (int) genRandLong(&prng);
+                } else {
+                    key = j;
+                }
+                findRbt(rbt, key);
+            }
+
+            clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+            counter++;
+        } while(getDifference(start, end) <= initTime + resolution * ((1 / 0.005) + 1) );
+        times[i] = (getDifference(start, end) / counter - initTime) / elements;
+        destroy_rbt(rbt);
+    }
+
+    elaborateTimes(times, result);
+}
 
 int main(){
     double resolution = getMedianResolution();
@@ -549,7 +696,7 @@ int main(){
 /*
 
     // basic comparation of the 3 trees
-    output = fopen("../second_part/times/all.txt", "w");
+    output = fopen("second_part/times/all.txt", "w");
     fprintf(output, "N,T1,D1,T2,D2,T3,D3\n");
     printf("N T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 35; i++){
@@ -583,7 +730,8 @@ int main(){
 
     elements = 100;
     // pseudo-ordered input sequence
-    output = fopen("../second_part/times/all_ordered.txt", "w");
+    // 95% random elements
+    output = fopen("second_part/times/all_ordered.txt", "w");
     fprintf(output, "N,T1,D1,T2,D2,T3,D3\n");
     printf("N T1 D1 T2 D2 T3 D3\n");
     for(int i = 0; i < 35; i++){
@@ -613,14 +761,13 @@ int main(){
     }
     fclose(output);
 
-    */
 
     // try to effectuate "elements" find (ONLY FIND)
     elements = 100;
     output = fopen("second_part/times/finds.txt", "w");
     fprintf(output, "N,T1,D1,T2,D2,T3,D3\n");
     printf("N T1 D1 T2 D2 T3 D3\n");
-    for(int i = 0; i < 35; i++){
+    for(int i = 0; i < 40; i++){
 
         printf("%d ", elements);
 
@@ -646,5 +793,70 @@ int main(){
         elements = (int) (elements * 1.31);
     }
     fclose(output);
+
+
+    // try to effectuate "elements" find (ONLY FIND) with pseudo-ORDERED inserted elements!
+    // 95% random elements
+    elements = 100;
+    output = fopen("second_part/times/finds_ordered.txt", "w");
+    fprintf(output, "N,T1,D1,T2,D2,T3,D3\n");
+    printf("N T1 D1 T2 D2 T3 D3\n");
+    for(int i = 0; i < 35; i++){
+
+        printf("%d ", elements);
+
+        initTime = getInitTimeOrdered(resolution, elements, seed);
+
+        getBstTimeFindOrdered(resolution, elements, seed, initTime, bstTime);
+        printf("%.17g %.17g  ", bstTime[0], bstTime[1]);
+
+        getAvlTimeFindOrdered(resolution, elements, seed, initTime, avlTime);
+        printf("%.17g %.17g ", avlTime[0], avlTime[1]);
+
+        getRbtTimeFindOrdered(resolution, elements, seed, initTime, rbtTime);
+        printf("%.17g %.17g", rbtTime[0], rbtTime[1]);
+
+        printf("\n");
+
+        fprintf(output, "%d,%.17g,%.17g,%.17g,%.17g,%.17g,%.17g\n",
+                elements,
+                bstTime[0], bstTime[1],
+                avlTime[0], avlTime[1],
+                rbtTime[0], rbtTime[1]);
+
+        elements = (int) (elements * 1.31);
+    }
+    fclose(output);
+
+
+    // ONLY FOR RBT AND AVL, bst takes WAY TOO MUCH TIME
+    // 10% of random elements
+    elements = 100;
+    output = fopen("second_part/times/finds_ordered_avl_rbt.txt", "w");
+    fprintf(output, "N,T2,D2,T3,D3\n");
+    printf("N T1 D2 T3 D3\n");
+    for(int i = 0; i < 40; i++){
+
+        printf("%d ", elements);
+
+        initTime = getInitTimeOrdered(resolution, elements, seed);
+
+        getAvlTimeFindOrdered(resolution, elements, seed, initTime, avlTime);
+        printf("%.17g %.17g ", avlTime[0], avlTime[1]);
+
+        getRbtTimeFindOrdered(resolution, elements, seed, initTime, rbtTime);
+        printf("%.17g %.17g", rbtTime[0], rbtTime[1]);
+
+        printf("\n");
+
+        fprintf(output, "%d,%.17g,%.17g,%.17g,%.17g\n",
+                elements,
+                avlTime[0], avlTime[1],
+                rbtTime[0], rbtTime[1]);
+
+        elements = (int) (elements * 1.31);
+    }
+    fclose(output);
+    */
 }
 
