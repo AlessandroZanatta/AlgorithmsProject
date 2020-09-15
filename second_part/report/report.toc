@@ -1,0 +1,22 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {1}Introduzione}{2}%
+\contentsline {section}{\numberline {2}Considerazioni teoriche}{3}%
+\contentsline {subsection}{\numberline {2.1}Costo asintotico}{3}%
+\contentsline {paragraph}{Binary Search Tree}{3}%
+\contentsline {paragraph}{Adelson-Velsky and Landis Tree}{3}%
+\contentsline {paragraph}{Red-Black Tree}{3}%
+\contentsline {subsection}{\numberline {2.2}Aspettative teoriche}{4}%
+\contentsline {paragraph}{BST}{4}%
+\contentsline {paragraph}{RBT e AVL}{4}%
+\contentsline {section}{\numberline {3}Note implementative}{5}%
+\contentsline {paragraph}{Generazione di numeri pseudo-casuali}{5}%
+\contentsline {paragraph}{Scomputazione dei tempi di inizializzazione}{5}%
+\contentsline {section}{\numberline {4}Calcolo del tempi di esecuzione}{6}%
+\contentsline {paragraph}{Risoluzione}{6}%
+\contentsline {paragraph}{Scomputazione dei tempi di inizializzazione}{6}%
+\contentsline {paragraph}{Tempo di esecuzione degli algoritmi}{6}%
+\contentsline {paragraph}{Errore relativo massimo totale}{7}%
+\contentsline {paragraph}{Problematiche riscontrate}{7}%
+\contentsline {section}{\numberline {5}Analisi degli tempi di esecuzione}{8}%
+\contentsline {section}{\numberline {6}Conclusioni}{9}%
