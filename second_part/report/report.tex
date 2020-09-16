@@ -61,7 +61,8 @@
 	Data la maggior semplicità e i maggiori costi asintotici di questo tipo di albero, ci si aspetta una maggiore inefficienza, accentuata se l'albero si sbilancia. Per input casuali potrebbe comunque eseguire le operazioni in un tempo comparabile agli altri due alberi binari in quanto potrebbe rimanere, a causa della natura casuale delle chiavi dei nodi che vengono inseriti, relativamente bilanciato.\\
 	Per input fortemente ordinati, questo albero sarà invece certamente molto inefficiente.
 	
-	\paragraph{RBT e AVL}	
+	\paragraph{RBT e AVL}
+	\label{par:rbt_avl}
 	Sia i RBT che gli AVL impiegano tempo asintotico logaritmico per qualsiasi input e operazione, tuttavia è importante notare le differenze di questi due tipi di alberi.\\
 	I RBT tendono a essere meno bilanciati rispetto agli alberi di tipo AVL. Formalmente, dato un nodo $x$ e denotato come $x.left$ e $x.right$ rispettivamente il figlio sinistro e destro di $x$, si ha che $\text{h}\left(x.left\right) \leq 2\cdot \text{h}\left(x.right\right)$ (e viceversa). Negli alberi AVL, invece, la differenza di altezza fra due sottoalberi di un certo nodo $x$ non supera mai l'unità. Ci si aspetta quindi un tempo di ricerca maggiore per i RBT rispetto agli AVL. \\
 	Consideriamo inoltre la procedura di inserimento in un RBT. Questa richiede al più due cammini radice-foglia, in particolare ne richiede sempre uno per arrivare in una foglia (in cui verrà inserito il nodo con la chiava appropriata) e ne richiede al più un altro (o solo parte di esso) per ri-bilanciare l'albero. Per quanto riguarda gli AVL, invece, sono sempre richiesti esattaemente due cammini, il primo per l'inserimento e il secondo per ri-bilanciare l'albero, similmente al caso dei RBT. Per quanto riguarda l'operazione di inserimento, quindi, ci si aspetta che i RBT siano maggiormente efficienti degli alberi di tipo AVL.
@@ -76,10 +77,11 @@
 	Dato che la funzione $\text{rand()}$ di C è piuttosto lenta e tende a fornire gli stessi interi dopo un numero relativamente piccolo di iterazioni, si utilizzerà una implementazione dell'algoritmo Mersenne Twister.
 	
 	\paragraph{Scomputazione dei tempi di inizializzazione}
-	Si è ritenuto opportuno, al fine di ottenere dei tempi minormente affetti da errori casuali, scomputare il tempo di generazione di $n$ numeri casuali utilizzando l'algoritmo sopra nominato. Si discute il modo in cui si è effettuato ciò nella sezione successiva alla presente.
+	Si è ritenuto opportuno, al fine di ottenere misurazioni maggiormente accurate e minormente affette da errori casuali, scomputare il tempo di generazione di $n$ numeri casuali utilizzando l'algoritmo sopra nominato. Si discute il modo in cui si è effettuato ciò nella sezione successiva (\ref{section:exec}).
 	
 	\newpage
 	\section{Calcolo del tempi di esecuzione}	
+	\label{section:exec}
 	Si riportano di seguito alcune	considerazioni riguardo il calcolo dei tempi effettuato nell'elaborato.
 	
 	\paragraph{Risoluzione}
@@ -117,9 +119,90 @@
 	\paragraph{Problematiche riscontrate}
 	Durante le prime misurazioni, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere delle misurazioni migliori, cioè meno sensibili ad outliers e rumore, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathclose|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori casuali.
 	
-	\newpage	
+	\newpage
 	\section{Analisi degli tempi di esecuzione}
 	
+	Per la valutazione dei tre diversi tipi di alberi sono stati utilizzati diversi criteri e sono state considerate diverse casistiche ritenute interessanti. In particolare, ci si soffermerà sui seguenti casi:
+	
+	\begin{itemize}
+		\item $n$ operazioni di inserimento
+		\item $n$ operazioni di inserimento con il $5\%$ di elementi ordinati
+		\item $n$ operazioni di ricerca
+		\item $n$ operazioni di ricerca con il $10\%$ di elementi ordinati 
+		\item $n$ operazioni di ricerca con l'$80\%$ di elementi ordinati 
+	\end{itemize}
+	
+	\newpage
+	
+	\subsection{Esecuzione di $n$ operazioni di inserimento}
+	\label{subsection:n_op_ins}
+	Iniziamo dall'analisi del grafico di un caso generale.
+	
+	\begin{figure}[h!]
+		\centering
+  		\includegraphics[width=1 \columnwidth]{Grafici/Grafico_All.png}
+  		\caption{Tempo di esecuzione di $n$ operazioni di inserimento}
+  		\label{fig:graph2}
+	\end{figure}
+	
+	Le aspettative teoriche sono state principalmente rispettate. Sia gli RBT che gli AVL si sono comportati come ci si aspettava.\\
+	Ciò che sorprende di più è l'efficienza dei BST. Questi alberi sono, per input generati casualmente tramite l'algoritmo MT, molto efficienti in quanto non si sbilanciano. Possiamo però notare come la deviazione mediana assoluta sia molto superiore a quella degli altri due alberi, ad indicare come questa efficienza sia molto legata, come già detto, all'input. \\
+	La maggiore efficienza dei BST rispetto agli AVL può inoltre essere attribuita all'assenza, per il primo tipo di albero, di procedure di ri-bilanciamento.
+	
+	\newpage
+	
+	\subsection{Esecuzione di $n$ operazioni di inserimento con il $10\%$ di elementi ordinati}
+	\label{subsection:n_op_ins_ord}
+		
+	\begin{figure}[h!]
+		\centering
+  		\includegraphics[width=1 \columnwidth]{Grafici/Grafico_All_ordered.png}
+  		\caption{Tempo di esecuzione di $n$ operazioni di inserimento con $10\%$ di elementi ordinati}
+  		\label{fig:graph2}
+	\end{figure}
+	
+	Anche in questo grafico le aspettative teoriche sono state rispettate. Tutti gli alberi si sono comportati esattamento come predetto. \\
+	Possiamo notare come i BST si siano effettivamente rivelati inefficienti rispetto agli altri due alberi. In particolare, si nota molto chiaramente l'andamento lineare nel tempo di esecuzione. \\
+	Per quanto riguarda gli altri due alberi, è interessante la maggiore efficienza dei RBT rispetto agli AVL. Come predetto nella sezione \ref{par:rbt_avl}, infatti, i RBT hanno un costo di inserimento minore, dato dal funzionamento della procedura di ri-bilanciamento dell'albero stesso.
+	
+	\newpage
+	
+	\subsection{Esecuzione di $n$ operazioni di ricerca}
+	\label{subsection:n_op_ric}
+		
+	\begin{figure}[h!]
+		\centering
+  		\includegraphics[width=1 \columnwidth]{Grafici/Grafico_All_finds.png}
+  		\caption{Tempo di esecuzione di $n$ operazioni di ricerca}
+  		\label{fig:graph3}
+	\end{figure}
+	
+	Nel caso di sole operazioni di ricerca possiamo subito notare come i BST siano meno efficienti degli alberi AVL. Ciò è giustificato dal fatto che gli AVL sono particolarmente efficienti per le operazioni di ricerca in quanto sono effettivamente bilanciati. \\
+	Risulta invece piuttosto anomala la loro minor efficienza rispetto ai RBT. Bisogna sottolineare che la differenza fra i due tempi di esecuzione è comunque minima (nell'ordine di $10^{-8}$), tuttavia questa rimane costante per svariati valori di $n$. La congettura riguardo questo anomalia riguarda l'input: essendo questo casuale è possibile che i RBT rimangano abbastanza bilanciati. Ciò tuttavia non spiega il risultato sperimentale ottenuto.
+	
+	\newpage
+	
+	\subsection{Esecuzione di $n$ operazioni di ricerca con $10\%$ di elementi ordinati}
+	\label{subsection:n_op_ric}
+	
+	\begin{figure}[h!]
+		\centering
+  		\includegraphics[width=1 \columnwidth]{Grafici/Grafico_All_find_ordered.png}
+  		\caption{Tempo di esecuzione di $n$ operazioni di ricerca con $10\%$ di elementi ordinati}
+  		\label{fig:graph4}
+	\end{figure}
+	
+	\newpage
+	
+	\subsection{Esecuzione di $n$ operazioni di ricerca con $90\%$ di elementi ordinati}
+	\label{subsection:n_op_ric}
+	
+	\begin{figure}[h!]
+		\centering
+  		\includegraphics[width=1 \columnwidth]{Grafici/Grafico_All_find_ordered_AvlRbt.png}
+  		\caption{Tempo di esecuzione di $n$ operazioni di ricerca con $90\%$ di elementi ordinati}
+  		\label{fig:graph5}
+	\end{figure}
 	
 	\newpage
 

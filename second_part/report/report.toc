@@ -19,4 +19,9 @@
 \contentsline {paragraph}{Errore relativo massimo totale}{7}%
 \contentsline {paragraph}{Problematiche riscontrate}{7}%
 \contentsline {section}{\numberline {5}Analisi degli tempi di esecuzione}{8}%
-\contentsline {section}{\numberline {6}Conclusioni}{9}%
+\contentsline {subsection}{\numberline {5.1}Esecuzione di $n$ operazioni di inserimento}{9}%
+\contentsline {subsection}{\numberline {5.2}Esecuzione di $n$ operazioni di inserimento con il $10\%$ di elementi ordinati}{10}%
+\contentsline {subsection}{\numberline {5.3}Esecuzione di $n$ operazioni di ricerca}{11}%
+\contentsline {subsection}{\numberline {5.4}Esecuzione di $n$ operazioni di ricerca con $10\%$ di elementi ordinati}{12}%
+\contentsline {subsection}{\numberline {5.5}Esecuzione di $n$ operazioni di ricerca con $90\%$ di elementi ordinati}{13}%
+\contentsline {section}{\numberline {6}Conclusioni}{14}%
