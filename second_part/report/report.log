@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.9.10)  16 SEP 2020 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.9.10)  17 SEP 2020 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,6 +258,9 @@ LaTeX Warning: Label `fig:graph2' multiply defined.
 
 LaTeX Warning: Label `subsection:n_op_ric' multiply defined.
 
+
+LaTeX Warning: Label `subsection:n_op_ric' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -369,14 +372,14 @@ ne 190.
 File: Grafici/Grafico_All_find_ordered_AvlRbt.png Graphic file (type png)
 <use Grafici/Grafico_All_find_ordered_AvlRbt.png>
 Package pdftex.def Info: Grafici/Grafico_All_find_ordered_AvlRbt.png  used on i
-nput line 202.
+nput line 205.
 (pdftex.def)             Requested size: 345.0pt x 345.00414pt.
- [13 <./Grafici/Grafico_All_find_ordered_AvlRbt.png>] [14]
-(./report.aux
+ [13 <./Grafici/Grafico_All_find_ordered_AvlRbt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 214--217
 
-Package pdfbase Warning: Rerun to get internal references right!
+ []
 
-)
+[14] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -384,7 +387,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4743 strings out of 482802
  71583 string characters out of 5955390
- 352231 words of memory out of 5000000
+ 352240 words of memory out of 5000000
  20005 multiletter control sequences out of 15000+600000
  540806 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -403,7 +406,7 @@ nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (15 pages, 949052 bytes).
+Output written on report.pdf (15 pages, 950710 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream

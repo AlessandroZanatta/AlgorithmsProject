@@ -698,7 +698,7 @@ int main(){
 
     printf("Resolution %.17g ns\n", resolution*1000000000);
 
-    /*
+
     // basic comparation of the 3 trees
     output = fopen("second_part/times/all.txt", "w");
     fprintf(output, "N,T1,D1,T2,D2,T3,D3\n");
@@ -730,7 +730,6 @@ int main(){
         elements = (int) (elements * 1.31);
     }
     fclose(output);
-    */
 
     elements = 100;
     // pseudo-ordered input sequence
@@ -765,7 +764,6 @@ int main(){
     }
     fclose(output);
 
-    /*
     // try to effectuate "elements" find (ONLY FIND)
     elements = 100;
     output = fopen("second_part/times/finds.txt", "w");
@@ -797,7 +795,6 @@ int main(){
         elements = (int) (elements * 1.31);
     }
     fclose(output);
-    */
 
     // try to effectuate "elements" find (ONLY FIND) with pseudo-ORDERED inserted elements!
     // 95% random elements
@@ -832,9 +829,9 @@ int main(){
     }
     fclose(output);
 
-    /*
+
     // ONLY FOR RBT AND AVL, bst takes WAY TOO MUCH TIME
-    // 10% of random elements
+    // 50% of random elements
     elements = 100;
     output = fopen("second_part/times/finds_ordered_avl_rbt.txt", "w");
     fprintf(output, "N,T2,D2,T3,D3\n");
@@ -861,7 +858,7 @@ int main(){
         elements = (int) (elements * 1.31);
     }
     fclose(output);
-    */
+
 
 }
 

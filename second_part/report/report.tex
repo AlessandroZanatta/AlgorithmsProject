@@ -24,19 +24,19 @@
 	\newpage
 	
 	\section{Introduzione}
-	La seguente relazione si propone di analizzare i tempi di esecuzione di operazione su tre diversi tipi di alberi binari: 
+	La seguente relazione si propone di analizzare i tempi di esecuzione per operazioni di inserimento e ricerca su tre diversi tipi di alberi binari: 
 	\begin{itemize}
 		\item Binary Search Tree (BST)
 		\item Adelson-Velsky and Landis Tree (AVL)
 		\item Red-Black Tree (RBT)
 	\end{itemize}
 	 
-	Il linguaggio scelto e utilizzato per implementare le strutture dati e gli algoritmi, nonchè per il calcolo dei tempi di esecuzione, è C, in quanto è indubbiamente uno dei linguaggi più efficienti e veloci, al costo di una maggiore complessità del codice. \\ In questo modo i tempi di esecuzione ottenuti sono liberi da operazioni sulla memoria (come ad esempio un garbage collector) che vengono invece effettuate in momenti opportuni.
+	Il linguaggio scelto e utilizzato per implementare le strutture dati e gli algoritmi, nonchè per il calcolo dei tempi di esecuzione, è C, in quanto è indubbiamente uno dei linguaggi più efficienti e veloci, al costo di una maggiore complessità del codice. \\ In questo modo i tempi di esecuzione ottenuti sono liberi da operazioni sulla memoria (come ad esempio un garbage collector) che vengono invece effettuate in momenti opportunamente scelti.
 	\newpage
 	
 	
 	\section{Considerazioni teoriche}
-	In questa sezione si discuteranno le aspettative teoriche relative ai tempi di esecuzione degli alberi binari in questione.
+	Segue una breve riflessione teorica relativa ai tempi di esecuzione degli alberi binari in questione.
 	
 	\subsection{Costo asintotico}
 	Ricordiamo, innanzitutto, il costo asintotico delle operazioni al variare del numero di elementi $n$ presenti nell'albero:
@@ -88,7 +88,7 @@
 	Si è scelto di utilizzare il clock offerto dalla funzione $\text{clock\_gettime}$. Il primo parametro della funzione indica il tipo di clock, mentre il secondo parametro è un puntatore ad una struct contentente il tempo all'istante della chiamata a funzione. Il tipo di clock utilizzato ($\text{CLOCK\_MONOTONIC\_RAW}$) è, come suggerito dal nome stesso, di tipo monotonico. \\ Per ottenere una misurazione della risoluzione migliore si è utilizzata la risoluzione mediana, calcolata su un campione di 10000 elementi.
 	
 	\paragraph{Scomputazione dei tempi di inizializzazione}
-	Al fine di scomputare correttamente dai tempi di esecuzione delle operazioni il tempo di generazione di $n$ numeri casuali, si è utilizzata una funzione apposita che calcola il tempo mediano di tale operazione. Al fine di ottenere un errore relativo minore di $0.5\%$ si è ripetuta l'inizializzazione sufficienti volte affinché la seguente equazione fosse soddisfatta:
+	Al fine di scomputare correttamente dai tempi di esecuzione delle operazioni il tempo di generazione di $n$ numeri casuali, si è utilizzata una funzione apposita che calcola il tempo mediano di tale operazione. Per ottenere un errore relativo minore di $0.5\%$ si è ripetuta l'inizializzazione sufficienti volte affinché la seguente equazione fosse soddisfatta:
 	
 	\[
 		\text{diff}\left(end, start\right) > resolution \cdot \left(1+\frac{1}{0.005}\right)  
@@ -96,7 +96,7 @@
 	
 	dove $\text{diff}$ indica l'intervallo temporale trascorso fra $start$ e $end$ e $resolution$ è la risoluzione del clock utilizzato. \\ Questo procedimento è stato poi iterato un certo numero di volte e dal campione di dati ottenuto si è estratta la mediana.
 	
-	\paragraph{Tempo di esecuzione degli algoritmi}
+	\paragraph{Tempo di esecuzione delle operazioni}
 	Per ottenere misurazioni con errore relativo minore di $0.5\%$ si è operato nel seguente modo:
 	
 	\begin{itemize}
@@ -114,7 +114,7 @@
 	\newpage
 	
 	\paragraph{Errore relativo massimo totale}
-	Calcolando i tempi nei modi indicati negli ultimi due paragrafi si è ottenuto un errore relativo complessivo $\leq1\%$. L'errore relativo totale è, infatti, dato dalla somma degli errori. Essendoci quindi due misurazioni affette da errore\footnote{La prima è quella relativa al calcolo del tempo di inizializzazione, la seconda è quella relativa al tempo di esecuzione dell'algoritmo.}, entrambe con errore relativo pari o minore a $0.5\%$, l'errore relativo massimo totale è effettivamente dell'$1\%$.
+	Calcolando i tempi nei modi indicati negli ultimi due paragrafi si è ottenuto un errore relativo complessivo $\leq1\%$. L'errore relativo totale è, infatti, dato dalla somma degli errori. Essendoci quindi due misurazioni affette da errore\footnote{La prima è quella relativa al calcolo del tempo di inizializzazione, la seconda è quella relativa al tempo di esecuzione delle operazioni.}, entrambe con errore relativo pari o minore a $0.5\%$, l'errore relativo massimo totale è effettivamente dell'$1\%$.
 	
 	\paragraph{Problematiche riscontrate}
 	Durante le prime misurazioni, si era notata una deviazione standard piuttosto elevata, indice di una grande variabilità nelle misurazioni ottenute. Al fine di ottenere delle misurazioni migliori, cioè meno sensibili ad outliers e rumore, si è scelto di utilizzare, al posto della media, la mediana dei tempi di esecuzione e, al posto della deviazione standard, la deviazione mediana assoluta, definita come $\textrm{MAD}=\textrm{median}\left(\mathopen|X_{i}-\textrm{median}\left(X\right)\mathclose|\right)$. Questi indici, in quanto indici di posizione, sono più robusti della media e della deviazione standard e hanno permesso di ottenere dei tempi sperimentali più accurati e minormente affetti da errori casuali.
@@ -129,7 +129,7 @@
 		\item $n$ operazioni di inserimento con il $5\%$ di elementi ordinati
 		\item $n$ operazioni di ricerca
 		\item $n$ operazioni di ricerca con il $10\%$ di elementi ordinati 
-		\item $n$ operazioni di ricerca con l'$80\%$ di elementi ordinati 
+		\item $n$ operazioni di ricerca con l'$50\%$ di elementi ordinati 
 	\end{itemize}
 	
 	\newpage
@@ -145,8 +145,8 @@
   		\label{fig:graph2}
 	\end{figure}
 	
-	Le aspettative teoriche sono state principalmente rispettate. Sia gli RBT che gli AVL si sono comportati come ci si aspettava.\\
-	Ciò che sorprende di più è l'efficienza dei BST. Questi alberi sono, per input generati casualmente tramite l'algoritmo MT, molto efficienti in quanto non si sbilanciano. Possiamo però notare come la deviazione mediana assoluta sia molto superiore a quella degli altri due alberi, ad indicare come questa efficienza sia molto legata, come già detto, all'input. \\
+	Le aspettative teoriche sono state principalmente rispettate. Sia i RBT che gli AVL si sono comportati come ci si aspettava.\\
+	Ciò che sorprende di più è l'efficienza dei BST. Questi alberi sono, per input generati casualmente tramite l'algoritmo MT, molto efficienti in quanto non si sbilanciano. Possiamo però notare come la deviazione mediana assoluta sia molto superiore a quella degli altri due alberi, a confermare come questa efficienza sia molto legata all'input. \\
 	La maggiore efficienza dei BST rispetto agli AVL può inoltre essere attribuita all'assenza, per il primo tipo di albero, di procedure di ri-bilanciamento.
 	
 	\newpage
@@ -192,21 +192,29 @@
   		\label{fig:graph4}
 	\end{figure}
 	
+	Come possiamo notare, introdurre una certa quantità di elementi ordinati rende i BST estremamente meno efficienti.\\
+	Gli altri due alberi invece rispecchiano lo stesso comportamento già notato nella sottosezione \ref{subsection:n_op_ric}.
+	
 	\newpage
 	
-	\subsection{Esecuzione di $n$ operazioni di ricerca con $90\%$ di elementi ordinati}
+	\subsection{Esecuzione di $n$ operazioni di ricerca con $50\%$ di elementi ordinati}
 	\label{subsection:n_op_ric}
 	
 	\begin{figure}[h!]
 		\centering
   		\includegraphics[width=1 \columnwidth]{Grafici/Grafico_All_find_ordered_AvlRbt.png}
-  		\caption{Tempo di esecuzione di $n$ operazioni di ricerca con $90\%$ di elementi ordinati}
+  		\caption{Tempo di esecuzione di $n$ operazioni di ricerca con $50\%$ di elementi ordinati}
   		\label{fig:graph5}
 	\end{figure}
 	
+	Un ulteriore grafico riguardante il tempo di esecuzione di operazioni di ricerca su AVL e RBT rivela come i primi possano effettivamente essere più efficienti. Questo sembrerebbe confermare la congettura precedentemente formulata nella sottosezione \ref{subsection:n_op_ric}.
 	\newpage
 
 	\section{Conclusioni}
+	I risultati ottenuti sono stati molto interessanti e, sotto alcuni aspetti, inaspettati. L'analisi sperimentale degli alberi binari in questione ha certamente contribuito ad una maggior consapevolezza nell'uso degli stessi.
+	\\
+	Si può trarre la seguente conclusione dall'analisi sperimentale effettuata: ogni albero binario ha dei punti di forza e di debolezza. I BST sono efficienti per input casuali, anche se le loro performance tendono a deteriorare velocemente per input anche solo poco ordinati. AVL e RBT si sono rivelati entrambi molto efficienti, come previsto. In particolare, i RBT sono particolarmente efficienti nel caso di molte operazioni di inserimento, mentre gli AVL sono più efficienti per le operazioni di ricerca.\\
 	
+	Tutti questi sono importanti fattori di cui tenere conto nell'implementare in maniera efficiente degli alberi binari.
 	
 \end{document}
