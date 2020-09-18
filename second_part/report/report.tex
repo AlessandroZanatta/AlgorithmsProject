@@ -146,7 +146,7 @@
 	\end{figure}
 	
 	Le aspettative teoriche sono state principalmente rispettate. Sia i RBT che gli AVL si sono comportati come ci si aspettava.\\
-	Ciò che sorprende di più è l'efficienza dei BST. Questi alberi sono, per input generati casualmente tramite l'algoritmo MT, molto efficienti in quanto non si sbilanciano. Possiamo però notare come la deviazione mediana assoluta sia molto superiore a quella degli altri due alberi, a confermare come questa efficienza sia molto legata all'input. \\
+	Ciò che sorprende di più è l'efficienza dei BST. Questi alberi sono, per input generati casualmente tramite l'algoritmo MT, molto efficienti in quanto non si sbilanciano. \\
 	La maggiore efficienza dei BST rispetto agli AVL può inoltre essere attribuita all'assenza, per il primo tipo di albero, di procedure di ri-bilanciamento.
 	
 	\newpage
@@ -162,7 +162,7 @@
 	\end{figure}
 	
 	Anche in questo grafico le aspettative teoriche sono state rispettate. Tutti gli alberi si sono comportati esattamento come predetto. \\
-	Possiamo notare come i BST si siano effettivamente rivelati inefficienti rispetto agli altri due alberi. In particolare, si nota molto chiaramente l'andamento lineare nel tempo di esecuzione. \\
+	Possiamo notare come i BST si siano effettivamente rivelati inefficienti rispetto agli altri due alberi. In particolare, si nota molto chiaramente l'andamento lineare nel tempo di esecuzione, soprattutto nella prima parte del grafico. \\
 	Per quanto riguarda gli altri due alberi, è interessante la maggiore efficienza dei RBT rispetto agli AVL. Come predetto nella sezione \ref{par:rbt_avl}, infatti, i RBT hanno un costo di inserimento minore, dato dal funzionamento della procedura di ri-bilanciamento dell'albero stesso.
 	
 	\newpage
@@ -183,7 +183,6 @@
 	\newpage
 	
 	\subsection{Esecuzione di $n$ operazioni di ricerca con $10\%$ di elementi ordinati}
-	\label{subsection:n_op_ric}
 	
 	\begin{figure}[h!]
 		\centering
@@ -193,12 +192,11 @@
 	\end{figure}
 	
 	Come possiamo notare, introdurre una certa quantità di elementi ordinati rende i BST estremamente meno efficienti.\\
-	Gli altri due alberi invece rispecchiano lo stesso comportamento già notato nella sottosezione \ref{subsection:n_op_ric}.
+	Gli altri due alberi invece rispecchiano lo stesso comportamento già notato nella sottosezione \ref{subsection:n_op_ric}. Si può inoltre notare con estrema chiarezza l'andamento logaritmico di questi due tipi di albero binario.
 	
 	\newpage
 	
 	\subsection{Esecuzione di $n$ operazioni di ricerca con $50\%$ di elementi ordinati}
-	\label{subsection:n_op_ric}
 	
 	\begin{figure}[h!]
 		\centering
@@ -215,6 +213,6 @@
 	\\
 	Si può trarre la seguente conclusione dall'analisi sperimentale effettuata: ogni albero binario ha dei punti di forza e di debolezza. I BST sono efficienti per input casuali, anche se le loro performance tendono a deteriorare velocemente per input anche solo poco ordinati. AVL e RBT si sono rivelati entrambi molto efficienti, come previsto. In particolare, i RBT sono particolarmente efficienti nel caso di molte operazioni di inserimento, mentre gli AVL sono più efficienti per le operazioni di ricerca.\\
 	
-	Tutti questi sono importanti fattori di cui tenere conto nell'implementare in maniera efficiente degli alberi binari.
+	In conclusione si può affermare che questi sono importanti fattori di cui tenere conto nell'implementare in maniera efficiente degli alberi binari.
 	
 \end{document}
